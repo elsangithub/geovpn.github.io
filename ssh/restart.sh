@@ -69,4 +69,4 @@ clear
 echo -e "Restart All Service" | lolcat
 sleep 2
 figlet -f slant SUKSES | lolcat
-status
+running
