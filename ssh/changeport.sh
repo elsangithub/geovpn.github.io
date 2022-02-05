@@ -34,13 +34,13 @@ echo -e "[4]. Change Port Vless"
 echo -e "[5]. Change Port Trojan"
 echo -e "[6]. Change Port Squid"
 echo -e "[7]. Change Port SSTP"
-echo -e "[7]. Change Port SSTP"
-echo -e "[7]. Change Port SSTP"
-echo -e "[8]. Exit"
+echo -e "[8]. Change Port SSH WS TLS"
+echo -e "[9]. Change Port SSH WS non TLS"
+echo -e "[10]. Exit"
 echo -e ""
 echo -e "======================================"
 echo -e ""
-read -p "Select From Options [ 1-8 ] : " port
+read -p "Select From Options [ 1-10 ] : " port
 echo -e ""
 case $port in
 1)
@@ -65,6 +65,12 @@ portsquid
 portsstp
 ;;
 8)
+portsstp
+;;
+9)
+portsstp
+;;
+10)
 clear
 menu
 ;;
