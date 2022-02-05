@@ -1,1 +1,1 @@
-geovpn.github.io
+https://geovpn.github.io
