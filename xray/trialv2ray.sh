@@ -70,9 +70,9 @@ systemctl restart xray@v2ray-tls
 systemctl restart xray@v2ray-nontls
 service cron restart
 clear
-echo -e "${cyan}=======================${off}"
+echo -e "${cyan}==================================${off}"
 echo -e "${purple} ~> TRIAL XRAY / VMESS${off}"
-echo -e "${cyan}=======================${off}"
+echo -e "${cyan}==================================${off}"
 echo -e " Remarks        : ${user}"
 echo -e " Bug            : ${bug}"
 echo -e " Domain         : ${domain}"
@@ -91,5 +91,5 @@ echo -e "${cyan}==================================${off}"
 echo -e " ${green}Aktif Selama   : $masaaktif Hari"
 echo -e "${cyan}==================================${off}"
 echo -e ""
-echo -e "Script By GeoVPN" | lolcat
+echo -e "Script By GeoVPN"
 echo -e ""
