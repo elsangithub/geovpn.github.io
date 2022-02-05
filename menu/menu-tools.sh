@@ -129,7 +129,7 @@ clearlog
 autoreboot
 ;;
 11)
-status
+running
 ;;
 12)
 bw
