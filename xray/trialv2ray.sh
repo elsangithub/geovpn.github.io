@@ -10,13 +10,7 @@ white='\x1b[37m'
 bold='\033[1m'
 off='\x1b[m'
 flag='\x1b[47;41m'
-
-
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
-COUNTRY=$(curl -s ipinfo.io/country )
-
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 source /var/lib/geovpnstore/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -27,36 +21,40 @@ fi
 read -rp "Bug: " -e bug
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 nontls="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
-user=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c2`
+
+# Create Expried 
+masaaktif="1"
+exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
+
+# Make Random Username 
+user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
-tnggl=$(date +"%R")
-read -p "Expired (Jam): " ktf
-exp=`date -d "$ktf hour" +"%R"`
-sed -i '/#xray-v2ray-tls$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/v2ray-tls.json
-sed -i '/#xray-v2ray-nontls$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/v2ray-nontls.json
-cat>/etc/xray/v2ray-$user-tls.json<<EOF
+created=`date -d "0 days" +"%d-%m-%Y"`
+sed -i '/#tls$/a\### '"$user $exp"'\
+},{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
+sed -i '/#none$/a\### '"$user $exp"'\
+},{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/none.json
+cat>/etc/xray/$user-tls.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "${nontls}",
+      "port": "${tls}",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
       "path": "geo",
       "type": "none",
-      "host": "",
-      "tls": "none"
+      "host": "${bug}",
+      "tls": "tls"
 }
 EOF
-cat>/etc/xray/v2ray-$user-nontls.json<<EOF
+cat>/etc/xray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
       "add": "${bug}",
-      "port": "${nontls}",
+      "port": "${none}",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
@@ -68,16 +66,15 @@ cat>/etc/xray/v2ray-$user-nontls.json<<EOF
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
-xrayv2ray1="vmess://$(base64 -w 0 /etc/xray/v2ray-$user-tls.json)"
-xrayv2ray2="vmess://$(base64 -w 0 /etc/xray/v2ray-$user-nontls.json)"
-systemctl restart xray@v2ray-tls
-systemctl restart xray@v2ray-nontls
+vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
+vmesslink2="vmess://$(base64 -w 0 /etc/xray/$user-none.json)"
+systemctl restart xray
+systemctl restart xray@none
 service cron restart
 clear
-echo -e ""
-echo -e "${cyan}==================================${off}"
-echo -e "${purple} ~> TRIAL V2RAY VMESS${off}"
-echo -e "${cyan}==================================${off}"
+echo -e "${cyan}=====================${off}"
+echo -e "${cyan}TRIAL XRAY /VMESS${off}"
+echo -e "${cyan}=====================${off}"
 echo -e " Remarks        : ${user}"
 echo -e " Bug            : ${bug}"
 echo -e " Domain         : ${domain}"
@@ -88,11 +85,15 @@ echo -e " AlterID        : 0"
 echo -e " Security       : auto"
 echo -e " Network        : ws"
 echo -e " Path           : geo${off}"
-echo -e "${cyan}==================================${off}"
-echo -e "${purple}~> VMESS TLS : $off${xrayv2ray1}"
-echo -e "${cyan}==================================${off}"
-echo -e "${purple}~> VMESS NON-TLS : $off${xrayv2ray2}"
-echo -e "${cyan}==================================${off}"
-echo -e " ${green}Aktif Selama   : $ktf Jam"
-echo -e "${cyan}==================================${off}"
+echo -e "${cyan}=====================${off}"
+echo -e "${purple}~> VMESS TLS${off}"
+echo -e "${vmesslink1}"
+echo -e "${cyan}====================${off}"
+echo -e "${purple}~> VMESS NON-TLS${off}"
+echo -e "${vmesslink2}"
+echo -e "${cyan}====================${off}"
+echo -e " ${green}Aktif Selama   : $masaaktif Hari"
+echo -e "${cyan}====================${off}"
+echo -e ""
+echo -e "Script By Geo.NTB" | lolcat
 echo -e ""
