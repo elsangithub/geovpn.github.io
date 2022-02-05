@@ -65,10 +65,10 @@ portsquid
 portsstp
 ;;
 8)
-portsstp
+portsshnontls
 ;;
 9)
-portsstp
+portsshws
 ;;
 10)
 clear
