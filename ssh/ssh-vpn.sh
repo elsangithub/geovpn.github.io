@@ -582,6 +582,7 @@ wget -O trialtrojan "https://${geovpnnnnnnnn}/trialtrojan.sh"
 wget -O trialv2ray "https://${geovpnnnnnnnn}/trialv2ray.sh"
 wget -O trialvless "https://${geovpnnnnnnnn}/trialvless.sh"
 wget -O trialwg "https://${geovpnnnnnnnn}/trialwg.sh"
+wget -O trialtrgo "https://${geovpnnnnnnnn}/trialtrgo.sh"
 chmod +x trial-akun
 chmod +x trialpptp
 chmod +x trialss
@@ -593,6 +594,7 @@ chmod +x triall2tp
 chmod +x trialv2ray
 chmod +x trialvless
 chmod +x trialwg
+chmod +x trialtrgo
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
