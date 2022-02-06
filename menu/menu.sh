@@ -182,7 +182,6 @@ x)
 exit
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
 menu
 ;;
 esac
