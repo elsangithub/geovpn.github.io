@@ -54,6 +54,27 @@ exit 0
 fi
 rm -f setup.sh
 clear
+apt-get update --allow-releaseinfo-change -y > /dev/null
+
+apt-get update -y > /dev/null 2>&1
+apt-get upgrade -y > /dev/null 2>&1
+#install figlet & lolcat
+apt-get install figlet -y > /dev/null 2>&1
+apt-get install ruby -y > /dev/null 2>&1
+gem install lolcat > /dev/null 2>&1
+clear
+MYIP=$(wget -qO- https://icanhazip.com);
+host=$(hostname);
+cat > /etc/hosts <<-END
+127.0.0.1       localhost.localdomain localhost
+127.0.1.1       localhost
+$MYIP   $host
+END
+
+apt-get install dbus -y > /dev/null
+sudo hostnamectl set-hostname Setup-Geo-Project
+
+clear
 if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
