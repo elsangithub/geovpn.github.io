@@ -80,11 +80,9 @@ clear
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 COUNTRY=$(curl -s ipinfo.io/country )
-
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(curl -sS ipinfo.io/ip)
 clear
-uuid=$(cat /etc/trojan/uuid.txt)
-clear
+tr="$(cat ~/log-install.txt | grep -w "Trojan" | cut -d: -f2|sed 's/ //g')"
 source /var/lib/geovpnstore/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -95,22 +93,26 @@ fi
 masaaktif="1"
 exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 
-tr="$(cat ~/log-install.txt | grep -w "Trojan" | cut -d: -f2|sed 's/ //g')"
-# Make Random Username
-
+# Make Random Username 
 user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 sed -i '/#xray-trojan$/a\### '"$user $exp"'\
 },{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/trojan.json
+systemctl restart xray@trojan
 trojanlink="trojan://${user}@${domain}:${tr}"
-service cron restart
-echo -e "======-XRAYS/TROJAN-======"
-echo -e "Remarks  : ${user}"
-echo -e "IP/Host  : ${MYIP}"
-echo -e "Address  : ${domain}"
-echo -e "Port     : ${tr}"
-echo -e "Key      : ${user}"
-echo -e "=========================="
-echo -e "Link TR  : ${trojanlink}"
-echo -e "=========================="
-echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "=========================="
+clear
+echo -e ""
+echo -e "=================================${off}"
+echo -e "       TRIAL XRAY TROJAN ${off}"
+echo -e "=================================${off}"
+echo -e " ISP            : ${ISP}"
+echo -e " CITY           : ${CITY}"
+echo -e " COUNTRY        : ${COUNTRY}"
+echo -e " Server IP      : ${MYIP}"
+echo -e " Remarks        : ${user}"
+echo -e " Host           : ${domain}"
+echo -e " Port           : ${tr}"
+echo -e " Key            : ${user}"
+echo -e " Link TR        : ${trojanlink}"
+echo -e "=================================${off}"
+echo -e " Aktif Selama   : $masaaktif Hari"
+echo -e "=================================${off}"
