@@ -95,27 +95,22 @@ fi
 masaaktif="1"
 exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 
-# Make Random Username 
+tr="$(cat ~/log-install.txt | grep -w "Trojan" | cut -d: -f2|sed 's/ //g')"
+# Make Random Username
+
 user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 sed -i '/#xray-trojan$/a\### '"$user $exp"'\
 },{"password": "'""$user""'","email": "'""$user""'"' /etc/xray/trojan.json
-systemctl restart xray@trojan
-trojanlink="trojan://${user}@${domain}:2087"
+trojanlink="trojan://${user}@${domain}:${tr}"
 service cron restart
-clear
-echo -e ""
-echo -e "${red}=================================${off}"
-echo -e "===========-XRAYS/TROJAN-============="
-echo -e "${red}=================================${off}"
+echo -e "======-XRAYS/TROJAN-======"
 echo -e "Remarks  : ${user}"
 echo -e "IP/Host  : ${MYIP}"
 echo -e "Address  : ${domain}"
-echo -e "Port     : 2087"
+echo -e "Port     : ${tr}"
 echo -e "Key      : ${user}"
-echo -e "${red}=================================${off}"
+echo -e "=========================="
 echo -e "Link TR  : ${trojanlink}"
-echo -e "${red}=================================${off}"
-echo -e "${red}=================================${off}"
-echo -e " ${white}Aktif Selama   : $masaaktif Hari"
-echo -e "${red}=================================${off}"
-
+echo -e "=========================="
+echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "=========================="
