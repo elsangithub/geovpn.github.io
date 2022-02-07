@@ -106,7 +106,7 @@ cat>/etc/xray/v2ray-$user-tls.json<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "geo",
+      "path": "/geo",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -121,7 +121,7 @@ cat>/etc/xray/v2ray-$user-nontls.json<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "geo",
+      "path": "/geo",
       "type": "none",
       "host": "${domain}",
       "tls": "none"
@@ -135,9 +135,9 @@ systemctl restart xray@v2ray-tls
 systemctl restart xray@v2ray-nontls
 service cron restart
 clear
-echo -e "${cyan}=======================${off}"
-echo -e "${purple} ~> TRIAL XRAY / VMESS${off}"
-echo -e "${cyan}=======================${off}"
+echo -e " =======================${off}"
+echo -e " TRIAL XRAY / VMESS${off}"
+echo -e " =======================${off}"
 echo -e " Remarks        : ${user}"
 echo -e " Bug            : ${bug}"
 echo -e " Domain         : ${domain}"
@@ -147,14 +147,14 @@ echo -e " ID             : ${uuid}"
 echo -e " AlterID        : 0"
 echo -e " Security       : auto"
 echo -e " Network        : ws"
-echo -e " Path           : geo${off}"
-echo -e "${cyan}==================================${off}"
-echo -e "${purple}~> VMESS TLS : $off${xrayv2ray1}"
-echo -e "${cyan}==================================${off}"
-echo -e "${purple}~> VMESS NON-TLS : $off${xrayv2ray2}"
-echo -e "${cyan}==================================${off}"
-echo -e " ${green}Aktif Selama   : $masaaktif Hari"
-echo -e "${cyan}==================================${off}"
+echo -e " Path           : /geo${off}"
+echo -e " ==================================${off}"
+echo -e "  VMESS TLS : ${xrayv2ray1}"
+echo -e " ==================================${off}"
+echo -e " VMESS NON-TLS : ${xrayv2ray2}"
+echo -e " ==================================${off}"
+echo -e " Aktif Selama   : $masaaktif Hari"
+echo -e " ==================================${off}"
 echo -e ""
 echo -e "Script By GeoVPN"
 echo -e ""
