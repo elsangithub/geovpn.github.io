@@ -118,9 +118,6 @@ x)
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
-sleep 1
 menu-v2ray
 ;;
 esac
-
