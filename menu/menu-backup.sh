@@ -74,14 +74,14 @@ exit 0
 fi
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m        ⇱ Backup Section ⇲         \E[0m"
+echo -e "\E[44;1;39m        ⇱ Backup Section ⇲             \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${color1}1${color3}.$bd Autobackup Data VPS (${color2}autobackup${color3})"
 echo -e "${color1}2${color3}.$bd Backup Manual Data VPS (${color2}backup${color3})"
 echo -e "${color1}3${color3}.$bd Restore Data VPS (${color2}restore${color3})"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${color1}x${color3}.$bd Menu"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e""
 read -p " Please Enter The Number  [1-3 or x] :  "  gok
 echo -e ""
