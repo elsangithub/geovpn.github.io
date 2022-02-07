@@ -91,7 +91,7 @@ cat > /etc/xray/v2ray-tls.json << END
           ]
         },
         "wsSettings": {
-          "path": "geo",
+          "path": "/geo",
           "headers": {
             "Host": ""
           }
@@ -179,7 +179,7 @@ cat > /etc/xray/v2ray-nontls.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "geo",
+          "path": "/geo",
           "headers": {
             "Host": ""
           }
@@ -276,7 +276,7 @@ cat > /etc/xray/vless-tls.json << END
           ]
         },
         "wsSettings": {
-          "path": "nur",
+          "path": "/nur",
           "headers": {
             "Host": ""
           }
@@ -363,7 +363,7 @@ cat > /etc/xray/vless-nontls.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "nur",
+          "path": "/nur",
           "headers": {
             "Host": ""
           }
@@ -523,7 +523,7 @@ END
 cat > /etc/systemd/system/xray@.service << END
 [Unit]
 Description=Xray Service ( %i ) By geovpn
-Documentation=https://t.me/geovpn
+Documentation=https://t.me/sampiiiiu
 After=network.target nss-lookup.target
 
 [Service]
