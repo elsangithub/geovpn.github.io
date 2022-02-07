@@ -99,8 +99,6 @@ x)
 menu-vpn
 ;;
 *)
-echo "Masukkan Nomor Yang Ada!"
-menu-l2tp
 ;;
 esac
 
