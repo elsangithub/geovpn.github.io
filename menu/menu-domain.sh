@@ -110,8 +110,6 @@ x)
 menu-tools
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
-sleep 1
 menu-domain
 ;;
 esac
