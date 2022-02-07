@@ -95,7 +95,7 @@ echo -e "${color1}16${color3}.$bd Domain Section (${color2}menu-domain${color3})
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${color1}x${color3}.$bd Menu"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -p "  Please Enter The Number  [1-17 or x] :  "  sis
+read -p "  Please Enter The Number  [1-16 or x] :  "  sis
 echo -e ""
 case $sis in
 1)
@@ -150,9 +150,6 @@ x)
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
-sleep 1
 menu-tools
 ;;
 esac
-
