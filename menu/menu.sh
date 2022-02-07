@@ -12,6 +12,7 @@ color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
 # Getting
+clear
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
