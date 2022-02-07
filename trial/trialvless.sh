@@ -96,8 +96,8 @@ sed -i '/#xray-vless-tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/vless-tls.json
 sed -i '/#xray-vless-nontls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/vless-nontls.json
-xrayvless1="vless://${uuid}@${domain}:$tls?path=nur&security=tls&encryption=none&type=ws#${user}"
-xrayvless2="vless://${uuid}@${domain}:$nontls?path=nur&encryption=none&type=ws#${user}"
+xrayvless1="vless://${uuid}@${domain}:$tls?path=/nur&security=tls&encryption=none&type=ws#${user}"
+xrayvless2="vless://${uuid}@${domain}:$nontls?path=/nur&encryption=none&type=ws#${user}"
 systemctl restart xray@vless-tls
 systemctl restart xray@vless-nontls
 service cron restart
@@ -114,7 +114,7 @@ echo -e "Port No TLS : $nontls"
 echo -e "User ID     : ${uuid}"
 echo -e "Encryption  : none"
 echo -e "Network     : ws"
-echo -e "Path        : nur"
+echo -e "Path        : /nur"
 echo -e "========================="
 echo -e "Link TLS    : ${xrayvless1}"
 echo -e "========================="
