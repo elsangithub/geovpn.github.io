@@ -106,7 +106,7 @@ cat>/etc/xray/v2ray-$user-tls.json<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "geo",
+      "path": "/geo",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -121,7 +121,7 @@ cat>/etc/xray/v2ray-$user-nontls.json<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "geo",
+      "path": "/geo",
       "type": "none",
       "host": "${domain}",
       "tls": "none"
@@ -147,7 +147,7 @@ echo -e " ID             : ${uuid}"
 echo -e " AlterID        : 0"
 echo -e " Security       : auto"
 echo -e " Network        : ws"
-echo -e " Path           : geo${off}"
+echo -e " Path           : /geo${off}"
 echo -e " ==================================${off}"
 echo -e " VMESS TLS : $off${xrayv2ray1}"
 echo -e " ==================================${off}"
