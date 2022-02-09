@@ -71,7 +71,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install Cloudflare.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install Cloudflare.. "
 sleep 4
 wget https://${geovpn}/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -82,7 +82,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install SSH OVPN.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install SSH OVPN.. "
 sleep 4
 wget https://${geovpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -93,7 +93,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install SSTP.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install SSTP.. "
 sleep 4
 wget https://${geovpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -104,7 +104,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install ShadowsocksR.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install ShadowsocksR.. "
 sleep 4
 wget https://${geovpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -115,7 +115,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install Shadowsocks.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install Shadowsocks.. "
 sleep 4
 wget https://${geovpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -126,7 +126,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install Wireguard.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install Wireguard.. "
 sleep 4
 wget https://${geovpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -137,7 +137,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install Xray.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install Xray.. "
 sleep 4
 wget https://${geovpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -148,7 +148,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install L2TP vpn.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install L2TP vpn.. "
 sleep 4
 wget https://${geovpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -159,7 +159,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install set-br.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install set-br.. "
 sleep 4
 wget https://${geovpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -170,7 +170,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install Websocket CDN.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install Websocket CDN.. "
 sleep 4
 wget https://${geovpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
@@ -181,7 +181,7 @@ curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
-echo -e "[ ${tyblue}PROSES${NC} ] Install OHP.. "
+echo -e "[ ${GREEN}PROSES${NC} ] Install OHP.. "
 sleep 4
 wget https://${geovpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
