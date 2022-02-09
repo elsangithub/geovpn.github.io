@@ -17,7 +17,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 # Link Hosting Kalian
-geovpn="vpnkuy.site/wireguard"
+geovpn="geovpn.github.io/wireguard"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
