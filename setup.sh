@@ -69,158 +69,158 @@ fi
 mkdir /var/lib/geovpnstore;
 echo "IP=" >> /var/lib/geovpnstore/ipvps.conf
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install CLOUDFLARE${NC}"
-sleep 4
+sleep 1
 wget https://${geovpn}/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "CLOUDFLARE successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SSH OVPN${NC}"
-sleep 4
+sleep 1
 wget https://${geovpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SSH OVPN successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SSTP${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SSTP successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SHADOWSOCKSR${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SHADOWSOCKSR successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SHADOWSOCKS${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SHADOWSOCKS successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install WIREGUARD${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "WIREGUARD successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install XRAY${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "XRAY successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install L2TP VPN${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "L2TP successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SET-BR${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SET-BR successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install WEBSOCKET CDN${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "WEBSOCKET CDN successfully installed..."
-sleep 3
+sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}SETTING UP${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
-sleep 3
+sleep 1
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install OHP${NC}"
-sleep 4
+sleep 1
 wget https://${geovpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "OHP successfully installed..."
-sleep 3
+sleep 1
 clear
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -256,7 +256,7 @@ echo "Installation has been completed!!"
 echo " "
 echo "=================-geovpn Project-==================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "=================" | tee -a log-install.txt
+echo "================================================" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
@@ -278,8 +278,8 @@ echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Vless TLS         : 2083"  | tee -a log-install.txt
 echo "   - XRAYS Vless None TLS    : 2095"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2087"  | tee -a log-install.txt
-echo "   - Websocket SSL           : 443, 2096"  | tee -a log-install.txt
-echo "   - Websocket non SSL       : 8880"  | tee -a log-install.txt
+echo "   - Websocket SSL           : 443"  | tee -a log-install.txt
+echo "   - Websocket none SSL       : 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
 echo "   - OHP                     : 8181, 8282, 8383"  | tee -a log-install.txt
 echo "   - Tr Go                   : 2053"  | tee -a log-install.txt
@@ -305,7 +305,7 @@ echo "   - Telegram                : T.me/sampiiiiu"  | tee -a log-install.txt
 echo "   - Instagram               : @geo_gabuter"  | tee -a log-install.txt
 echo "   - Whatsapp                : 082339191527"  | tee -a log-install.txt
 echo "   - Facebook                : Ardiansyah" | tee -a log-install.txt
-echo "=================-Script Created By GeoVPN Project-=================" | tee -a log-install.txt
+echo "=======-Script Created By GeoVPN Project-=======" | tee -a log-install.txt
 echo ""
 echo " Reboot 5 Sec"
 sleep 5
