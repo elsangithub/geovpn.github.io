@@ -70,7 +70,7 @@ mkdir /var/lib/geovpnstore;
 echo "IP=" >> /var/lib/geovpnstore/ipvps.conf
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -84,7 +84,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -98,7 +98,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -112,7 +112,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -126,7 +126,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -140,7 +140,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -154,7 +154,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -168,7 +168,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -182,13 +182,13 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SET-BR${NC}"
 sleep 4
-wget https://${geovpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null 2>&1
+wget https://${geovpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SET-BR successfully installed..."
@@ -196,7 +196,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
@@ -210,7 +210,7 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${GREEN}Setting UP${NC} ]"
+echo -e "[ ${GREEN}SETTING UP${NC} ]"
 sleep 3
 echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
