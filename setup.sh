@@ -70,9 +70,9 @@ mkdir /var/lib/geovpnstore;
 echo "IP=" >> /var/lib/geovpnstore/ipvps.conf
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install CLOUDFLARE${NC}"
 sleep 4
@@ -84,13 +84,13 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SSH OVPN${NC}"
 sleep 4
-wget https://${geovpn}/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null 2>&1
+wget https://${geovpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SSH OVPN successfully installed..."
@@ -98,9 +98,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SSTP${NC}"
 sleep 4
@@ -112,9 +112,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SHADOWSOCKSR${NC}"
 sleep 4
@@ -126,9 +126,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SHADOWSOCKS${NC}"
 sleep 4
@@ -140,9 +140,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install WIREGUARD${NC}"
 sleep 4
@@ -154,9 +154,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install XRAY${NC}"
 sleep 4
@@ -168,9 +168,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install L2TP VPN${NC}"
 sleep 4
@@ -182,9 +182,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SET-BR${NC}"
 sleep 4
@@ -196,9 +196,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install WEBSOCKET CDN${NC}"
 sleep 4
@@ -210,9 +210,9 @@ sleep 3
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 3
-echo -e "[ ${RED}Setting UP${NC} ]"
+echo -e "[ ${GREEN}Setting UP${NC} ]"
 sleep 3
-echo -e "[ ${ORANGE}Progress${NC} ]"
+echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install OHP${NC}"
 sleep 4
@@ -305,7 +305,7 @@ echo "   - Telegram                : T.me/sampiiiiu"  | tee -a log-install.txt
 echo "   - Instagram               : @geo_gabuter"  | tee -a log-install.txt
 echo "   - Whatsapp                : 082339191527"  | tee -a log-install.txt
 echo "   - Facebook                : Ardiansyah" | tee -a log-install.txt
-echo "=================-Script Created By GeoVPN Project-=================" | tee -a log-install.txt
+echo "============-Script Created By GeoVPN Project-============" | tee -a log-install.txt
 echo ""
 echo " Reboot 5 Sec"
 sleep 5
