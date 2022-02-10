@@ -188,7 +188,7 @@ echo -e "[ ${CYAN}PROGRESS${NC} ]"
 sleep 3
 echo -e "[ ${GREEN}PROSES${NC} ] ${PURPLE}Install SET-BR${NC}"
 sleep 4
-wget https://${geovpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh > /dev/null 2>&1
+wget https://${geovpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "SET-BR successfully installed..."
