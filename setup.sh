@@ -305,7 +305,7 @@ echo "   - Telegram                : T.me/sampiiiiu"  | tee -a log-install.txt
 echo "   - Instagram               : @geo_gabuter"  | tee -a log-install.txt
 echo "   - Whatsapp                : 082339191527"  | tee -a log-install.txt
 echo "   - Facebook                : Ardiansyah" | tee -a log-install.txt
-echo "============-Script Created By GeoVPN Project-============" | tee -a log-install.txt
+echo "=================-Script Created By GeoVPN Project-=================" | tee -a log-install.txt
 echo ""
 echo " Reboot 5 Sec"
 sleep 5
