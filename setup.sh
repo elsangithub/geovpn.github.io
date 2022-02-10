@@ -261,7 +261,7 @@ echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
-echo "   - Stunnel5                : 443, 222, 777"  | tee -a log-install.txt
+echo "   - Stunnel5                : 443, 445, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 443, 109, 143"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
@@ -276,10 +276,10 @@ echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
 echo "   - XRAYS Vmess TLS         : 8443"  | tee -a log-install.txt
 echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Vless TLS         : 2083"  | tee -a log-install.txt
-echo "   - XRAYS Vless None TLS    : 8880"  | tee -a log-install.txt
+echo "   - XRAYS Vless None TLS    : 2095"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2087"  | tee -a log-install.txt
 echo "   - Websocket SSL           : 443, 2096"  | tee -a log-install.txt
-echo "   - Websocket Drop          : 2052, 2095"  | tee -a log-install.txt
+echo "   - Websocket non SSL       : 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
 echo "   - OHP                     : 8181, 8282, 8383"  | tee -a log-install.txt
 echo "   - Tr Go                   : 2053"  | tee -a log-install.txt
