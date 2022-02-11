@@ -1,6 +1,5 @@
 #!/bin/bash
 # IP Validation
-# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -375,18 +374,6 @@ else
    swsopen="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
-# RAM USAGE
-total_r2am=` grep "MemAvailable: " /proc/meminfo | awk '{ print $2}'`
-MEMORY=$(($total_r2am/1024))
-
-# DOWNLOAD
-download=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev  | awk '{print $2}' | paste -sd+ - | bc`
-downloadsize=$(($download/1073741824))
-
-# UPLOAD
-upload=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev | awk '{print $10}' | paste -sd+ - | bc`
-uploadsize=$(($upload/1073741824))
-
 # TOTAL RAM
 total_ram=` grep "MemTotal: " /proc/meminfo | awk '{ print $2}'`
 totalram=$(($total_ram/1024))
@@ -399,13 +386,6 @@ tipeprosesor="$(awk -F ': | @' '/model name|Processor|^cpu model|chip type|^cpu 
                         printf $2;
                         exit
                         }' /proc/cpuinfo)"
-
-# SHELL VERSION
-shellversion=""
-shellversion=Bash
-shellversion+=" Version" 
-shellversion+=" ${BASH_VERSION/-*}" 
-versibash=$shellversion
 
 # GETTING CPU INFORMATION
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
@@ -466,7 +446,7 @@ echo -e "XRAYS Vless None TLS    : $status_nontls_vless"
 echo -e "Shadowsocks-R           : $status_ssr"
 echo -e "Shadowsocks-OBFS HTTPS  : $status_sst"
 echo -e "Shadowsocks-OBFS HTTP   : $status_ssh"
-echo -e "Trojan                  : $status_virus_trojan"
+echo -e "XRAYS Trojan            : $status_virus_trojan"
 echo -e "Trojan GO               : $status_trgo"
 echo -e "Wireguard               : $status_wg"
 echo -e "Websocket TLS           : $swstls"
