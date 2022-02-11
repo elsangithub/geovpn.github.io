@@ -123,7 +123,7 @@ sleep 1
 wget https://${geovpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
-yellow "SHADOWSOCKS Successfully Installed..."
+yellow "SHADOWSOCKS-OBFS Successfully Installed..."
 sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
@@ -207,7 +207,7 @@ sleep 1
 wget https://${geovpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh > /dev/null 2>&1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
-yellow "OHP Successfully Installed..."
+yellow "Open HTTP Puncher Successfully Installed..."
 sleep 1
 clear
 rm -f /root/ssh-vpn.sh
