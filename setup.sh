@@ -58,10 +58,13 @@ mkdir /var/lib/geovpnstore;
 echo "IP=" >> /var/lib/geovpnstore/ipvps.conf
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation CLOUDFLARE${NC}"
 sleep 1
 wget https://${geovpn}/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null 2>&1
@@ -72,10 +75,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation SSH OVPN${NC}"
 sleep 1
 wget https://${geovpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh > /dev/null 2>&1
@@ -86,10 +92,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation SSTP${NC}"
 sleep 1
 wget https://${geovpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh > /dev/null 2>&1
@@ -100,10 +109,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation SHADOWSOCKSR${NC}"
 sleep 1
 wget https://${geovpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh > /dev/null 2>&1
@@ -114,10 +126,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation SHADOWSOCKS${NC}"
 sleep 1
 wget https://${geovpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh > /dev/null 2>&1
@@ -128,10 +143,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation WIREGUARD${NC}"
 sleep 1
 wget https://${geovpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh > /dev/null 2>&1
@@ -142,10 +160,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation XRAY${NC}"
 sleep 1
 wget https://${geovpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh > /dev/null 2>&1
@@ -156,10 +177,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation L2TP VPN${NC}"
 sleep 1
 wget https://${geovpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh > /dev/null 2>&1
@@ -170,10 +194,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation SET-BR${NC}"
 sleep 1
 wget https://${geovpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null 2>&1
@@ -184,10 +211,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
-echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
 sleep 1
-echo -e "[ ${CYAN}P R O G R E S S I O N ${NC} ]"
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation WEBSOCKET CDN${NC}"
 sleep 1
 wget https://${geovpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh > /dev/null 2>&1
