@@ -110,7 +110,7 @@ portsshnontls
 9)
 portsshws
 ;;
-x)
+0 | 00)
 menu-tools
 ;;
 *)
