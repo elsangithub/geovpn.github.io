@@ -79,60 +79,41 @@ echo -e "
 echo ""
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
-echo -ne "Select menu : "; read x
-
-case "$x" in 
-   1 | 01)
-   clear
-   portovpn
-   break
-   ;;
-   2 | 02)
-   clear
-   portwg
-   break
-   ;;
-   3 | 03)
-   clear
-   portv2ray
-   break
-   ;;
-   4 | 04)
-   clear
-   portvless
-   break
-   ;;
-   5 | 05)
-   clear
-   porttrojan
-   break
-   ;;
-   6 | 06)
-   clear
-   portsquid
-   break
-   ;;
-   7 | 07)
-   clear
-   portsstp
-   break
-   ;;
-   8 | 08)
-   clear
-   portsshnontls
-   break
-   ;;
-   9 | 09)
-   clear
-   portsshws
-   break
-   ;;
-   0 | 00)
-   clear
-   menu
-   ;;
-   *)
-   changeport
+echo -e ""
+read -p "Select From Options [ 1-9 ] : " port
+echo -e ""
+case $port in
+1)
+portovpn
+;;
+2)
+portwg
+;;
+3)
+portv2ray
+;;
+4)
+portvless
+;;
+5)
+porttrojan
+;;
+6)
+portsquid
+;;
+7)
+portsstp
+;;
+8)
+portsshnontls
+;;
+9)
+portsshws
+;;
+x)
+menu-tools
+;;
+*)
+changeport
+;;
 esac
-
-#fim
