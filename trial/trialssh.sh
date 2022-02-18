@@ -14,7 +14,6 @@ off='\x1b[m'
 # ==========================================
 # Getting
 MYIP=$(curl -sS ipinfo.io/ip)
-echo "Checking VPS"
 # Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
