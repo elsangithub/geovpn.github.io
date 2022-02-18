@@ -79,13 +79,13 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                 ⇱ TOOLS MENU ⇲                   \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "
-[\033[0;32m01\033[0m] • Change Port All Account
+[\033[0;32m01\033[0m] • Change Port Of Some Service
 [\033[0;32m02\033[0m] • Webmin Menu
 [\033[0;32m03\033[0m] • Limit Bandwith Speed Server
 [\033[0;32m04\033[0m] • Check Usage of VPS Ram
 [\033[0;32m05\033[0m] • Reboot VPS
 [\033[0;32m06\033[0m] • Speedtest VPS
-[\033[0;32m07\033[0m] • Information Display Syste
+[\033[0;32m07\033[0m] • Information Display System
 [\033[0;32m08\033[0m] • Info Script Auto Install
 [\033[0;32m09\033[0m] • Clear Log
 [\033[0;32m10\033[0m] • Auto Reboot 
