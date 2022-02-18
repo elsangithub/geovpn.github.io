@@ -70,18 +70,17 @@ echo -e "
 [\033[0;32m03\033[0m] • Change Port Vmess
 [\033[0;32m04\033[0m] • Change Port Vless
 [\033[0;32m05\033[0m] • Change Port Trojan
-[\033[0;32m06\033[0m] • Change Port Trojan-GO
-[\033[0;32m07\033[0m] • Change Port Squid
-[\033[0;32m08\033[0m] • Change Port SSTP
-[\033[0;32m09\033[0m] • Change Port SSH WS non TLS
-[\033[0;32m10\033[0m] • Change Port SSH WS TLS
+[\033[0;32m06\033[0m] • Change Port Squid
+[\033[0;32m07\033[0m] • Change Port SSTP
+[\033[0;32m08\033[0m] • Change Port SSH WS non TLS
+[\033[0;32m09\033[0m] • Change Port SSH WS TLS
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 echo -e ""
-read -p "Select From Options [ 1-9 ] : " port
+read -p "Select menu : " port
 echo -e ""
 case $port in
 1)
@@ -100,18 +99,15 @@ portvless
 porttrojan
 ;;
 6)
-porttrgo
-;;
-7)
 portsquid
 ;;
-8)
+7)
 portsstp
 ;;
-9)
+8)
 portsshnontls
 ;;
-10)
+9)
 portsshws
 ;;
 0 | 00)
