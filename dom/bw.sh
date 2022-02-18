@@ -15,10 +15,10 @@ BURIQ () {
     if [[ "$exp2" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
+    r m-f /etc/.$user.ini > /dev/null 2>&1
     fi
     done
-    rm -f /root/tmp
+    r m-f /root/tmp
 }
 
 MYIP=$(curl -sS ipinfo.io/ip)
@@ -76,7 +76,7 @@ while true $x != "ok"
 do
 
  echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
- echo -e "\E[44;1;39m                     ⇱ BANWIDTH MENU ⇲                        \E[0m"
+ echo -e "\E[44;1;39 m                    ⇱ BANWIDTH MENU ⇲                        \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "
 [\033[0;32m01\033[0m] • Lihat Total Bandwith Tersisa
@@ -100,14 +100,14 @@ case "$x" in
    1 | 01)
    clear
 
-echo -e "\033[0;34m ⇱ TOTAL BANDWITH SERVER TERSISA"
+echo -e "\033[0;34m⇱ TOTAL BANDWITH SERVER TERSISA"
 
 echo -e ""
 
 vnstat
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -115,14 +115,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ PENGGUNAAN BANDWITH SETIAP 5 MENIT ⇲ \033[0m"
+echo -e "\033[0;34m⇱ PENGGUNAAN BANDWITH SETIAP 5 MENIT ⇲ \033[0m"
 
 echo -e ""
 
 vnstat -5
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -130,14 +130,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ PENGGUNAAN BANDWITH SETIAP JAM"
+echo -e "\033[0;34m⇱ PENGGUNAAN BANDWITH SETIAP JAM"
 
 echo -e ""
 
 vnstat -h
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -145,14 +145,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ PENGGUNAAN BANDWITH SETIAP HARI ⇲ \033[0m"
+echo -e "\033[0;34m⇱ PENGGUNAAN BANDWITH SETIAP HARI ⇲ \033[0m"
 
 echo -e ""
 
 vnstat -d
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -160,14 +160,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ PENGGUNAAN BANDWITH SETIAP BULAN ⇲ \033[0m"
+echo -e "\033[0;34m⇱ PENGGUNAAN BANDWITH SETIAP BULAN ⇲ \033[0m"
 
 echo -e ""
 
 vnstat -m
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -175,14 +175,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ PENGGUNAAN BANDWITH SETIAP TAHUN ⇲ \033[0m"
+echo -e "\033[0;34m⇱ PENGGUNAAN BANDWITH SETIAP TAHUN ⇲ \033[0m"
 
 echo -e ""
 
 vnstat -y
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -190,14 +190,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ PENGGUNAAN BANDWITH TERTINGGI ⇲ \033[0m"
+echo -e "\033[0;34m⇱ PENGGUNAAN BANDWITH TERTINGGI ⇲ \033[0m"
 
 echo -e ""
 
 vnstat -t
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -205,14 +205,14 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ GRAFIK BANDWITH TERPAKAI SETIAP JAM ⇲ \033[0m"
+echo -e "\033[0;34m⇱ GRAFIK BANDWITH TERPAKAI SETIAP JA m⇲ \033[0m"
 
 echo -e ""
 
 vnstat -hg
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -220,7 +220,7 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ LIVE PENGGUNAAN BANDWITH SAAT INI ⇲ \033[0m"
+echo -e "\033[0;34m⇱ LIVE PENGGUNAAN BANDWITH SAAT INI ⇲ \033[0m"
 
 echo -e " ${white}CTRL+C Untuk Keluar!${off}"
 echo -e ""
@@ -228,7 +228,7 @@ echo -e ""
 vnstat -l
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
@@ -236,20 +236,20 @@ echo -e "$baris2"
    clear
 
 
-echo -e "\033[0;34m ⇱ LIVE TRAFIK PENGGUNAAN BANDWITH ⇲ \033[0m"
+echo -e "\033[0;34m⇱ LIVE TRAFIK PENGGUNAAN BANDWITH ⇲ \033[0m"
 
 echo -e ""
 
 vnstat -tr
 
 echo -e ""
-echo -e "\033[0;34m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$baris2"
    break
    ;;
    0 | 00)
    clear
-   menu-vpn
+   menu-tools
    break
    ;;
    *)
