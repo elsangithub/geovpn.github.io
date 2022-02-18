@@ -158,5 +158,6 @@ wget -O /usr/bin/addssr https://${geovpn}/addssr.sh && chmod +x /usr/bin/addssr
 wget -O /usr/bin/delssr https://${geovpn}/delssr.sh && chmod +x /usr/bin/delssr
 wget -O /usr/bin/renewssr https://${geovpn}/renewssr.sh && chmod +x /usr/bin/renewssr
 wget -O /usr/bin/bbr https://${geovpn}/bbr.sh && chmod +x /usr/bin/bbr
+wget -O /usr/bin/porttrgo https://${geovpn}/porttrgo.sh && chmod +x /usr/bin/porttrgo
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
