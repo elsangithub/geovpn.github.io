@@ -102,14 +102,14 @@ menu_sts
 chck_stunnel
 echo -e "
 [\033[0;32m01\033[0m] • Create SSH & OpenVPN Account
-[\033[0;32m02\033[0m] • Renew SSH & OpenVPN Account
+[\033[0;32m02\033[0m] • Extending SSH & OpenVPN Account Active Life
 [\033[0;32m03\033[0m] • Delete SSH & OpenVPN Account
 [\033[0;32m04\033[0m] • Check User Login SSH & OpenVPN
 [\033[0;32m05\033[0m] • List Member SSH & OpenVPN
 [\033[0;32m06\033[0m] • Delete User Expired SSH & OpenVPN
 [\033[0;32m07\033[0m] • Set up Autokill SSH
 [\033[0;32m08\033[0m] • Cek Users Who Do Multi Login SSH
-[\033[0;32m09\033[0m] • Restart Services
+[\033[0;32m09\033[0m] • Restart All Services
 
 [00] • Kembali Ke Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
