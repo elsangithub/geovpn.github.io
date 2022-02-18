@@ -70,10 +70,11 @@ echo -e "
 [\033[0;32m03\033[0m] • Change Port Vmess
 [\033[0;32m04\033[0m] • Change Port Vless
 [\033[0;32m05\033[0m] • Change Port Trojan
-[\033[0;32m06\033[0m] • Change Port Squid
-[\033[0;32m07\033[0m] • Change Port SSTP
-[\033[0;32m08\033[0m] • Change Port SSH WS non TLS
-[\033[0;32m09\033[0m] • Change Port SSH WS TLS
+[\033[0;32m06\033[0m] • Change Port Trojan-GO
+[\033[0;32m07\033[0m] • Change Port Squid
+[\033[0;32m08\033[0m] • Change Port SSTP
+[\033[0;32m09\033[0m] • Change Port SSH WS non TLS
+[\033[0;32m10\033[0m] • Change Port SSH WS TLS
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
@@ -99,15 +100,18 @@ portvless
 porttrojan
 ;;
 6)
-portsquid
+porttrgo
 ;;
 7)
-portsstp
+portsquid
 ;;
 8)
-portsshnontls
+portsstp
 ;;
 9)
+portsshnontls
+;;
+10)
 portsshws
 ;;
 0 | 00)
