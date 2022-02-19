@@ -1,4 +1,21 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -75,20 +92,20 @@ chck_pid(){
 
 while true $x != "ok"
 do
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                ⇱ WIREGUARD MENU ⇲                \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                      ⇱ WIREGUARD MENU ⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 chck_pid
 echo -e "
-[\033[0;32m01\033[0m] • Create Wireguard Account
-[\033[0;32m02\033[0m] • Deleting Wireguard Account
-[\033[0;32m03\033[0m] • Cek User Login Wireguard
-[\033[0;32m04\033[0m] • Extending Wireguard Account Active Life
-[\033[0;32m05\033[0m] • Check Wireguard User Interface
+[${GREEN}01${NC}] ${color1} •${color3}$bd Create Wireguard Account
+[${GREEN}02${NC}] ${color1} •${color3}$bd Deleting Wireguard Account
+[${GREEN}03${NC}] ${color1} •${color3}$bd Cek User Login Wireguard
+[${GREEN}04${NC}] ${color1} •${color3}$bd Extending Wireguard Account Active Life
+[${GREEN}05${NC}] ${color1} •${color3}$bd Check Wireguard User Interface
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo -ne "Select menu : "; read x
 
