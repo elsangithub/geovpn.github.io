@@ -1,4 +1,21 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -786,36 +803,36 @@ fi
 x="ok"
 while true $x != "ok"
 do
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m               ⇱ SHADOWSOCKS MENU ⇲               \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                    ⇱ SHADOWSOCKS MENU ⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 menu_sts
 echo -e "
-[\033[0;32m01\033[0m] • Create SS-Obfs Account
-[\033[0;32m02\033[0m] • Deleting SS-Obfs Account
-[\033[0;32m03\033[0m] • Extending SS-Obfs Account Active Life
-[\033[0;32m04\033[0m] • Check SS-Obfs User Login
+[${GREEN}01${NC}] ${color1} •${color3}$bd Create SS-Obfs Account
+[${GREEN}02${NC}] ${color1} •${color3}$bd Deleting SS-Obfs Account
+[${GREEN}03${NC}] ${color1} •${color3}$bd Extending SS-Obfs Account Active Life
+[${GREEN}04${NC}] ${color1} •${color3}$bd Check SS-Obfs User Login
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 menu_status
 echo -e "
-[\033[0;32m05\033[0m] • Create SS-R Account
-[\033[0;32m06\033[0m] • Deleting SS-R Account
-[\033[0;32m07\033[0m] • Extending SS-R Account Active Life
+[${GREEN}05${NC}] ${color1} •${color3}$bd Create SS-R Account
+[${GREEN}06${NC}] ${color1} •${color3}$bd Deleting SS-R Account
+[${GREEN}07${NC}] ${color1} •${color3}$bd Extending SS-R Account Active Life
 
-[\033[0;32m08\033[0m] • Check the account information SSR
-[\033[0;32m09\033[0m] • Display the connection information SSR
-[\033[0;32m10\033[0m] • Change Password User SSR
-[\033[0;32m11\033[0m] • Manually Modify User Configuration SSR
-[\033[0;32m12\033[0m] • Clear The Used Traffic SSR
-[\033[0;32m13\033[0m] • Start ShadowsocksR 
-[\033[0;32m14\033[0m] • Stop ShadowsocksR
-[\033[0;32m15\033[0m] • Restart ShadowsocksR
-[\033[0;32m16\033[0m] • Cek ShadowsocksR log
+[${GREEN}08${NC}] ${color1} •${color3}$bd Check the account information SSR
+[${GREEN}09${NC}] ${color1} •${color3}$bd Display the connection information SSR
+[${GREEN}10${NC}] ${color1} •${color3}$bd Change Password User SSR
+[${GREEN}11${NC}] ${color1} •${color3}$bd Manually Modify User Configuration SSR
+[${GREEN}12${NC}] ${color1} •${color3}$bd Clear The Used Traffic SSR
+[${GREEN}12${NC}] ${color1} •${color3}$bd Start ShadowsocksR 
+[${GREEN}14${NC}] ${color1} •${color3}$bd Stop ShadowsocksR
+[${GREEN}15${NC}] ${color1} •${color3}$bd Restart ShadowsocksR
+[${GREEN}16${NC}] ${color1} •${color3}$bd Cek ShadowsocksR log
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo -ne "Select menu : "; read x
 
@@ -912,3 +929,4 @@ case "$x" in
 esac
 done
 #fim
+

@@ -1,4 +1,21 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -64,27 +81,27 @@ clear
 
 
 x="ok"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m             ⇱ TRIAL MENU GENERATOR ⇲             \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                    ⇱ TRIAL MENU GENERATOR ⇲                  \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\033[1;37mNB: Trial account will not logged into create log user\033[0m
 \033[1;32mTrial-Generator\033[0m :
 
-[\033[0;32m01\033[0m] • Generate Trial SSH & OpenVPN
-[\033[0;32m02\033[0m] • Generate Trial Wireguard
-[\033[0;32m03\033[0m] • Generate Trial L2TP
-[\033[0;32m04\033[0m] • Generate Trial PPTP
-[\033[0;32m05\033[0m] • Generate Trial SSTP
-[\033[0;32m06\033[0m] • Generate Trial Shadowsocks-R
-[\033[0;32m07\033[0m] • Generate Trial Shadowsocks
-[\033[0;32m08\033[0m] • Generate Trial Vmess
-[\033[0;32m09\033[0m] • Generate Trial VLESS
-[\033[0;32m10\033[0m] • Generate Trial Trojan-GFW
-[\033[0;32m11\033[0m] • Generate Trial Trojan-GO
+[${GREEN}01${NC}] ${color1} •${color3}$bd Generate Trial SSH & OpenVPN
+[${GREEN}02${NC}] ${color1} •${color3}$bd Generate Trial Wireguard
+[${GREEN}03${NC}] ${color1} •${color3}$bd Generate Trial L2TP
+[${GREEN}04${NC}] ${color1} •${color3}$bd Generate Trial PPTP
+[${GREEN}05${NC}] ${color1} •${color3}$bd Generate Trial SSTP
+[${GREEN}06${NC}] ${color1} •${color3}$bd Generate Trial Shadowsocks-R
+[${GREEN}07${NC}] ${color1} •${color3}$bd Generate Trial Shadowsocks
+[${GREEN}08${NC}] ${color1} •${color3}$bd Generate Trial Vmess
+[${GREEN}09${NC}] ${color1} •${color3}$bd Generate Trial VLESS
+[${GREEN}10${NC}] ${color1} •${color3}$bd Generate Trial Trojan-GFW
+[${GREEN}11${NC}] ${color1} •${color3}$bd Generate Trial Trojan-GO
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo -ne "Select menu : "; read x
 
@@ -142,3 +159,4 @@ case "$x" in
 esac
 
 #fim
+

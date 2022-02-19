@@ -1,4 +1,21 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -64,9 +81,9 @@ clear
 
 
 x="ok"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                  ⇱ XRAY MENU ⇲                   \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                         ⇱ XRAY MENU ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 rekk='XRAY'
 kjj='xray'
@@ -76,7 +93,7 @@ echo -e "
 [\033[0;32m03\033[0m] • Extending $rekk Vmess Account Active Life
 [\033[0;32m04\033[0m] • Check User Login $rekk
 
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
+${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}
 
 [\033[0;32m05\033[0m] • Create $rekk Vless Websocket Account
 [\033[0;32m06\033[0m] • Deleting $rekk Vless Websocket Account
@@ -85,7 +102,7 @@ echo -e "
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo -ne "Select menu : "; read x
 
@@ -139,3 +156,4 @@ case "$x" in
 esac
 
 #fim
+

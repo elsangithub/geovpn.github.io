@@ -1,4 +1,21 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -75,30 +92,30 @@ chck_pid(){
 while true $x != "ok"
 do
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                 ⇱ TOOLS MENU ⇲                   \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                        ⇱ TOOLS MENU ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[\033[0;32m01\033[0m] • Change Port Of Some Service
-[\033[0;32m02\033[0m] • Webmin Menu
-[\033[0;32m03\033[0m] • Limit Bandwith Speed Server
-[\033[0;32m04\033[0m] • Check Usage of VPS Ram
-[\033[0;32m05\033[0m] • Reboot VPS
-[\033[0;32m06\033[0m] • Speedtest VPS
-[\033[0;32m07\033[0m] • Information Display System
-[\033[0;32m08\033[0m] • Info Script Auto Install
-[\033[0;32m09\033[0m] • Clear Log
-[\033[0;32m10\033[0m] • Auto Reboot 
-[\033[0;32m11\033[0m] • Service Status
-[\033[0;32m12\033[0m] • Cek Bandwidth VPS
-[\033[0;32m13\033[0m] • Install BBR
-[\033[0;32m14\033[0m] • Change Banner SSH
-[\033[0;32m15\033[0m] • Ganti Password VPS
-[\033[0;32m16\033[0m] • Domain Section
+[${GREEN}01${NC}] ${color1} •${color3}$bd Change Port All Account
+[${GREEN}02${NC}] ${color1} •${color3}$bd Webmin Menu
+[${GREEN}03${NC}] ${color1} •${color3}$bd Limit Bandwith Speed Server
+[${GREEN}04${NC}] ${color1} •${color3}$bd Check Usage of VPS Ram
+[${GREEN}05${NC}] ${color1} •${color3}$bd Reboot VPS
+[${GREEN}06${NC}] ${color1} •${color3}$bd Speedtest VPS
+[${GREEN}07${NC}] ${color1} •${color3}$bd Information Display Syste
+[${GREEN}08${NC}] ${color1} •${color3}$bd Info Script Auto Install
+[${GREEN}09${NC}] ${color1} •${color3}$bd Clear Log
+[${GREEN}10${NC}] ${color1} •${color3}$bd Auto Reboot 
+[${GREEN}11${NC}] ${color1} •${color3}$bd Service Status
+[${GREEN}12${NC}] ${color1} •${color3}$bd Cek Bandwidth VPS
+[${GREEN}13${NC}] ${color1} •${color3}$bd Install BBR
+[${GREEN}14${NC}] ${color1} •${color3}$bd Change Banner SSH
+[${GREEN}15${NC}] ${color1} •${color3}$bd Ganti Password VPS
+[${GREEN}16${NC}] ${color1} •${color3}$bd Domain Section
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo -ne "Select menu : "; read x
 
@@ -175,7 +192,7 @@ case "$x" in
    ;;
    15 | 15)
    clear
-   wget https://raw.githubusercontent.com/Sangarya/root/main/root.sh && chmod +x root.sh && ./root.sh
+   sudo passwd && sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config && sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config && sudo systemctl restart sshd
    break
    ;;
    16 | 16)

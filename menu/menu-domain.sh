@@ -1,4 +1,21 @@
 #!/bin/bash
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -75,20 +92,20 @@ chck_pid(){
 while true $x != "ok"
 do
 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m                 ⇱ DOMAIN MENU ⇲                  \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                       ⇱ DOMAIN MENU ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[\033[0;32m01\033[0m] • Add Subdomain Host For VPS
-[\033[0;32m02\033[0m] • Add ID Cloudflare
-[\033[0;32m03\033[0m] • Cloudflare Add-Ons
-[\033[0;32m04\033[0m] • Pointing BUG
-[\033[0;32m05\033[0m] • Renew Certificate V2RAY
-[\033[0;32m06\033[0m] • Domain Default
+[${GREEN}01${NC}] ${color1} •${color3}$bd Add Subdomain Host For VPS
+[${GREEN}02${NC}] ${color1} •${color3}$bd Add ID Cloudflare
+[${GREEN}03${NC}] ${color1} •${color3}$bd Cloudflare Add-Ons
+[${GREEN}04${NC}] ${color1} •${color3}$bd Pointing BUG
+[${GREEN}05${NC}] ${color1} •${color3}$bd Renew Certificate V2RAY
+[${GREEN}06${NC}] ${color1} •${color3}$bd Domain Default
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo -ne "Select menu : "; read x
 
