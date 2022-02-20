@@ -102,25 +102,25 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${color1}•${color3}$bd IP VPS            ${color1}:${color3}$bd $MYIP"
-echo -e "${color1}•${color3}$bd ISP Name          ${color1}:${color3}$bd $ISP"
-echo -e "${color1}•${color3}$bd Client Name       ${color1}:${color3}$bd $Name"
-echo -e "${color1}•${color3}$bd Expiry script     ${color1}:${color3}$bd $Exp"
-echo -e "${color1}•${color3}$bd Version           ${color1}:${color3}$bd Latest Version"
+echo -e " ${color1}🟢${color3}$bd IP VPS            ${color1}•${color3}$bd $MYIP"
+echo -e " ${color1}🟢${color3}$bd ISP Name          ${color1}•${color3}$bd $ISP"
+echo -e " ${color1}🟢${color3}$bd Client Name       ${color1}•${color3}$bd $Name"
+echo -e " ${color1}🟢${color3}$bd Expiry script     ${color1}•${color3}$bd $Exp"
+echo -e " ${color1}🟢${color3}$bd Version           ${color1}•${color3}$bd Latest Version"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ MENU  OPTIONS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[${green}01${NC}]${color1}•${color3}$bd SSH & OpenVPN Section (${color2}menu-ssh${color3})
-[${green}02${NC}]${color1}•${color3}$bd SSTP - L2TP - PPTP - Wireguard Section (${color2}menu-vpn${color3})
-[${green}03${NC}]${color1}•${color3}$bd Shadowsocks & ShadowsocksR Section (${color2}menu-shadowsocks${color3})
-[${green}04${NC}]${color1}•${color3}$bd V2ray Vmess & Vless Section (${color2}menu-v2ray${color3})
-[${green}05${NC}]${color1}•${color3}$bd Trojan & TrojanGO Section (${color2}menu-trojan${color3})
-[${green}06${NC}]${color1}•${color3}$bd Backup Section (${color2}menu-backup${color3})
-[${green}07${NC}]${color1}•${color3}$bd Trial Account Section (${color2}menu-trial${color3})
-[${green}08${NC}]${color1}•${color3}$bd System Tools Section (${color2}menu-tools${color3})
+[${green}01${NC}]${color1} •${color3}$bd SSH & OpenVPN Section (${color2}menu-ssh${color3})
+[${green}02${NC}]${color1} •${color3}$bd SSTP - L2TP - PPTP - Wireguard Section (${color2}menu-vpn${color3})
+[${green}03${NC}]${color1} •${color3}$bd Shadowsocks & ShadowsocksR Section (${color2}menu-shadowsocks${color3})
+[${green}04${NC}]${color1} •${color3}$bd V2ray Vmess & Vless Section (${color2}menu-v2ray${color3})
+[${green}05${NC}]${color1} •${color3}$bd Trojan & TrojanGO Section (${color2}menu-trojan${color3})
+[${green}06${NC}]${color1} •${color3}$bd Backup Section (${color2}menu-backup${color3})
+[${green}07${NC}]${color1} •${color3}$bd Trial Account Section (${color2}menu-trial${color3})
+[${green}08${NC}]${color1} •${color3}$bd System Tools Section (${color2}menu-tools${color3})
 
-[${green}00${NC}]${color1}•${color3}$bd Back to exit Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
+[${green}00${NC}]${color1} •${color3}$bd Back to exit Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ GEOVPN PROJECT ⇲                       \E[0m"
