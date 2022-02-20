@@ -41,8 +41,6 @@ geovpnnnnnnnnn="geovpn.github.io/websocket"
 # Link Hosting Kalian Untuk Ohp
 geovpnnnnnnnnnn="geovpn.github.io/ohp"
 #######################################################
-apt-get update -y > /dev/null 2>&1
-apt-get upgrade -y > /dev/null 2>&1
 #install figlet & lolcat
 apt-get install figlet -y > /dev/null 2>&1
 apt-get install ruby -y > /dev/null 2>&1
