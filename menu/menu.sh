@@ -98,15 +98,12 @@ chck_b(){
     fi
 }
 echo -e ""
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e " ${color1}🟢${color3}$bd IP VPS            ${color1}•${color3}$bd $MYIP"
-echo -e " ${color1}🟢${color3}$bd ISP Name          ${color1}•${color3}$bd $ISP"
-echo -e " ${color1}🟢${color3}$bd Client Name       ${color1}•${color3}$bd $Name"
-echo -e " ${color1}🟢${color3}$bd Expiry script     ${color1}•${color3}$bd $Exp"
-echo -e " ${color1}🟢${color3}$bd Version           ${color1}•${color3}$bd Latest Version"
+echo -e " ${color1}❇️${color3}$bd IP VPS            ${color1}•${color3}$bd $MYIP"
+echo -e " ${color1}❇️${color3}$bd Client Name       ${color1}•${color3}$bd $Name"
+echo -e " ${color1}❇️${color3}$bd Expiry script     ${color1}•${color3}$bd $Exp"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ MENU  OPTIONS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
