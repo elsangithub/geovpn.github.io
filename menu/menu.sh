@@ -15,7 +15,7 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-# Getting
+clear
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -98,13 +98,42 @@ chck_b(){
     fi
 }
 echo -e ""
+#toilet --gay -f slant -t " Geo Project"
+#cat /usr/bin/bannerku | lolcat
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+IPVPS=$(curl -s ipinfo.io/ip )
+DOMAIN=$(cat /etc/xray/domain)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+#WKT=$(curl -s ipinfo.io/timezone )
+IPVPS=$(curl -s ipinfo.io/ip )
+#jam=$(date +"%T")
+#hari=$(date +"%A")
+#tnggl=$(date +"%d-%B-%Y")
+	#cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	#freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+	tram=$( free -m | awk 'NR==2 {print $2}' )
+	#swap=$( free -m | awk 'NR==4 {print $2}' )
+	#up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+ echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e " ${color1}❇️${color3}$bd IP VPS            ${color1}•${color3}$bd $MYIP"
-echo -e " ${color1}❇️${color3}$bd Client Name       ${color1}•${color3}$bd $Name"
-echo -e " ${color1}❇️${color3}$bd Expiry script     ${color1}•${color3}$bd $Exp"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e " ❇️$bd ISP Name          ${color1} •${color3}$bd $ISP"
+ echo -e " ❇️$bd City              ${color1} •${color3}$bd $CITY"
+ #echo -e " ❇️$bd CPU Model         ${color1} •${color3}$bd$cname"
+ echo -e " ❇️$bd Number Of Cores   ${color1} •${color3}$bd $cores"
+# echo -e " ❇️$bd CPU Frequency     ${color1} •${color3}$bd$freq MHz"
+ echo -e " ❇️$bd Total RAM         ${color1} •${color3}$bd $tram MB"
+ #echo -e " ❇️$bd Waktu             ${color1} •${color3}$bd $jam"
+ #echo -e " ❇️$bd Hari              ${color1} •${color3}$bd $hari"
+# echo -e " ❇️$bd Tanggal           ${color1} •${color3}$bd $tnggl"
+ echo -e " ❇️$bd IP VPS            ${color1} •${color3}$bd $IPVPS"
+ echo -e " ❇️$bd Domain            ${color1} •${color3}$bd $DOMAIN"
+ echo -e " ❇️$bd Client Name       ${color1} •${color3}$bd $Name"
+ echo -e " ❇️$bd Expiry script     ${color1} •${color3}$bd $Exp"
+ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ MENU  OPTIONS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
@@ -122,8 +151,8 @@ echo ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ GEOVPN PROJECT ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo ""
- read -p " Select menu :  " menu
+echo -e  ""
+ read -p "  Select menu :  " menu
 echo -e   ""
 case $menu in
 1)

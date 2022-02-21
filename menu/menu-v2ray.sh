@@ -103,57 +103,38 @@ ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━�
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo ""
-echo -ne "Select menu : "; read x
-
-case "$x" in 
-   1 | 01)
-   clear
-   addv2ray
-   break
-   ;;
-   2 | 02)
-   clear
-   delv2ray 
-   break
-   ;;
-   3 | 03)
-   clear
-   renewv2ray
-   break
-   ;;
-   4 | 04)
-   clear
-   cekv2ray
-   break
-   ;;
-   5 | 05)
-   clear
-   addvless
-   break
-   ;;
-   6 | 06)
-   clear
-   delvless
-   break
-   ;;
-   7 | 07)
-   clear
-   renewvless
-   break
-   ;;
-   8 | 08)
-   clear
-   cekvless
-   break
-   ;;
-   0 | 00)
-   clear
-   menu
-   ;;
-   *)
-   menu-v2ray
+echo -e""
+read -p " Select menu :  "  v2ray
+echo -e ""
+case $v2ray in
+1)
+addv2ray
+;;
+2)
+delv2ray
+;;
+3)
+renewv2ray
+;;
+4)
+cekv2ray
+;;
+5)
+addvless
+;;
+6)
+delvless
+;;
+7)
+renewvless
+;;
+8)
+cekvless
+;;
+0 | 00)
+menu
+;;
+*)
+menu-v2ray
+;;
 esac
-
-#fim
-
