@@ -299,7 +299,9 @@ echo "   - XRAYS Trojan            : 2087"  | tee -a log-install.txt
 echo "   - Websocket TLS           : 443"   | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
-echo "   - OHP                     : 8181, 8282, 8383"  | tee -a log-install.txt
+echo "   - OHP_SSH                 : 8181"  | tee -a log-install.txt
+echo "   - OHP_Dropbear            : 8282"  | tee -a log-install.txt
+echo "   - OHP_OpenVPN             : 8383"  | tee -a log-install.txt
 echo "   - Tr Go                   : 2053"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
