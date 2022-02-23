@@ -149,7 +149,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 8443,
+      "port": 2083,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -192,7 +192,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 80,
+      "port": 2095,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -227,7 +227,7 @@ cat > /etc/xray/config.json << END
       }
     },
     {
-      "port": 2083,
+      "port": 2087,
       "protocol": "trojan",
       "settings": {
         "clients": [
@@ -395,7 +395,7 @@ cat > /etc/trojan-go/config.json << END
 {
   "run_type": "server",
   "local_addr": "0.0.0.0",
-  "local_port": 2087,
+  "local_port": 2053,
   "remote_addr": "127.0.0.1",
   "remote_port": 89,
   "log_level": 1,
