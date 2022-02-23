@@ -57,13 +57,23 @@ bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 
 service squid start
-uuid=$(cat /proc/sys/kernel/random/uuid)
-# Buat Config Xray TLS
-cat > /etc/xray/v2ray-tls.json << END
+uuid1=$(cat /proc/sys/kernel/random/uuid)
+uuid2=$(cat /proc/sys/kernel/random/uuid)
+uuid3=$(cat /proc/sys/kernel/random/uuid)
+uuid4=$(cat /proc/sys/kernel/random/uuid)
+uuid5=$(cat /proc/sys/kernel/random/uuid)
+uuid6=$(cat /proc/sys/kernel/random/uuid)
+
+# // Certificate File
+path_crt="/etc/xray/xray.crt"
+path_key="/etc/xray/xray.key"
+
+# Buat Config Xray
+cat > /etc/xray/config.json << END
 {
   "log": {
-    "access": "/var/log/xray/v2ray-login.log",
-    "error": "/var/log/xray/v2ray-error.log",
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
     "loglevel": "info"
   },
   "inbounds": [
@@ -73,9 +83,9 @@ cat > /etc/xray/v2ray-tls.json << END
       "settings": {
         "clients": [
           {
-            "id": "${uuid}",
+            "id": "${uuid1}",
             "alterId": 0
-#xray-v2ray-tls
+#xray-vmess-tls
           }
         ]
       },
@@ -85,110 +95,50 @@ cat > /etc/xray/v2ray-tls.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/xray/xray.crt",
-              "keyFile": "/etc/xray/xray.key"
+              "certificateFile": "${path_crt}",
+              "keyFile": "${path_key}"
             }
           ]
         },
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "httpSettings": {},
         "wsSettings": {
-          "path": "/geo",
+          "path": "/vmess/",
           "headers": {
             "Host": ""
           }
-         },
-        "quicSettings": {},
-        "sockopt": {
-          "mark": 0,
-          "tcpFastOpen": true
-        }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      },
-      "domain": "$domain"
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "ip": [
-          "0.0.0.0/8",
-          "10.0.0.0/8",
-          "100.64.0.0/10",
-          "169.254.0.0/16",
-          "172.16.0.0/12",
-          "192.0.0.0/24",
-          "192.0.2.0/24",
-          "192.168.0.0/16",
-          "198.18.0.0/15",
-          "198.51.100.0/24",
-          "203.0.113.0/24",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ]
+        },
+        "quicSettings": {}
       }
-    ]
-  }
-}
-END
-cat > /etc/xray/v2ray-nontls.json << END
-{
-  "log": {
-    "access": "/var/log/xray/v2ray-login.log",
-    "error": "/var/log/xray/v2ray-error.log",
-    "loglevel": "info"
-  },
-  "inbounds": [
+    },
     {
       "port": 80,
       "protocol": "vmess",
       "settings": {
         "clients": [
+
           {
-            "id": "${uuid}",
+            "id": "${uuid2}",
             "alterId": 0
-#xray-v2ray-nontls
+#xray-vmess-nontls
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
+        "security": "none",
+        "tlsSettings": {},
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "httpSettings": {},
         "wsSettings": {
-          "path": "/geo",
+          "path": "/vmess/",
           "headers": {
             "Host": ""
           }
-         },
-        "quicSettings": {},
-        "sockopt": {
-          "mark": 0,
-          "tcpFastOpen": true
-        }
+        },
+        "quicSettings": {}
       },
       "sniffing": {
         "enabled": true,
@@ -196,69 +146,15 @@ cat > /etc/xray/v2ray-nontls.json << END
           "http",
           "tls"
         ]
-      },
-      "domain": "$domain"
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
+      }
     },
     {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "ip": [
-          "0.0.0.0/8",
-          "10.0.0.0/8",
-          "100.64.0.0/10",
-          "169.254.0.0/16",
-          "172.16.0.0/12",
-          "192.0.0.0/24",
-          "192.0.2.0/24",
-          "192.168.0.0/16",
-          "198.18.0.0/15",
-          "198.51.100.0/24",
-          "203.0.113.0/24",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ]
-      }
-    ]
-  }
-}
-END
-cat > /etc/xray/vless-tls.json << END
-{
-  "log": {
-    "access": "/var/log/xray/vless-login.log",
-    "error": "/var/log/xray/vless-error.log",
-    "loglevel": "info"
-  },
-  "inbounds": [
-    {
-      "port": 2083,
+      "port": 8443,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "${uuid}"
+            "id": "${uuid3}"
 #xray-vless-tls
           }
         ],
@@ -270,23 +166,23 @@ cat > /etc/xray/vless-tls.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/xray/xray.crt",
-              "keyFile": "/etc/xray/xray.key"
+              "certificateFile": "${path_crt}",
+              "keyFile": "${path_key}"
             }
           ]
         },
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "httpSettings": {},
         "wsSettings": {
-          "path": "/nur",
+          "path": "/vless/",
           "headers": {
             "Host": ""
           }
-         },
-        "quicSettings": {},
-        "sockopt": {
-          "mark": 0,
-          "tcpFastOpen": true
-        }
+        },
+        "quicSettings": {}
       },
+      "domain": "$domain",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -294,67 +190,14 @@ cat > /etc/xray/vless-tls.json << END
           "tls"
         ]
       }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
     },
     {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "ip": [
-          "0.0.0.0/8",
-          "10.0.0.0/8",
-          "100.64.0.0/10",
-          "169.254.0.0/16",
-          "172.16.0.0/12",
-          "192.0.0.0/24",
-          "192.0.2.0/24",
-          "192.168.0.0/16",
-          "198.18.0.0/15",
-          "198.51.100.0/24",
-          "203.0.113.0/24",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ]
-      }
-    ]
-  }
-}
-END
-cat > /etc/xray/vless-nontls.json << END
-{
-  "log": {
-    "access": "/var/log/xray/vless-login.log",
-    "error": "/var/log/xray/vless-error.log",
-    "loglevel": "info"
-  },
-  "inbounds": [
-    {
-      "port": 2095,
+      "port": 80,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "${uuid}"
+            "id": "${uuid4}"
 #xray-vless-nontls
           }
         ],
@@ -362,17 +205,18 @@ cat > /etc/xray/vless-nontls.json << END
       },
       "streamSettings": {
         "network": "ws",
+        "security": "none",
+        "tlsSettings": {},
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "httpSettings": {},
         "wsSettings": {
-          "path": "/nur",
+          "path": "/vless/",
           "headers": {
             "Host": ""
           }
-         },
-        "quicSettings": {},
-        "sockopt": {
-          "mark": 0,
-          "tcpFastOpen": true
-        }
+        },
+        "quicSettings": {}
       },
       "sniffing": {
         "enabled": true,
@@ -380,69 +224,15 @@ cat > /etc/xray/vless-nontls.json << END
           "http",
           "tls"
         ]
-      },
-      "domain": "$domain"
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
+      }
     },
     {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "ip": [
-          "0.0.0.0/8",
-          "10.0.0.0/8",
-          "100.64.0.0/10",
-          "169.254.0.0/16",
-          "172.16.0.0/12",
-          "192.0.0.0/24",
-          "192.0.2.0/24",
-          "192.168.0.0/16",
-          "198.18.0.0/15",
-          "198.51.100.0/24",
-          "203.0.113.0/24",
-          "::1/128",
-          "fc00::/7",
-          "fe80::/10"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ]
-      }
-    ]
-  }
-}
-END
-cat > /etc/xray/trojan.json <<END
-{
-  "log": {
-    "access": "/var/log/xray/trojan-login.log",
-    "error": "/var/log/xray/trojan-error.log",
-    "loglevel": "info"
-  },
-  "inbounds": [
-    {
-      "port": 2087,
+      "port": 2083,
       "protocol": "trojan",
       "settings": {
         "clients": [
           {
-            "password": "geovpnProject"
+            "password": "${uuid5}"
 #xray-trojan
           }
         ],
@@ -458,21 +248,23 @@ cat > /etc/xray/trojan.json <<END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/xray/xray.crt",
-              "keyFile": "/etc/xray/xray.key"
+              "certificateFile": "${path_crt}",
+              "keyFile": "${path_key}"
             }
           ],
           "alpn": [
             "http/1.1"
           ]
         },
-        "sockopt": {
-          "mark": 0,
-          "tcpFastOpen": true
-        }
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "wsSettings": {},
+        "httpSettings": {},
+        "quicSettings": {},
+        "grpcSettings": {}
       },
       "domain": "$domain"
-    }
+     }
   ],
   "outbounds": [
     {
@@ -508,6 +300,13 @@ cat > /etc/xray/trojan.json <<END
         "outboundTag": "blocked"
       },
       {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
         "type": "field",
         "outboundTag": "blocked",
         "protocol": [
@@ -515,29 +314,44 @@ cat > /etc/xray/trojan.json <<END
         ]
       }
     ]
+  },
+  "stats": {},
+  "api": {
+    "services": [
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserDownlink": true,
+        "statsUserUplink": true
+      }
+    },
+    "system": {
+      "statsInboundUplink": true,
+      "statsInboundDownlink": true
+    }
   }
 }
 END
 
-# / / Installation V2Ray Service
-cat > /etc/systemd/system/xray@.service << END
+# / / Installation Xray Service
+cat > /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray Service ( %i ) By geovpn
-Documentation=https://t.me/geovpn
+Description=Xray Service By Akbar Maulana
+Documentation=https://t.me/Akbar218
 After=network.target nss-lookup.target
 
 [Service]
-Type=simple
-StandardError=journal
-PIDFile=/etc/xray/xray.pid
+User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/%i.json
-ExecStop=/usr/local/bin/xray
-LimitNOFILE=51200
+ExecStart=/usr/local/bin/xray -config /etc/xray/config.json
 Restart=on-failure
-RestartSec=1s
+RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
@@ -552,35 +366,15 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2083 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2095 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2095 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
-systemctl stop xray@v2ray-tls
-systemctl stop xray@v2ray-nontls
-systemctl stop xray@vless-tls
-systemctl stop xray@vless-nontls
-systemctl stop xray@trojan
-systemctl start xray@v2ray-tls 
-systemctl start xray@v2ray-nontls 
-systemctl start xray@vless-tls 
-systemctl start xray@vless-nontls 
-systemctl start xray@trojan 
-systemctl enable xray@v2ray-tls
-systemctl enable xray@v2ray-nontls
-systemctl enable xray@vless-tls
-systemctl enable xray@vless-nontls
-systemctl enable xray@trojan
-systemctl restart xray@v2ray-tls
-systemctl restart xray@v2ray-nontls
-systemctl restart xray@vless-tls
-systemctl restart xray@vless-nontls
-systemctl restart xray@trojan
+systemctl stop xray.service
+systemctl start xray.service
+systemctl enable xray.service
+systemctl restart xray.service
 
 # Install Trojan Go
 latest_version="$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases" | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
@@ -594,7 +388,6 @@ mv trojan-go /usr/local/bin/trojan-go
 chmod +x /usr/local/bin/trojan-go
 mkdir /var/log/trojan-go/
 touch /etc/trojan-go/akun.conf
-touch /etc/trojan-go/trojan-go.pid
 touch /var/log/trojan-go/trojan-go.log
 
 # Buat Config Trojan Go
@@ -602,7 +395,7 @@ cat > /etc/trojan-go/config.json << END
 {
   "run_type": "server",
   "local_addr": "0.0.0.0",
-  "local_port": 2053,
+  "local_port": 2087,
   "remote_addr": "127.0.0.1",
   "remote_port": 89,
   "log_level": 1,
@@ -665,22 +458,18 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By geovpn
-Documentation=https://t.me/geovpn
-Documentation=https://github.com/geovpn/geovpn
+Description=Trojan-Go Service By Akbar Maulana
+Documentation=https://t.me/Akbar218
 After=network.target nss-lookup.target
 
 [Service]
-Type=simple
-StandardError=journal
-PIDFile=/etc/trojan-go/trojan-go.pid
+User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/trojan-go -config /etc/trojan-go/config.json
-LimitNOFILE=51200
 Restart=on-failure
-RestartSec=1s
+RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
@@ -692,8 +481,8 @@ $uuid
 END
 
 # restart
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2053 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2053 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2086 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
@@ -705,4 +494,4 @@ systemctl enable trojan-go
 systemctl restart trojan-go
 
 cd
-mv /root/domain /etc/xray
+cp /root/domain /etc/xray
