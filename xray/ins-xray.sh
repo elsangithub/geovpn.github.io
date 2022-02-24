@@ -16,7 +16,7 @@ LIGHT='\033[0;37m'
 
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-domain=$(cat /root/domain)
+domain=$(cat /etc/xray/domain)
 apt install iptables iptables-persistent -y
 apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
 apt install socat cron bash-completion ntpdate -y
@@ -49,13 +49,17 @@ chmod +x /usr/local/bin/xray
 
 # Make Folder XRay
 mkdir -p /var/log/xray/
-touch /etc/xray/xray.pid
 
-mkdir /root/.acme.sh
-curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
-chmod +x /root/.acme.sh/acme.sh
-/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
+cd /root/
+wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+bash acme.sh --install
+rm acme.sh
+cd .acme.sh
+bash acme.sh --register-account -m patajunit@gmail.com
+bash acme.sh --issue --standalone -d $domain --force
+bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
+
 service squid start
 uuid=$(cat /proc/sys/kernel/random/uuid)
 # Buat Config Xray TLS
@@ -705,4 +709,4 @@ systemctl enable trojan-go
 systemctl restart trojan-go
 
 cd
-mv /root/domain /etc/xray
+cp /root/domain /etc/xray
