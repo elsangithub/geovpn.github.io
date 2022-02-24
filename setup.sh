@@ -81,6 +81,24 @@ echo " "
 echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
 sleep 1
 echo " "
+echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation XRAY${NC}"
+sleep 1
+echo " "
+wget https://${geovpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh > /dev/null 2>&1
+yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
+clear
+yellow "XRAY Successfully Installed..."
+sleep 1
+clear
+curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
+sleep 1
+echo " "
+echo -e " ${GREEN}S E T T I N G UP${NC}"
+sleep 1
+echo " "
+echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
+sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation SSH OVPN${NC}"
 sleep 1
 echo " "
@@ -160,24 +178,6 @@ wget https://${geovpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh > /de
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 clear
 yellow "WIREGUARD Successfully Installed..."
-sleep 1
-clear
-curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-sleep 1
-echo " "
-echo -e " ${GREEN}S E T T I N G UP${NC}"
-sleep 1
-echo " "
-echo -e " ${CYAN}P R O G R E S S I O N ${NC}"
-sleep 1
-echo " "
-echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation XRAY${NC}"
-sleep 1
-echo " "
-wget https://${geovpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh > /dev/null 2>&1
-yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
-clear
-yellow "XRAY Successfully Installed..."
 sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
