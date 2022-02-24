@@ -236,10 +236,13 @@ sleep 1
 clear
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
 sleep 1
+echo " "
 echo -e "[ ${GREEN}S E T T I N G UP${NC} ]"
 sleep 1
+echo " "
 echo -e "[ ${CYAN}P R O G R E S S I O N${NC} ]"
 sleep 1
+echo " "
 echo -e "[ ${GREEN}P R O C E S S I N G${NC} ]       ${PURPLE}Installation OHP${NC}"
 sleep 1
 echo " "
