@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -15,7 +15,7 @@ clear
 echo start
 sleep 0.5
 source /var/lib/geovpnstore/ipvps.conf
-domain=$IP
+domain=$(cat /etc/xray/domain)
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 cd /root/
 wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
@@ -25,7 +25,5 @@ cd .acme.sh
 echo "starting...., Port 80 Akan di Hentikan Saat Proses install Cert"
 bash acme.sh --register-account -m patajunit@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
-bash acme.sh --installcert -d $domain
---fullchainpath /etc/xray/xray.crt
---keypath /etc/xray/xray.key
+bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 restart
