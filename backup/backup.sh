@@ -1,4 +1,5 @@
 #!/bin/bash
+MYIP=$(curl -sS ipinfo.io/ip)
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -132,7 +133,7 @@ Save_And_Exit () {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/geovpn/user-backup-db
-    git push -f https://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@github.com/geovpn/user-backup-db.git &> /dev/null
+    git push -f https://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@github.com/geovpn/user-backup-db.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -162,6 +163,7 @@ Your VPS IP $IP
 $link
 save the link pliss!
 
+If you want to restore data, please enter the link above.
 Thank You For Using Our Services"
 
 rm -rf /root/backup &> /dev/null
@@ -169,4 +171,4 @@ rm -rf /root/user-backup &> /dev/null
 rm -f /root/$NameUser.zip &> /dev/null
 echo
 read -n 1 -s -r -p "Press any key to back on menu"
-system-menu
+menu-backup
