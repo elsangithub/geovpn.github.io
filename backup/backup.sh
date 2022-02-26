@@ -1,24 +1,24 @@
 #!/bin/bash
-# My Telegram : https://t.me/sampiiiiu
+# My Telegram : https://t.me/geovpn
 # ==========================================
 # Color
 RED='\033[0;31m'
 NC='\033[0m'
-#GREEN='\033[0;32m'
-#ORANGE='\033[0;33m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
-#CYAN='\033[0;36m'
+CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
-off='\x1b[m'
 # ==========================================
+# Getting
 # Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Sangarya/izin/main/allow > /root/tmp
+    curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -36,7 +36,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipinfo.io/ip)
-Name=$(curl -sS https://raw.githubusercontent.com/Sangarya/izin/main/allow | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -53,7 +53,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipinfo.io/ip)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Sangarya/izin/main/allow | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
