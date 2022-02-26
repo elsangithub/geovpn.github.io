@@ -132,7 +132,7 @@ Save_And_Exit () {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/geovpn/user-backup-db
-    git push -f https://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@github.com/geovpn/user-backup-db.git &> /dev/null
+    git push -f https://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@github.com/geovpn/user-backup-db.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
