@@ -106,7 +106,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/geovpn/user-backup-db.git /root/user-backup/ &> /dev/null
+git clone https://github.com/Sangarya/user-backup-db.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -125,15 +125,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "geogabut1981@gmail.com" &> /dev/null
-    git config --global user.name "geovpn" &> /dev/null
+    git config --global user.email "cinajembut2@gmail.com" &> /dev/null
+    git config --global user.name "Sangarya" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/geovpn/user-backup-db
-    git push -f https://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@github.com/geovpn/user-backup-db.git &> /dev/null
+    git remote add origin https://github.com/Sangarya/user-backup-db
+    git push -f https://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@github.com/Sangarya/user-backup-db.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -148,7 +148,7 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/geovpn/user-backup-db/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/Sangarya/user-backup-db/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Backup done "
 sleep 1
@@ -161,6 +161,7 @@ echo -e "The following is a link to your vps data backup file.
 Your VPS IP $IP
 
 $link
+
 save the link pliss!
 
 If you want to restore data, please enter the link above.
