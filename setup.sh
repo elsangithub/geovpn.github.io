@@ -48,6 +48,10 @@ gem install lolcat > /dev/null 2>&1
 clear
 sudo hostnamectl set-hostname Setup-Geo-Project
 clear
+if [ -f "/etc/xray/domain" ]; then
+echo "Script Already Installed"
+exit 0
+fi
 mkdir /var/lib/geovpnstore;
 echo "IP=" >> /var/lib/geovpnstore/ipvps.conf
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
