@@ -1,6 +1,5 @@
 #!/bin/bash
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo "Checking VPS"
 #########################
 IZIN=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
