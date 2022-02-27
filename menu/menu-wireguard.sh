@@ -38,7 +38,7 @@ echo -e "\e[31mPermission Denied!\e[0m";
 echo -e "\e[31mDaftar Atau Renew IP VPS Dulu ke ADMIN#\e[0m"
 exit 0
 fi
-clear
+clear 
 
 x="ok"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
