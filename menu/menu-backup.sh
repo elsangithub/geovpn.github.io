@@ -99,6 +99,7 @@ echo -e "
 [${GREEN}01${NC}] ${color1} •${color3}$bd Autobackup Data VPS
 [${GREEN}02${NC}] ${color1} •${color3}$bd Backup Manual Data VPS
 [${GREEN}03${NC}] ${color1} •${color3}$bd Restore Data VPS
+[${GREEN}04${NC}] ${color1} •${color3}$bd Backup Info VPS
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
@@ -109,7 +110,7 @@ echo -ne "Select menu : "; read x
 case "$x" in 
    1 | 01)
    clear
-   autobackup
+   autobackup-setup
    break
    ;;
    2 | 02)
@@ -117,9 +118,14 @@ case "$x" in
    backup
    break
    ;;
-   3 | 03)
+   4 | 04)
    clear
    restore
+   break
+    ;;
+   3 | 03)
+   clear
+   backup-info
    break
    ;;
    0 | 00)
