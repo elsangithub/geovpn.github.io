@@ -77,9 +77,9 @@ exit 0
 fi
 clear
 apt install jq curl -y
-DOMAIN=vpsku.space
+DOMAIN=sumbawa.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.vpsku.space
+SUB_DOMAIN=${sub}.sumbawa.me
 CF_ID=paoandest@gmail.com
 CF_KEY=1d158d0efc4eef787222cefff0b6d20981462
 set -euo pipefail
