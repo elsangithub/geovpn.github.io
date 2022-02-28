@@ -15,30 +15,32 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-CEKEXPIRED () {
-    today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $3}')
-    if [[ $today < $Exp1 ]]; then
-    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
-    else
-    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
-    echo -e "\e[31mRenew IP letak tempoh banyak kit okay? hehe syg ktk #\e[0m"
-    exit 0
-fi
-}
+MYIP=$(curl -sS ipv4.icanhazip.com)
+#########################
 IZIN=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
-CEKEXPIRED
 else
 echo -e "\e[31mPermission Denied!\e[0m";
-echo -e "\e[31mDaftar Atau Renew IP VPS Dulu ke ADMIN#\e[0m"
+echo -e "\e[31mDaftar IP dalam github lok sayang okay? mun dah daftar tapi masih juak permission denied refresh dolok website ya hehe. Love you #\e[0m"
 exit 0
 fi
-clear 
+#EXPIRED
+expired=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $3}')
+echo $expired > /root/expired.txt
+today=$(date -d +1day +%Y-%m-%d)
+while read expired
+do
+	exp=$(echo $expired | curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $3}')
+	if [[ $exp < $today ]]; then
+		Exp2="\033[1;31mExpired\033[0m"
+        else
+        Exp2=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $3}')
+	fi
+done < /root/expired.txt
+rm /root/expired.txt
+Name=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
+clear
 
 x="ok"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
