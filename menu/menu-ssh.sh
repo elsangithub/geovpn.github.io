@@ -2,6 +2,7 @@
 # My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
+white='\e[1;37m'
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -116,15 +117,15 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 menu_sts
 chck_stunnel
 echo -e "
-[${GREEN}01${NC}] ${color1} •${color3}$bd Create SSH & OpenVPN Account
-[${GREEN}02${NC}] ${color1} •${color3}$bd Renew SSH & OpenVPN Account
-[${GREEN}03${NC}] ${color1} •${color3}$bd Delete SSH & OpenVPN Account
-[${GREEN}04${NC}] ${color1} •${color3}$bd Check User Login SSH & OpenVPN
-[${GREEN}05${NC}] ${color1} •${color3}$bd List Member SSH & OpenVPN
-[${GREEN}06${NC}] ${color1} •${color3}$bd Delete User Expired SSH & OpenVPN
-[${GREEN}07${NC}] ${color1} •${color3}$bd Set up Autokill SSH
-[${GREEN}08${NC}] ${color1} •${color3}$bd Cek Users Who Do Multi Login SSH
-[${GREEN}09${NC}] ${color1} •${color3}$bd Restart Services
+[${GREEN}01${NC}] ${color1} •${color3}$white Create SSH & OpenVPN Account
+[${GREEN}02${NC}] ${color1} •${color3}$white Renew SSH & OpenVPN Account
+[${GREEN}03${NC}] ${color1} •${color3}$white Delete SSH & OpenVPN Account
+[${GREEN}04${NC}] ${color1} •${color3}$white Check User Login SSH & OpenVPN
+[${GREEN}05${NC}] ${color1} •${color3}$white List Member SSH & OpenVPN
+[${GREEN}06${NC}] ${color1} •${color3}$white Delete User Expired SSH & OpenVPN
+[${GREEN}07${NC}] ${color1} •${color3}$white Set up Autokill SSH
+[${GREEN}08${NC}] ${color1} •${color3}$white Cek Users Who Do Multi Login SSH
+[${GREEN}09${NC}] ${color1} •${color3}$white Restart Services
 
 [00] • Kembali Ke Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
