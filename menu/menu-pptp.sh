@@ -2,6 +2,7 @@
 # My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
+white='\e[1;37m'
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -101,9 +102,9 @@ echo -e "\E[44;1;39m                       ⇱ PPTP MENU ⇲                    
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 check_pid
 echo -e "
-[${GREEN}01${NC}] ${color1} •${color3}$bd Create PPTP Account
-[${GREEN}02${NC}] ${color1} •${color3}$bd Deleting PPTP Account
-[${GREEN}03${NC}] ${color1} •${color3}$bd Extending PPTP Account Active Life
+[${GREEN}01${NC}] ${color1} •${color3}$white Create PPTP Account
+[${GREEN}02${NC}] ${color1} •${color3}$white Deleting PPTP Account
+[${GREEN}03${NC}] ${color1} •${color3}$white Extending PPTP Account Active Life
 
 00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
