@@ -2,6 +2,7 @@
 # My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
+white='\e[1;37m'
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -94,9 +95,9 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                        ⇱ BACKUP MENU ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[${GREEN}02${NC}] ${color1} •${color3}$bd Backup Data VPS
-[${GREEN}03${NC}] ${color1} •${color3}$bd Restore Data VPS
-[${GREEN}04${NC}] ${color1} •${color3}$bd Backup Info VPS
+[${GREEN}02${NC}] ${color1} •${color3}$white Backup Data VPS
+[${GREEN}03${NC}] ${color1} •${color3}$white Restore Data VPS
+[${GREEN}04${NC}] ${color1} •${color3}$white Backup Info VPS
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
