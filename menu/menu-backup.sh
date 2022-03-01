@@ -94,8 +94,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                        ⇱ BACKUP MENU ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[${GREEN}01${NC}] ${color1} •${color3}$bd Autobackup Data VPS
-[${GREEN}02${NC}] ${color1} •${color3}$bd Backup Manual Data VPS
+[${GREEN}02${NC}] ${color1} •${color3}$bd Backup Data VPS
 [${GREEN}03${NC}] ${color1} •${color3}$bd Restore Data VPS
 [${GREEN}04${NC}] ${color1} •${color3}$bd Backup Info VPS
 
@@ -108,15 +107,10 @@ echo -ne "Select menu : "; read x
 case "$x" in 
    1 | 01)
    clear
-   autobackup-setup
-   break
-   ;;
-   2 | 02)
-   clear
    backup
    break
    ;;
-   4 | 04)
+   2 | 02)
    clear
    restore
    break
