@@ -2,6 +2,7 @@
 # My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
+white='\e[1;37m'
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -94,12 +95,12 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                       ⇱ DOMAIN MENU ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[${GREEN}01${NC}] ${color1} •${color3}$bd Add Subdomain Host For VPS
-[${GREEN}02${NC}] ${color1} •${color3}$bd Add ID Cloudflare
-[${GREEN}03${NC}] ${color1} •${color3}$bd Cloudflare Add-Ons
-[${GREEN}04${NC}] ${color1} •${color3}$bd Pointing BUG
-[${GREEN}05${NC}] ${color1} •${color3}$bd Renew Certificate V2RAY
-[${GREEN}06${NC}] ${color1} •${color3}$bd Domain Default
+[${GREEN}01${NC}] ${color1} •${color3}$white Add Subdomain Host For VPS
+[${GREEN}02${NC}] ${color1} •${color3}$white Add ID Cloudflare
+[${GREEN}03${NC}] ${color1} •${color3}$white Cloudflare Add-Ons
+[${GREEN}04${NC}] ${color1} •${color3}$white Pointing BUG
+[${GREEN}05${NC}] ${color1} •${color3}$white Renew Certificate V2RAY
+[${GREEN}06${NC}] ${color1} •${color3}$white Domain Default
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
