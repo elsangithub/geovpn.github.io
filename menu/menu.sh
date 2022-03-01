@@ -1,6 +1,8 @@
 #!/bin/bash
 # Color Validation
 color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
 DF='\e[39m'
 Bold='\e[1m'
 Blink='\e[5m'
@@ -104,14 +106,14 @@ echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━
 echo -e "   \E[44;1;39m                ⇱ Dashboard Menu ⇲               \E[0m"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
-echo -e "   [${green}01${NC}]${color1} •$white SSH & OpenVPN Section$NC"
-echo -e "   [${green}02${NC}]${color1} •$white SSTP - L2TP - PPTP - Wireguard Section$NC"
-echo -e "   [${green}03${NC}]${color1} •$white Shadowsocks & ShadowsocksR Section$NC"
-echo -e "   [${green}04${NC}]${color1} •$white V2ray Vmess & Vless Section$NC"
-echo -e "   [${green}05${NC}]${color1} •$white Trojan & TrojanGO Section$NC"
-echo -e "   [${green}05${NC}]${color1} •$white Backup Section$NC"
-echo -e "   [${green}07${NC}]${color1} •$white Trial Account Section$NC"
-echo -e "   [${green}08${NC}]${color1} •$white System Tools Section $NC"
+echo -e "   [${green}01${NC}]${color1} •$white SSH & OpenVPN (${color2}menu-ssh${color3})$NC"
+echo -e "   [${green}02${NC}]${color1} •$white SSTP - L2TP - PPTP - Wireguard (${color2}menu-vpn${color3})$NC"
+echo -e "   [${green}03${NC}]${color1} •$white Shadowsocks & ShadowsocksR (${color2}menu-shadowsocks${color3})$NC"
+echo -e "   [${green}04${NC}]${color1} •$white V2ray Vmess & Vless (${color2}menu-v2ray${color3})$NC"
+echo -e "   [${green}05${NC}]${color1} •$white Trojan & TrojanGO (${color2}menu-trojan${color3})$NC"
+echo -e "   [${green}05${NC}]${color1} •$white Backup (${color2}menu-backup${color3})$NC"
+echo -e "   [${green}07${NC}]${color1} •$white Trial Account (${color2}menu-trial${color3})$NC"
+echo -e "   [${green}08${NC}]${color1} •$white System Tools (${color2}menu-tools${color3}) $NC"
 echo ""
 echo -e "   [${green}00${NC}]${color1} •$white $bd Back to exit Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
