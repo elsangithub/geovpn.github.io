@@ -103,28 +103,28 @@ echo -e""
 read -p " Select menu :  "  v2ray
 echo -e ""
 case $v2ray in
-1)
+1| 01)
 addv2ray
 ;;
-2)
+2| 02)
 delv2ray
 ;;
-3)
+3| 03)
 renewv2ray
 ;;
-4)
+4| 04)
 cekv2ray
 ;;
-5)
+5| 05)
 addvless
 ;;
-6)
+6| 06)
 delvless
 ;;
-7)
+7| 07)
 renewvless
 ;;
-8)
+8| 08)
 cekvless
 ;;
 0 | 00)
