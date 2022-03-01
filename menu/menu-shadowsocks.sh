@@ -2,6 +2,7 @@
 # My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
+white='\e[1;37m'
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -815,19 +816,19 @@ echo -e "
 ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 menu_status
 echo -e "
-[${GREEN}05${NC}] ${color1} •${color3}$bd Create SS-R Account
-[${GREEN}06${NC}] ${color1} •${color3}$bd Deleting SS-R Account
-[${GREEN}07${NC}] ${color1} •${color3}$bd Extending SS-R Account Active Life
+[${GREEN}05${NC}] ${color1} •${color3}$white Create SS-R Account
+[${GREEN}06${NC}] ${color1} •${color3}$white Deleting SS-R Account
+[${GREEN}07${NC}] ${color1} •${color3}$white Extending SS-R Account Active Life
 
-[${GREEN}08${NC}] ${color1} •${color3}$bd Check the account information SSR
-[${GREEN}09${NC}] ${color1} •${color3}$bd Display the connection information SSR
-[${GREEN}10${NC}] ${color1} •${color3}$bd Change Password User SSR
-[${GREEN}11${NC}] ${color1} •${color3}$bd Manually Modify User Configuration SSR
-[${GREEN}12${NC}] ${color1} •${color3}$bd Clear The Used Traffic SSR
-[${GREEN}12${NC}] ${color1} •${color3}$bd Start ShadowsocksR 
-[${GREEN}14${NC}] ${color1} •${color3}$bd Stop ShadowsocksR
-[${GREEN}15${NC}] ${color1} •${color3}$bd Restart ShadowsocksR
-[${GREEN}16${NC}] ${color1} •${color3}$bd Cek ShadowsocksR log
+[${GREEN}08${NC}] ${color1} •${color3}$white Check the account information SSR
+[${GREEN}09${NC}] ${color1} •${color3}$white Display the connection information SSR
+[${GREEN}10${NC}] ${color1} •${color3}$white Change Password User SSR
+[${GREEN}11${NC}] ${color1} •${color3}$white Manually Modify User Configuration SSR
+[${GREEN}12${NC}] ${color1} •${color3}$white Clear The Used Traffic SSR
+[${GREEN}12${NC}] ${color1} •${color3}$white Start ShadowsocksR 
+[${GREEN}14${NC}] ${color1} •${color3}$white Stop ShadowsocksR
+[${GREEN}15${NC}] ${color1} •${color3}$white Restart ShadowsocksR
+[${GREEN}16${NC}] ${color1} •${color3}$white Cek ShadowsocksR log
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
