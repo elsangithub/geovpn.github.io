@@ -160,4 +160,19 @@ wget -O /usr/bin/renewssr https://${geovpn}/renewssr.sh && chmod +x /usr/bin/ren
 wget -O /usr/bin/bbr https://${geovpn}/bbr.sh && chmod +x /usr/bin/bbr
 wget -O /usr/bin/porttrgo https://${geovpn}/porttrgo.sh && chmod +x /usr/bin/porttrgo
 touch /usr/local/shadowsocksr/akun.conf
+clear
+echo; echo 'Installing DOS-Deflate 0.6'; echo
+echo; echo -n 'Downloading source files...'
+apt install -y dnsutils tcpdump dsniff grepcidr
+wget -qO ddos.zip "https://${geovpn}/ddos-deflate.zip"
+unzip ddos.zip
+cd ddos-deflate
+chmod +x install.sh
+./install.sh
+cd
+rm -rf ddos.zip ddos-deflate
+echo '...done'
+echo; echo 'Installation has completed.'
+echo 'Config file is at /usr/local/ddos/ddos.conf'
+echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 rm -f /root/ssr.sh
