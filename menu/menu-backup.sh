@@ -121,6 +121,7 @@ case "$x" in
    clear
    restore
    break
+   ;;
    4 | 04)
    clear
    restore2
