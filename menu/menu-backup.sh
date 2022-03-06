@@ -96,10 +96,10 @@ echo -e "\E[44;1;39m                        ⇱ BACKUP MENU ⇲                 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
 [${GREEN}01${NC}] ${color1} •${color3}$white Backup Data VPS to Github
-[${GREEN}01${NC}] ${color1} •${color3}$white Backup Data VPS to Telegram
-[${GREEN}02${NC}] ${color1} •${color3}$white Restore Data VPS From Github
-[${GREEN}02${NC}] ${color1} •${color3}$white Restore Data VPS From Telegram
-[${GREEN}03${NC}] ${color1} •${color3}$white Backup Info VPS
+[${GREEN}02${NC}] ${color1} •${color3}$white Backup Data VPS to Telegram
+[${GREEN}03${NC}] ${color1} •${color3}$white Restore Data VPS From Github
+[${GREEN}04${NC}] ${color1} •${color3}$white Restore Data VPS From Telegram
+[${GREEN}05${NC}] ${color1} •${color3}$white Backup Info VPS
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
