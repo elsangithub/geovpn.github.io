@@ -112,6 +112,7 @@ case "$x" in
    clear
    backup
    break
+   ;;
    2 | 02)
    clear
    backup2
