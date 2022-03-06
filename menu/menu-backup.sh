@@ -95,8 +95,10 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                        ⇱ BACKUP MENU ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "
-[${GREEN}01${NC}] ${color1} •${color3}$white Backup Data VPS
-[${GREEN}02${NC}] ${color1} •${color3}$white Restore Data VPS
+[${GREEN}01${NC}] ${color1} •${color3}$white Backup Data VPS to Github
+[${GREEN}01${NC}] ${color1} •${color3}$white Backup Data VPS to Telegram
+[${GREEN}02${NC}] ${color1} •${color3}$white Restore Data VPS From Github
+[${GREEN}02${NC}] ${color1} •${color3}$white Restore Data VPS From Telegram
 [${GREEN}03${NC}] ${color1} •${color3}$white Backup Info VPS
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
@@ -110,13 +112,21 @@ case "$x" in
    clear
    backup
    break
-   ;;
    2 | 02)
+   clear
+   backup2
+   break
+   ;;
+   3 | 03)
    clear
    restore
    break
+   4 | 04)
+   clear
+   restore2
+   break
     ;;
-   3 | 03)
+   5 | 05)
    clear
    backup-info
    break
