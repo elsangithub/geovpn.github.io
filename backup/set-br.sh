@@ -114,6 +114,7 @@ wget -O limitspeed "https://vpnkuy.site/limitspeed.sh"
 wget -O autobackup-setup "https://vpnkuy.site/autobackup-setup.sh"
 wget -O backup-info "https://vpnkuy.site/backup-info.sh"
 wget -O backup2 "https://vpnkuy.site/backup2.sh"
+wget -O backup2 "https://vpnkuy.site/backup2.sh"
 chmod +x autobackup-setup
 chmod +x backup-info
 chmod +x autobackup
@@ -122,5 +123,6 @@ chmod +x restore
 chmod +x strt
 chmod +x limitspeed
 chmod +x backup2
+chmod +x restore2
 cd
 rm -f /root/set-br.sh
