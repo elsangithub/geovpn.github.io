@@ -1,6 +1,16 @@
 #!/bin/bash
-#
-# ==================================================
+# My Telegram : https://t.me/sampiiiiu
+# ==========================================
+# Color
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
+# ==========================================
 # initializing var
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
@@ -146,17 +156,10 @@ END
 chmod +x /etc/rc.local
 
 # enable rc local
-sleep 1
-echo -e "[ ${green}INFO${NC} ] Checking... "
-sleep 2
-sleep 1
-echo -e "[ ${green}INFO$NC ] Enable system rc local"
 systemctl enable rc-local
 systemctl start rc-local.service
 
 # disable ipv6
-sleep 1
-echo -e "[ ${green}INFO$NC ] Disable ipv6"
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
@@ -204,8 +207,6 @@ apt install libssl1.0-dev -y > /dev/null 2>&1
 apt install dos2unix -y
 
 # set time GMT +7
-sleep 1
-echo -e "[ ${green}INFO$NC ] Set zona local time to Asia/Jakarta GMT+7"
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # set locale
@@ -216,7 +217,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 # install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
-echo "figlet -f slant GEO PROJECT | lolcat" >> .profile
+echo "figlet -f slant GEO GABUT | lolcat" >> .profile
 echo "sleep 0.5" >> .profile
 echo "clear" >> .profile
 echo "running " >> .profile
@@ -224,8 +225,6 @@ echo "echo -e \" - Script Mod By Geo Project\" | lolcat" >> .profile
 echo "echo -e \"\x1b[96m - Silahkan Ketik\x1b[m \x1b[92mMENU\x1b[m \x1b[96mUntuk Melihat daftar Perintah\x1b[m\"" >> .profile
 
 # install webserver
-sleep 1
-echo -e "[ ${green}INFO$NC ] Settings nginx" 
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
@@ -244,7 +243,6 @@ cd
 
 # install badvpn
 cd
-echo -e "[ ${green}INFO$NC ] Installing badvpn for game support..."
 wget -O /usr/bin/badvpn-udpgw "https://${geovpn}/badvpn-udpgw64" > /dev/null 2>&1
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
@@ -264,8 +262,6 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 
 # install dropbear
-sleep 1
-echo -e "[ ${green}INFO$NC ] Settings Dropbear"
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
@@ -427,8 +423,6 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-sleep 1
-echo -e "[ ${green}INFO$NC ] Install Openvpn"
 wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
@@ -442,11 +436,6 @@ else
 	mkdir /usr/local/ddos
 fi
 clear
-#clear
-sleep 1
-echo -e "[ ${green}INFO$NC ] Install DOS-Deflate"
-sleep 1
-echo -e "[ ${green}INFO$NC ] Downloading source files..."
 echo; echo 'Installing DOS-Deflate 0.6'; echo
 echo; echo -n 'Downloading source files...'
 wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
@@ -459,28 +448,16 @@ wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
 chmod 0755 /usr/local/ddos/ddos.sh
 cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
 echo '...done'
-sleep 1
-echo -e "[ ${green}INFO$NC ] Create cron script every minute...."
 echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
 /usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
 echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
-sleep 1
-echo -e "[ ${green}INFO$NC ] Install successfully..."
-sleep 1
-echo -e "[ ${green}INFO$NC ] Config file at /usr/local/ddos/ddos.conf"
 
 # banner /etc/issue.net
-sleep 1
-echo -e "[ ${green}INFO$NC ] Settings banner"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
-
-<font color="red"><b>============================</b></font><br> 
-<font color="white"><b>         SCRIPTVPS         </b></font><br> 
-<font color="red"><b>============================</b></font>
 
 # Install BBR
 wget https://${geovpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
@@ -488,7 +465,6 @@ wget https://${geovpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 # Ganti Banner
 wget -O /etc/issue.net "https://${geovpn}/issue.net" > /dev/null 2>&1
 
-echo -e "[ ${green}INFO$NC ] Set iptables"
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
@@ -711,9 +687,6 @@ echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
-# remove unnecessary files
-sleep 1
-echo -e "[ ${green}INFO$NC ] Clearing trash"
 apt autoclean -y
 apt -y remove --purge unscd
 apt-get -y --purge remove samba*;
