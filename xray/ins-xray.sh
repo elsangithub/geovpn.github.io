@@ -13,100 +13,23 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+
+MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-#########################
-
-BURIQ () {
-    curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
-    done
-    rm -f /root/tmp
-}
-
-MYIP=$(curl -sS ipinfo.io/ip)
-Name=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
-
-Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
-    if [ "$CekOne" = "$CekTwo" ]; then
-        res="Expired"
-    fi
-else
-res="Permission Accepted..."
-fi
-}
-
-PERMISSION () {
-    MYIP=$(curl -sS ipinfo.io/ip)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
-    else
-    res="Permission Denied!"
-    fi
-    BURIQ
-}
-clear
-red='\e[1;31m'
-green='\e[0;32m'
-yell='\e[1;33m'
-NC='\e[0m'
-curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
-echo "XRAY Core Vmess / Vless"
-echo "Trojan / Trojan Go"
-echo "Progress..."
-sleep 3
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
-if [ "$res" = "Permission Accepted..." ]; then
-green "Permission Accepted.."
-else
-red "Permission Denied!"
-exit 0
-fi
-echo -e "
-"
-date
-echo ""
 domain=$(cat /root/domain)
-sleep 1
-mkdir -p /etc/xray > /dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Checking... "
-apt install iptables iptables-persistent -y >/dev/null 2>&1
-sleep 1
-echo -e "[ ${green}INFO$NC ] Setting ntpdate"
-ntpdate pool.ntp.org >/dev/null 2>&1
-timedatectl set-ntp true >/dev/null 2>&1
-sleep 1
-echo -e "[ ${green}INFO$NC ] Enable chronyd"
-systemctl enable chronyd >/dev/null 2>&1
-systemctl restart chronyd >/dev/null 2>&1
-sleep 1
-echo -e "[ ${green}INFO$NC ] Enable chrony"
-systemctl enable chrony >/dev/null 2>&1
-systemctl restart chrony >/dev/null 2>&1
-timedatectl set-timezone Asia/Jakarta >/dev/null 2>&1
-sleep 1
-echo -e "[ ${green}INFO$NC ] Setting chrony tracking"
-chronyc sourcestats -v >/dev/null 2>&1
-chronyc tracking -v >/dev/null 2>&1
+apt install iptables iptables-persistent -y
+apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install socat cron bash-completion ntpdate -y
+ntpdate pool.ntp.org
+apt -y install chrony
+timedatectl set-ntp true
+systemctl enable chronyd && systemctl restart chronyd
+systemctl enable chrony && systemctl restart chrony
+timedatectl set-timezone Asia/Jakarta
+chronyc sourcestats -v
+chronyc tracking -v
+date
+
 # / / Ambil Xray Core Version Terbaru
 latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 
@@ -126,7 +49,6 @@ chmod +x /usr/local/bin/xray
 
 # Make Folder XRay
 mkdir -p /var/log/xray/
-
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 mkdir -p /root/.acme.sh >/dev/null 2>&1
 sleep 1
