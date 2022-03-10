@@ -81,7 +81,7 @@ echo -e "\E[44;1;39m    ⇱ Add Xray/Vmess Account ⇲    \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
 		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/v2ray-tls.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
@@ -165,9 +165,9 @@ echo -e "Security        : auto" | tee -a /etc/log-create-user.log
 echo -e "network         : ws" | tee -a /etc/log-create-user.log
 echo -e "path            : /geo" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link TLS        : ${vmesslink1}" | tee -a /etc/log-create-user.log
+echo -e "Link TLS        : ${xrayv2ray1}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link none TLS   : ${vmesslink2}" | tee -a /etc/log-create-user.log
+echo -e "Link none TLS   : ${xrayv2ray2}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " Aktif Selama   : $masaaktif Hari" | tee -a /etc/log-create-user.log
 echo -e " Dibuat Pada    : $tnggl" | tee -a /etc/log-create-user.log
