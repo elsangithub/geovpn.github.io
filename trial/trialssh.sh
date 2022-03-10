@@ -14,6 +14,7 @@ off='\x1b[m'
 # ==========================================
 # Getting
 MYIP=$(curl -sS ipinfo.io/ip)
+echo "Checking VPS"
 # Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
@@ -88,12 +89,6 @@ domain=$IP2
 fi
 clear
 MYIP=$(curl -sS ipinfo.io/ip)
-wssl="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2|sed 's/ //g')"
-ws="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2|sed 's/ //g')"
-ohps="$(cat ~/log-install.txt | grep -w "OHP_SSH" | cut -d: -f2|sed 's/ //g')"
-ohpd="$(cat ~/log-install.txt | grep -w "OHP_Dropbear" | cut -d: -f2|sed 's/ //g')"
-ohpo="$(cat ~/log-install.txt | grep -w "OHP_OpenVPN" | cut -d: -f2|sed 's/ //g')"
-
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
@@ -108,35 +103,31 @@ hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Thank You For Using Our Services Trial SSH"
-echo -e "OpenVPN & Websocket Account Info"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Thank You For Using Our Services Trial SSH ${off}"
+echo -e "OpenVPN & Websocket Account Info${off}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Username      : $Login"
 echo -e "Password      : $Pass"
 echo -e "Created       : $hariini"
-echo -e "Expired       : $expi"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Expired       : $expi ${off}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "IP/Host       : ${domain} / $MYIP"
 echo -e "OpenSSH       : 443, 22"
 echo -e "Dropbear      : 443, 109, 143"
 echo -e "SSL/TLS       :$ssl"
 echo -e "Port Squid    :$sqd"
-echo -e "Port OHP      : SSH $ohps, Dropbear $ohpd, Ovpn $ohpo"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "SSH WS        : $ws"
-echo -e "SSH WS SSL    : $wssl"
-echo -e "OpenVPN WS    : 2086"
+echo -e "OHP           : SSH 8181, Dropbear 8282, OpenVPN 8383${off}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "SSH WS        : 8880"
+echo -e "SSH WS SSL    : 443"
+echo -e "OpenVPN WS    : 2086${off}"
 echo -e "\033[0;34m===Payload CDN Websocket===\033[0m"
-echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${off}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Link Ovpn     : http://$MYIP:89/"
-echo -e "badvpn        : 7100-7200-7300"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Enjoy Our Auto Script Service"
+echo -e "badvpn        : 7100-7200-7300${off}"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
+echo -e "${NC}Script By geovpn${off}"
 echo -e ""
-echo -e ""
-read -n 1 -s -r -p "Press Any Key To Back On Menu"
-
-menu-trial
