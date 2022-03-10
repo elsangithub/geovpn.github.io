@@ -113,7 +113,7 @@ echo -e "   [${green}05${NC}]${color1} •$white Trojan & TrojanGO (${color2}men
 echo -e "   [${green}06${NC}]${color1} •$white Backup (${color2}menu-backup${color3})$NC"
 echo -e "   [${green}07${NC}]${color1} •$white Trial Account (${color2}menu-trial${color3})$NC"
 echo -e "   [${green}08${NC}]${color1} •$white System Tools (${color2}menu-tools${color3}) $NC"
-echo -e "   [${green}09${NC}]${color1} •$white Show Log Create Accounts$NC"
+echo -e "   [${green}09${NC}]${color1} •$white Show Log Create Account$NC"
 echo ""
 echo -e "   [${green}00${NC}]${color1} •$white Back to exit Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
