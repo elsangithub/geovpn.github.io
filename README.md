@@ -1,13 +1,8 @@
-<h2 align="center">
-
-- [x]  [GEO VPN PROJECT](https://geovpn.github.io)
-
-
-### TAHAP 1
+## TAHAP 1
 ```
 apt-get update && apt-get upgrade -y && apt-get install lolcat -y && apt-get install figlet -y && gem install lolcat && update-grub && sleep 2 && reboot
 ```
-### TAHAP 2
+## TAHAP 2
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl wget tcpdump dsniff grepcidr dnsutils -y && wget -P /root -N --no-check-certificate https://geovpn.github.io/setup.sh && chmod +x setup.sh && "/root/setup.sh"
 ```
@@ -27,3 +22,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=geovpn&layout=compact&theme=dark">
 <img height=150 src="https://github-readme-stats.vercel.app/api?username=geovpn&count_private=true&show_icons=true&theme=dark">
 </p>
+
+<h2 align="center">
+
+- [x]  [GEO VPN PROJECT](https://geovpn.github.io)
