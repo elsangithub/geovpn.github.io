@@ -21,9 +21,6 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 </h2>
 </div>
 
-<div height='45' align="center">
-<h2>My Repositories: <br>
-  </br>
 <h2 align="center">
 Stats:<br>
 <p align="center">  
