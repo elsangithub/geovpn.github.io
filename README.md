@@ -7,13 +7,35 @@ apt-get update && apt-get upgrade -y && apt-get install lolcat -y && apt-get ins
 ```
 ### TAHAP 2
 ```
-rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://geovpn.github.io/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
-```
-### WORK
-```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl wget tcpdump dsniff grepcidr dnsutils -y && wget -P /root -N --no-check-certificate https://geovpn.github.io/setup.sh && chmod +x setup.sh && "/root/setup.sh"
 ```
-- [x] [WHATSAPP](http://wa.me/+6282339191527)
-- [x] [TELEGRAM](http://t.me/sampiiiiu)
-- [x] [TESTIMONI](https://t.me/testikuy_mang)
 
+<p align="center">
+<img height=21 src="https://komarev.com/ghpvc/?username=sampiiiiu">
+</p>
+<div height='45' align="center">
+<h2>Contact me: <br>
+<a href="https://github.com/geovpn"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" height='50'> </a>
+<a href="https://t.me/sampiiiiu"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" height='50'> </a>
+<a href="http://wa.me/+6282339191527"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/whatsapp.svg" height='50'> </a>
+</h2>
+</div>
+
+<div height='45' align="center">
+<h2>My Repositories: <br>
+  </br>
+  
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=geovpn.github.io)](https://github.com/geovpn/geovpn.github.io)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=scvps)](https://github.com/geovpn/scvps)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=mantap)](https://github.com/geovpn/mantap)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=GEO-PROJECT-BACKUP)](https://github.com/geovpn/GEO-PROJECT-BACKUP)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=perizinan)](https://github.com/geovpn/perizinan)
+  </h2>
+  </div>
+<h2 align="center">
+Stats:<br>
+<p align="center">  
+<img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=geovpn&layout=compact&theme=dark">
+<img height=150 src="https://github-readme-stats.vercel.app/api?username=geovpn&count_private=true&show_icons=true&theme=dark">
+</h2>
+</p>
