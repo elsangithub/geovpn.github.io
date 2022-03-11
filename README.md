@@ -21,8 +21,11 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <h2 align="center">
 <img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=geovpn&layout=compact&theme=dark">
 <img height=150 src="https://github-readme-stats.vercel.app/api?username=geovpn&count_private=true&show_icons=true&theme=dark">
-</p>
-
 <h2 align="center">
+
+- [x] [WHATSAPP](http://wa.me/+6282339191527)
+- [x] [TELEGRAM](http://t.me/sampiiiiu)
+- [x] [TESTIMONI](https://t.me/testikuy_mang)
+
 
 - [x]  [GEO VPN PROJECT](https://geovpn.github.io)
