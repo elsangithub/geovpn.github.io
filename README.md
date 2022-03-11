@@ -1,5 +1,6 @@
 [GEO VPN PROJECT](https://geovpn.github.io)
 
+
 ## TAHAP 1
 ```
 apt-get update && apt-get upgrade -y && apt-get install lolcat -y && apt-get install figlet -y && gem install lolcat && update-grub && sleep 2 && reboot
