@@ -12,6 +12,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 </p>
 <div height='45' align="center">
 <h2>Contact me: <br>
+- [x]  [GEO VPN PROJECT](https://geovpn.github.io)
 <a href="https://github.com/geovpn"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" height='50'> </a>
 <a href="https://t.me/sampiiiiu"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" height='50'> </a>
 <a href="http://wa.me/+6282339191527"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/whatsapp.svg" height='50'> </a>
@@ -22,10 +23,3 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=geovpn&layout=compact&theme=dark">
 <img height=150 src="https://github-readme-stats.vercel.app/api?username=geovpn&count_private=true&show_icons=true&theme=dark">
 <h2 align="center">
-
-- [x] [WHATSAPP](http://wa.me/+6282339191527)
-- [x] [TELEGRAM](http://t.me/sampiiiiu)
-- [x] [TESTIMONI](https://t.me/testikuy_mang)
-
-
-- [x]  [GEO VPN PROJECT](https://geovpn.github.io)
