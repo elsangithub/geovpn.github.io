@@ -17,7 +17,6 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <a href="http://wa.me/+6282339191527"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/whatsapp.svg" height='50'> </a>
 </h2>
 </div>
-- [x]  [GEO VPN PROJECT](https://geovpn.github.io)
 <h2 align="center">
 <img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=geovpn&layout=compact&theme=dark">
 <img height=150 src="https://github-readme-stats.vercel.app/api?username=geovpn&count_private=true&show_icons=true&theme=dark">
