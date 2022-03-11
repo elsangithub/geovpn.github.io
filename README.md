@@ -24,14 +24,6 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 <div height='45' align="center">
 <h2>My Repositories: <br>
   </br>
-  
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=geovpn.github.io)](https://github.com/geovpn/geovpn.github.io)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=scvps)](https://github.com/geovpn/scvps)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=mantap)](https://github.com/geovpn/mantap)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=GEO-PROJECT-BACKUP)](https://github.com/geovpn/GEO-PROJECT-BACKUP)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=geovpn&repo=perizinan)](https://github.com/geovpn/perizinan)
-  </h2>
-  </div>
 <h2 align="center">
 Stats:<br>
 <p align="center">  
