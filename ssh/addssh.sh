@@ -1,16 +1,18 @@
 #!/bin/bash
-# My Telegram : https://t.me/sampiiiiu
+# My Telegram : https://t.me/geovpn
 # ==========================================
 # Color
 RED='\033[0;31m'
 NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
+#GREEN='\033[0;32m'
+#ORANGE='\033[0;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
+#CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+off='\x1b[m'
 # ==========================================
+# Getting
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -105,34 +107,34 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Thank You For Using Our Services SSH ${off}"
-echo -e "OpenVPN & Websocket Account Info${off}"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Username      : $Login"
-echo -e "Password      : $Pass"
-echo -e "Created       : $hariini"
-echo -e "Expired       : $expi"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "IP/Host       : ${domain} / $MYIP"
-echo -e "OpenSSH       : 443, 22"
-echo -e "Dropbear      : 443, 109, 143"
-echo -e "SSL/TLS       :$ssl"
-echo -e "Port Squid    :$sqd"
-echo -e "Port OHP      : SSH $ohps, Dropbear $ohpd, Ovpn $ohpo"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "SSH WS        : $ws"
-echo -e "SSH WS SSL    : $wssl"
-echo -e "OpenVPN WS    : 2086"
-echo -e "\033[0;34m===Payload CDN Websocket===\033[0m"
-echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${off}"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link Ovpn     : http://$MYIP:89/"
-echo -e "badvpn        : 7100-7200-7300"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Enjoy Our Auto Script Service"
-echo -e ""
-echo -e ""
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Thank You For Using Our Services SSH ${off}" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN & Websocket Account Info${off}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Username      : $Login" | tee -a /etc/log-create-user.log
+echo -e "Password      : $Pass" | tee -a /etc/log-create-user.log
+echo -e "Created       : $hariini" | tee -a /etc/log-create-user.log
+echo -e "Expired       : $expi" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "IP/Host       : ${domain} / $MYIP" | tee -a /etc/log-create-user.log
+echo -e "OpenSSH       : 443, 22" | tee -a /etc/log-create-user.log
+echo -e "Dropbear      : 443, 109, 143" | tee -a /etc/log-create-user.log
+echo -e "SSL/TLS       :$ssl" | tee -a /etc/log-create-user.log
+echo -e "Port Squid    :$sqd" | tee -a /etc/log-create-user.log
+echo -e "Port OHP      : SSH $ohps, Dropbear $ohpd, Ovpn $ohpo" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "SSH WS        : $ws" | tee -a /etc/log-create-user.log
+echo -e "SSH WS SSL    : $wssl" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN WS    : 2086" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m===Payload CDN Websocket===\033[0m" | tee -a /etc/log-create-user.log
+echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${off}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link Ovpn     : http://$MYIP:89/" | tee -a /etc/log-create-user.log
+echo -e "badvpn        : 7100-7200-7300" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Enjoy Our Auto Script Service" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
 echo -e ""
 read -n 1 -s -r -p "Press Any Key To Back On Menu"
 
