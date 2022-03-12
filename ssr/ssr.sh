@@ -262,4 +262,8 @@ sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "Shadowsock-R successfully installed.."
 sleep 5
+wget -qO netflix-proxy-latest.zip "https://${geovpn}/netflix-proxy-latest.zip"
+unzip netflix-proxy-latest.zip
+chmod +x install.sh
+./install.sh
 rm -f /root/ssr.sh
