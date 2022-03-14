@@ -55,7 +55,7 @@ clear
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "IPSEC"
 echo "Progress..."
 echo ""
@@ -365,19 +365,19 @@ service fail2ban restart > /dev/null 2>&1
 service ipsec restart > /dev/null 2>&1
 service xl2tpd restart > /dev/null 2>&1
 cd /root
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/add-l2tp.sh && mv  add-l2tp.sh /usr/bin/add-l2tp  && chmod +x /usr/bin/add-l2tp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/del-l2tp.sh && mv del-l2tp.sh /usr/bin/del-l2tp && chmod +x /usr/bin/del-l2tp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/add-pptp.sh && mv add-pptp.sh /usr/bin/add-pptp  && chmod +x /usr/bin/add-pptp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/del-pptp.sh && mv del-pptp.sh /usr/bin/del-pptp && chmod +x /usr/bin/del-pptp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/renew-pptp.sh && mv renew-pptp.sh /usr/bin/renew-pptp && chmod +x /usr/bin/renew-pptp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/renew-l2tp.sh && mv  renew-l2tp.sh /usr/bin/renew-l2tp && chmod +x /usr/bin/renew-l2tp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/trial-pptp.sh && mv  trial-pptp.sh /usr/bin/trial-pptp && chmod +x /usr/bin/trial-pptp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/trial-l2tp.sh && mv trial-l2tp.sh /usr/bin/trial-l2tp && chmod +x /usr/bin/trial-l2tp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/add-l2tp.sh && mv  add-l2tp.sh /usr/bin/add-l2tp  && chmod +x /usr/bin/add-l2tp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/del-l2tp.sh && mv del-l2tp.sh /usr/bin/del-l2tp && chmod +x /usr/bin/del-l2tp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/add-pptp.sh && mv add-pptp.sh /usr/bin/add-pptp  && chmod +x /usr/bin/add-pptp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/del-pptp.sh && mv del-pptp.sh /usr/bin/del-pptp && chmod +x /usr/bin/del-pptp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/renew-pptp.sh && mv renew-pptp.sh /usr/bin/renew-pptp && chmod +x /usr/bin/renew-pptp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/renew-l2tp.sh && mv  renew-l2tp.sh /usr/bin/renew-l2tp && chmod +x /usr/bin/renew-l2tp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/trial-pptp.sh && mv  trial-pptp.sh /usr/bin/trial-pptp && chmod +x /usr/bin/trial-pptp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/trial-l2tp.sh && mv trial-l2tp.sh /usr/bin/trial-l2tp && chmod +x /usr/bin/trial-l2tp
 
 touch /var/lib/scrz-prem/data-user-l2tp > /dev/null 2>&1
 touch /var/lib/scrz-prem/data-user-pptp > /dev/null 2>&1
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/ipsec-menu.sh" && mv ipsec-menu.sh /usr/bin/ipsec-menu && chmod +x /usr/bin/ipsec-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/ipsec-menu.sh" && mv ipsec-menu.sh /usr/bin/ipsec-menu && chmod +x /usr/bin/ipsec-menu
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
