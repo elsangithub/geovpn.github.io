@@ -57,7 +57,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "Shadowsocks-obfs"
 echo "Progress..."
 sleep 3
@@ -192,12 +192,12 @@ sudo iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j A
 sudo iptables-save > /etc/iptables.up.rules
 sudo ip6tables-save > /etc/ip6tables.up.rules
 cd /root
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/add-ss.sh" && mv add-ss.sh /usr/bin/add-ss && chmod +x /usr/bin/add-ss
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/del-ss.sh" && mv del-ss.sh /usr/bin/del-ss && chmod +x /usr/bin/del-ss
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/cek-ss.sh" && mv cek-ss.sh /usr/bin/cek-ss && chmod +x /usr/bin/cek-ss
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/renew-ss.sh" && mv renew-ss.sh /usr/bin/renew-ss && chmod +x /usr/bin/renew-ss
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/trial-ss.sh" && mv trial-ss.sh /usr/bin/trial-ss && chmod +x /usr/bin/trial-ss
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/ss-menu.sh" && mv ss-menu.sh /usr/bin/ss-menu && chmod +x /usr/bin/ss-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/add-ss.sh" && mv add-ss.sh /usr/bin/add-ss && chmod +x /usr/bin/add-ss
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/del-ss.sh" && mv del-ss.sh /usr/bin/del-ss && chmod +x /usr/bin/del-ss
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/cek-ss.sh" && mv cek-ss.sh /usr/bin/cek-ss && chmod +x /usr/bin/cek-ss
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/renew-ss.sh" && mv renew-ss.sh /usr/bin/renew-ss && chmod +x /usr/bin/renew-ss
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/trial-ss.sh" && mv trial-ss.sh /usr/bin/trial-ss && chmod +x /usr/bin/trial-ss
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/ss-menu.sh" && mv ss-menu.sh /usr/bin/ss-menu && chmod +x /usr/bin/ss-menu
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }

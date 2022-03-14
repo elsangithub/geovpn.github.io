@@ -53,7 +53,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "Shadowsocks-R"
 echo "Progress..."
 sleep 3
@@ -179,7 +179,7 @@ Service_SSR(){
 if [[ ${OS} = "centos" ]]; then
 echo "Not support centos"
 else
-wget -q --no-check-certificate https://${token}@raw.githubusercontent.com/geovpn/scz/main/core/ssr-core.sh -O /etc/init.d/ssrmu
+wget -q --no-check-certificate https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/core/ssr-core.sh -O /etc/init.d/ssrmu
 chmod +x /etc/init.d/ssrmu
 update-rc.d -f ssrmu defaults > /dev/null 2>&1
 fi
@@ -240,10 +240,10 @@ Install_SSR
 systemctl restart ssrmu > /dev/null 2>&1
 cd /root
 #mv /usr/bin/ssr raw.githubusercontent.com/scvps/scriptvps/main/shadowsocks/ssrmu.sh && chmod +x /usr/bin/ssr
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/add-ssr.sh && mv add-ssr.sh /usr/bin/add-ssr && chmod +x /usr/bin/add-ssr
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/del-ssr.sh && mv del-ssr.sh /usr/bin/del-ssr && chmod +x /usr/bin/del-ssr
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/renew-ssr.sh && mv renew-ssr.sh /usr/bin/renew-ssr && chmod +x /usr/bin/renew-ssr
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/trial-ssr.sh && mv trial-ssr.sh /usr/bin/trial-ssr && chmod +x /usr/bin/trial-ssr
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/add-ssr.sh && mv add-ssr.sh /usr/bin/add-ssr && chmod +x /usr/bin/add-ssr
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/del-ssr.sh && mv del-ssr.sh /usr/bin/del-ssr && chmod +x /usr/bin/del-ssr
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/renew-ssr.sh && mv renew-ssr.sh /usr/bin/renew-ssr && chmod +x /usr/bin/renew-ssr
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/trial-ssr.sh && mv trial-ssr.sh /usr/bin/trial-ssr && chmod +x /usr/bin/trial-ssr
 touch /usr/local/shadowsocksr/akun.conf
 
 sleep 1
