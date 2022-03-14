@@ -54,7 +54,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "Setting UP"
 echo "Progress..."
 sleep 3
@@ -122,19 +122,19 @@ chown -R www-data:www-data /etc/msmtprc
 sleep 1
 cd /root
 echo -e "[ ${green}INFO${NC} ] Downloading files... "
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/backup.sh" && mv backup.sh /usr/bin/backup && chmod +x /usr/bin/backup
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/bckp.sh" && mv bckp.sh /usr/bin/bckp  && chmod +x /usr/bin/bckp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/restore.sh" && mv restore  /usr/bin/restore && chmod +x /usr/bin/restore
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/kernel-updt.sh" && mv kernel-updt.sh /usr/bin/kernel-updt && chmod +x /usr/bin/kernel-updt
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/ubuntu-kernel.sh" && mv ubuntu-kernel .sh /usr/bin/ubuntu-kernel && chmod +x /usr/bin/ubuntu-kernel
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/ram.py" && mv ram.py /usr/bin/ram && chmod +x /usr/bin/ram
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/speedtest_cli.py" && mv speedtest_cli.py /usr/bin/speedtest && chmod +x /usr/bin/speedtest
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/swapkvm.sh" && mv swapkvm.sh /usr/bin/swapkvm  && chmod +x /usr/bin/swapkvm
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/webmin.sh" && mv wbmn.sh /usr/bin/wbmn && chmod +x /usr/bin/wbmn
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/update-script.sh" && mv update-script.sh /usr/bin/update-script && chmod +x /usr/bin/update-script
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/cloudflare-pointing.sh" && chmod +x /usr/bin/cloudflare-pointing
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/cloudflare-setting.sh" && mv cloudflare-setting.sh /usr/bin/cloudflare-setting && chmod +x /usr/bin/cloudflare-setting
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/logcleaner.sh" && mv logcleaner.sh /usr/bin/cleaner && chmod +x /usr/bin/cleaner
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/backup.sh" && mv backup.sh /usr/bin/backup && chmod +x /usr/bin/backup
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/bckp.sh" && mv bckp.sh /usr/bin/bckp  && chmod +x /usr/bin/bckp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/restore.sh" && mv restore  /usr/bin/restore && chmod +x /usr/bin/restore
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/kernel-updt.sh" && mv kernel-updt.sh /usr/bin/kernel-updt && chmod +x /usr/bin/kernel-updt
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/ubuntu-kernel.sh" && mv ubuntu-kernel .sh /usr/bin/ubuntu-kernel && chmod +x /usr/bin/ubuntu-kernel
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/ram.py" && mv ram.py /usr/bin/ram && chmod +x /usr/bin/ram
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/speedtest_cli.py" && mv speedtest_cli.py /usr/bin/speedtest && chmod +x /usr/bin/speedtest
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/swapkvm.sh" && mv swapkvm.sh /usr/bin/swapkvm  && chmod +x /usr/bin/swapkvm
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/webmin.sh" && mv wbmn.sh /usr/bin/wbmn && chmod +x /usr/bin/wbmn
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/update-script.sh" && mv update-script.sh /usr/bin/update-script && chmod +x /usr/bin/update-script
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/cloudflare-pointing.sh" && chmod +x /usr/bin/cloudflare-pointing
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/cloudflare-setting.sh" && mv cloudflare-setting.sh /usr/bin/cloudflare-setting && chmod +x /usr/bin/cloudflare-setting
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/logcleaner.sh" && mv logcleaner.sh /usr/bin/cleaner && chmod +x /usr/bin/cleaner
 
 if [ ! -f "/etc/cron.d/cleaner" ]; then
 cat> /etc/cron.d/cleaner << END
