@@ -59,7 +59,7 @@ red "Your script need to update first !"
 exit 0
 elif [ "$res" = "Permission Accepted..." ]; then
 echo -ne
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/scvpst.sh | bash -
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/scvpst.sh | bash -
 else
 red "Permission Denied!"
 exit 0
