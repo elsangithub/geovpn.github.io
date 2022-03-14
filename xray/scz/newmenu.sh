@@ -84,7 +84,7 @@ uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
-serverV=$( curl -sS https://raw.githubusercontent.com/scvps/perizinan/main/versi)
+serverV=$( curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/versi)
 
 if [ "$cekup" = "day" ]; then
 echo -e "System Uptime   :  $uphours $upminutes $uptimecek"
@@ -178,7 +178,7 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     fi
 else
     if [[ $x -eq 999 ]]; then
-       wget -q -O /usr/bin/update-script "https://bhm-vpn.com/asu/dll/system/update-script.sh" && chmod +x /usr/bin/update-script
+       wget -q -O /usr/bin/update-script "https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/update-script.sh" && chmod +x /usr/bin/update-script
        screen -S upds update-script
        menu
     elif [[ $x -eq 1 ]]; then

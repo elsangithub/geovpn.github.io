@@ -347,7 +347,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
