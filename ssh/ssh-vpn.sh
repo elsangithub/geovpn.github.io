@@ -298,7 +298,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/ws-epro -salome -listen :443 -127.0.0.1:777 -ssh 127.0.0.1:109 -vpn 127.0.0.1:990 -ssl 127.0.0.1:8443 -http 127.0.0.1:8880
+ExecStart=/usr/bin/ws-epro -salome -listen :443 -ssl 127.0.0.1:777 -ssh 127.0.0.1:109 -openvpn 127.0.0.1:1194 -http 127.0.0.1:8880
 Restart=on-failure
 
 [Install]
@@ -308,7 +308,7 @@ END
 systemctl daemon-reload
 systemctl enable salomessh.service
 systemctl start salomessh.service
-systemctl status salomessh.service
+
 
 # setting vnstat
 apt -y install vnstat
