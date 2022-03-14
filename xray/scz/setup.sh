@@ -219,7 +219,7 @@ fi
 fi
 
 echo ""
-wget -q https://${token}@raw.githubusercontent.com/geovpn/scz/main/dependencies
+wget -q https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dependencies
 chmod +x dependencies 
 screen -S depen ./dependencies
 rm dependencies
@@ -252,7 +252,7 @@ read answer
             else
                 echo "peler=$pp" > /root/scdomain
             fi
-        curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/cf.sh" && chmod +x cf.sh && ./cf.sh
+        curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/cf.sh" && chmod +x cf.sh && ./cf.sh
     fi
 else
 clear
@@ -270,57 +270,57 @@ read -rp "Input ur domain : " -e pp
     else
         echo "peler=$pp" > /root/scdomain
     fi
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/cf.sh" && chmod +x cf.sh && ./cf.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/cf.sh" && chmod +x cf.sh && ./cf.sh
 fi
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/newmenu.sh" && mv newmenu.sh /usr/bin/menu  && chmod +x /usr/bin/menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/ssh-vpn.sh" && chmod +x ssh-vpn.sh && screen -S sshvpn ./ssh-vpn.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/newmenu.sh" && mv newmenu.sh /usr/bin/menu  && chmod +x /usr/bin/menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/ssh-vpn.sh" && chmod +x ssh-vpn.sh && screen -S sshvpn ./ssh-vpn.sh
 if [ "$coreselect" = "v2ray" ]; then
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/ins-vt.sh" && chmod +x ins-vt.sh && screen -S insvt ./ins-vt.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/ins-vt.sh" && chmod +x ins-vt.sh && screen -S insvt ./ins-vt.sh
 elif [ "$coreselect" = "xray" ]; then
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/xray/ins-xray.sh" && chmod +x ins-xray.sh && screen -S insxray ./ins-xray.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/xray/ins-xray.sh" && chmod +x ins-xray.sh && screen -S insxray ./ins-xray.sh
 fi
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/wg.sh" && chmod +x wg.sh && screen -S wg ./wg.sh
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/sstp.sh" && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ipsec/ipsec.sh" && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/ss.sh" && chmod +x ss.sh && screen -S ss ./ss.sh
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/shadowsocks/ssr.sh" && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/system/set-br.sh" && chmod +x set-br.sh && screen -S sbr ./set-br.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/wg.sh" && chmod +x wg.sh && screen -S wg ./wg.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/sstp.sh" && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ipsec/ipsec.sh" && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/ss.sh" && chmod +x ss.sh && screen -S ss ./ss.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/shadowsocks/ssr.sh" && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/system/set-br.sh" && chmod +x set-br.sh && screen -S sbr ./set-br.sh
 #extension
 clear
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading extension !!"
 sleep 1
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/xray/xtls.sh" && mv xtls.sh /usr/bin/xtls && chmod +x /usr/bin/xtls && xtls && rm -f /usr/bin/xtls
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/setting-menu.sh" && mv setting-menu.sh /usr/bin/setting-menu && chmod +x /usr/bin/setting-menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/autokill-menu.sh" && mv autokill-menu.sh /usr/bin/autokill-menu && chmod +x /usr/bin/autokill-menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/info-menu.sh" && mv info-menu.sh /usr/bin/info-menu && chmod +x /usr/bin/info-menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/system-menu.sh" && mv system-menu.sh /usr/bin/system-menu && chmod +x /usr/bin/system-menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/trial-menu.sh" && mv trial-menu.sh /usr/bin/trial-menu && chmod +x /usr/bin/trial-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/xray/xtls.sh" && mv xtls.sh /usr/bin/xtls && chmod +x /usr/bin/xtls && xtls && rm -f /usr/bin/xtls
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/setting-menu.sh" && mv setting-menu.sh /usr/bin/setting-menu && chmod +x /usr/bin/setting-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/autokill-menu.sh" && mv autokill-menu.sh /usr/bin/autokill-menu && chmod +x /usr/bin/autokill-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/info-menu.sh" && mv info-menu.sh /usr/bin/info-menu && chmod +x /usr/bin/info-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/system-menu.sh" && mv system-menu.sh /usr/bin/system-menu && chmod +x /usr/bin/system-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/trial-menu.sh" && mv trial-menu.sh /usr/bin/trial-menu && chmod +x /usr/bin/trial-menu
 
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/kill-by-user.sh" && mv kill-by-user.sh /usr/bin/kill-by-user && chmod +x /usr/bin/kill-by-user
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/toolkit.sh" && mv toolkit.sh /usr/bin/importantfile && chmod +x /usr/bin/importantfile
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/status.sh" && mv status.sh /usr/bin/status && chmod +x /usr/bin/status
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/autoreboot.sh" && mv autoreboot.sh /usr/bin/autoreboot && chmod +x /usr/bin/autoreboot
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/limit-speed.sh" && mv limit-speed.sh /usr/bin/limit-speed && chmod +x /usr/bin/limit-speed
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/add-host.sh" && mv add-host.sh /usr/bin/add-host && chmod +x /usr/bin/add-host
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/akill-ws.sh" && mv akill-ws.sh /usr/bin/akill-ws && chmod +x /usr/bin/akill-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/autokill-ws.sh" && mv autokill-ws.sh /usr/bin/autokill-ws && chmod +x /usr/bin/autokill-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/restart-service.sh" && mv restart-service.sh /usr/bin/restart-service && chmod +x /usr/bin/restart-service
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/kill-by-user.sh" && mv kill-by-user.sh /usr/bin/kill-by-user && chmod +x /usr/bin/kill-by-user
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/toolkit.sh" && mv toolkit.sh /usr/bin/importantfile && chmod +x /usr/bin/importantfile
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/status.sh" && mv status.sh /usr/bin/status && chmod +x /usr/bin/status
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/autoreboot.sh" && mv autoreboot.sh /usr/bin/autoreboot && chmod +x /usr/bin/autoreboot
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/limit-speed.sh" && mv limit-speed.sh /usr/bin/limit-speed && chmod +x /usr/bin/limit-speed
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/add-host.sh" && mv add-host.sh /usr/bin/add-host && chmod +x /usr/bin/add-host
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/akill-ws.sh" && mv akill-ws.sh /usr/bin/akill-ws && chmod +x /usr/bin/akill-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/autokill-ws.sh" && mv autokill-ws.sh /usr/bin/autokill-ws && chmod +x /usr/bin/autokill-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/restart-service.sh" && mv restart-service.sh /usr/bin/restart-service && chmod +x /usr/bin/restart-service
  
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/bot_panel/installer.sh" && mv installer.sh /usr/bin/installbot && chmod +x /usr/bin/installbot
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/bot_panel/bbt.sh" && mv bbt.sh /usr/bin/bbt && chmod +x /usr/bin/bbt
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/bot_panel/installer.sh" && mv installer.sh /usr/bin/installbot && chmod +x /usr/bin/installbot
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/bot_panel/bbt.sh" && mv bbt.sh /usr/bin/bbt && chmod +x /usr/bin/bbt
 
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Installing Successfully!!"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Dont forget to reboot later"
 #=======[ end ] ======
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/xp.sh && mv xp.sh /usr/bin/xp && chmod +x /usr/bin/xp
-curl -s -O https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/info.sh && mv info.sh /usr/bin/info && chmod +x /usr/bin/info
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/xp.sh && mv xp.sh /usr/bin/xp && chmod +x /usr/bin/xp
+curl -s -O https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/info.sh && mv info.sh /usr/bin/info && chmod +x /usr/bin/info
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home" && mv ascii-home /usr/bin/.ascii-home 
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home" && mv ascii-home /usr/bin/.ascii-home 
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
@@ -347,7 +347,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/geovpn/scz/main/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
