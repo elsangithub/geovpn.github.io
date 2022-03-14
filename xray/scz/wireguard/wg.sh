@@ -53,7 +53,7 @@ clear
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "Wireguard"
 echo "Progress..."
 sleep 3
@@ -145,14 +145,14 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /root
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/add-wg.sh" && mv add-wg.sh /usr/bin/add-wg && chmod +x /usr/bin/add-wg
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/del-wg.sh" && mv del-wg.sh /usr/bin/del-wg && chmod +x /usr/bin/del-wg
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/cek-wg.sh" && mv cek-wg.sh /usr/bin/cek-wg && chmod +x /usr/bin/cek-wg
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/renew-wg.sh" && mv renew-wg.sh /usr/bin/renew-wg && chmod +x /usr/bin/renew-wg
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/trial-wg.sh" && mv trial-wg.sh /usr/bin/trial-wg && chmod +x /usr/bin/trial-wg
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/wireguard/port-wg.sh" && mv port-wg.sh /usr/bin/port-wg && chmod +x /usr/bin/port-wg
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/add-wg.sh" && mv add-wg.sh /usr/bin/add-wg && chmod +x /usr/bin/add-wg
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/del-wg.sh" && mv del-wg.sh /usr/bin/del-wg && chmod +x /usr/bin/del-wg
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/cek-wg.sh" && mv cek-wg.sh /usr/bin/cek-wg && chmod +x /usr/bin/cek-wg
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/renew-wg.sh" && mv renew-wg.sh /usr/bin/renew-wg && chmod +x /usr/bin/renew-wg
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/trial-wg.sh" && mv trial-wg.sh /usr/bin/trial-wg && chmod +x /usr/bin/trial-wg
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/wireguard/port-wg.sh" && mv port-wg.sh /usr/bin/port-wg && chmod +x /usr/bin/port-wg
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/wg-menu.sh" && mv /usr/bin/wg-menu && chmod +x /usr/bin/wg-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/wg-menu.sh" && mv /usr/bin/wg-menu && chmod +x /usr/bin/wg-menu
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
