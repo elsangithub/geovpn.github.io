@@ -56,7 +56,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "SSH & Ovpn"
 echo "Progress..."
 sleep 3
@@ -86,7 +86,7 @@ commonname=None
 email=github@scvps
 
 # simple password minimal
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 cd
@@ -281,7 +281,7 @@ fi
 
 # install squid
 cd
-curl -sS curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/squid3.conf" | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/squid/squid.conf
+curl -sS curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/squid3.conf" | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/squid/squid.conf
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # install stunnel
@@ -349,7 +349,7 @@ echo -e "[ ${green}INFO$NC ] Config file at /usr/local/ddos/ddos.conf"
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/banner/issue.net"
+wget -q -O /etc/issue.net curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/banner/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -377,29 +377,29 @@ sudo netfilter-persistent save >/dev/null 2>&1
 sudo netfilter-persistent reload >/dev/null 2>&1
 
 # download script
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/usernew.sh" && mv usernew.sh /usr/bin/usernew  && chmod +x /usr/bin/usernew
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/trial.sh" && mv trial.sh /usr/bin/trial && chmod +x /usr/bin/trial
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/hapus.sh" && mv hapus.sh /usr/bin/hapus && chmod +x /usr/bin/hapus
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/member.sh" && mv member.sh /usr/bin/member && chmod +x /usr/bin/member
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/delete.sh" && mv delete.sh /usr/bin/delete && chmod +x /usr/bin/delete
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/cek.sh" && mv cek.sh /usr/bin/cek && chmod +x /usr/bin/cek
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/restart.sh" && mv restart.sh /usr/bin/restart && chmod +x /usr/bin/restart
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/renew.sh" && mv renew.sh /usr/bin/renew && chmod +x /usr/bin/renew
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/autokill.sh" && mv autokill.sh /usr/bin/autokill && chmod +x /usr/bin/autokill
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/ceklim.sh" && mv ceklim.sh /usr/bin/ceklim && chmod +x /usr/bin/ceklim
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/tendang.sh" && mv tendang.sh /usr/bin/tendang && chmod +x /usr/bin/tendang
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/port-dropbear.sh" && mv port-dropbear .sh /usr/bin/port-dropbear && chmod +x /usr/bin/port-dropbear
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/port-ovpn.sh" && mv port-ovpn.sh /usr/bin/port-ovpn && chmod +x /usr/bin/port-ovpn
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/port-ssl.sh" && mv port-ssl.sh /usr/bin/port-ssl && chmod +x /usr/bin/port-ssl
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/banner/banner.sh" && mv banner.sh /usr/bin/banner && chmod +x /usr/bin/banner
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/ins-sshws.sh" && mv sshws.sh /usr/bin/sshws && chmod +x /usr/bin/sshws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/ssh-menu.sh" && mv ssh-menu.sh /usr/bin/ssh-menu && chmod +x /usr/bin/ssh-menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/port-ws-ssl.sh" && mv port-wssl.sh /usr/bin/port-wssl && chmod +x /usr/bin/port-wssl
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/usernew.sh" && mv usernew.sh /usr/bin/usernew  && chmod +x /usr/bin/usernew
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/trial.sh" && mv trial.sh /usr/bin/trial && chmod +x /usr/bin/trial
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/hapus.sh" && mv hapus.sh /usr/bin/hapus && chmod +x /usr/bin/hapus
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/member.sh" && mv member.sh /usr/bin/member && chmod +x /usr/bin/member
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/delete.sh" && mv delete.sh /usr/bin/delete && chmod +x /usr/bin/delete
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/cek.sh" && mv cek.sh /usr/bin/cek && chmod +x /usr/bin/cek
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/restart.sh" && mv restart.sh /usr/bin/restart && chmod +x /usr/bin/restart
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/renew.sh" && mv renew.sh /usr/bin/renew && chmod +x /usr/bin/renew
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/autokill.sh" && mv autokill.sh /usr/bin/autokill && chmod +x /usr/bin/autokill
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/ceklim.sh" && mv ceklim.sh /usr/bin/ceklim && chmod +x /usr/bin/ceklim
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/tendang.sh" && mv tendang.sh /usr/bin/tendang && chmod +x /usr/bin/tendang
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/port-dropbear.sh" && mv port-dropbear .sh /usr/bin/port-dropbear && chmod +x /usr/bin/port-dropbear
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/port-ovpn.sh" && mv port-ovpn.sh /usr/bin/port-ovpn && chmod +x /usr/bin/port-ovpn
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/port-ssl.sh" && mv port-ssl.sh /usr/bin/port-ssl && chmod +x /usr/bin/port-ssl
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/banner/banner.sh" && mv banner.sh /usr/bin/banner && chmod +x /usr/bin/banner
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/ins-sshws.sh" && mv sshws.sh /usr/bin/sshws && chmod +x /usr/bin/sshws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/ssh-menu.sh" && mv ssh-menu.sh /usr/bin/ssh-menu && chmod +x /usr/bin/ssh-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/port-ws-ssl.sh" && mv port-wssl.sh /usr/bin/port-wssl && chmod +x /usr/bin/port-wssl
 wget -q -O /usr/bin/ohp https://scrzoke.000webhostapp.com/ohp && chmod +x /usr/bin/ohp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/ohp-ssh.sh" && mv ohp-ssh.sh /usr/bin/ohp-ssh && chmod +x /usr/bin/ohp-ssh
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/ohp-db.sh" && mv ohp-db.sh /usr/bin/ohp-db && chmod +x /usr/bin/ohp-db
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/ohp-opn.sh" && mv ohp-opn.sh /usr/bin/ohp-opn && chmod +x /usr/bin/ohp-opn
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/ssh/portohp.sh" && mv portohp.sh /usr/bin/portohp && chmod +x /usr/bin/portohp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/ohp-ssh.sh" && mv ohp-ssh.sh /usr/bin/ohp-ssh && chmod +x /usr/bin/ohp-ssh
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/ohp-db.sh" && mv ohp-db.sh /usr/bin/ohp-db && chmod +x /usr/bin/ohp-db
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/ohp-opn.sh" && mv ohp-opn.sh /usr/bin/ohp-opn && chmod +x /usr/bin/ohp-opn
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/portohp.sh" && mv portohp.sh /usr/bin/portohp && chmod +x /usr/bin/portohp
 
 cat <<EOF > /etc/systemd/system/ohp-ssh.service
 [Unit]

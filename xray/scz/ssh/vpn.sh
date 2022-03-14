@@ -73,7 +73,7 @@ ANU=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 apt install openssl iptables iptables-persistent -y >/dev/null 2>&1
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget -q https://raw.githubusercontent.com/geovpn/scz/main/ssh/vpn.zip
+wget -q https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/ssh/vpn.zip
 unzip -o -P scvps07 vpn.zip >/dev/null 2>&1
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
