@@ -57,7 +57,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "SSTP"
 echo "Progress..."
 sleep 3
@@ -124,7 +124,7 @@ fi
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Setting config... "
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf > /dev/null 2>&1
-curl -sS curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/accel.conf" | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/accel-ppp.conf
+curl -sS curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/accel.conf" | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/accel-ppp.conf
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 sleep 1
@@ -155,13 +155,13 @@ sudo netfilter-persistent save > /dev/null 2>&1
 sudo netfilter-persistent reload > /dev/null 2>&1
 #input perintah sstp
 cd /root
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/add-sstp.sh" && mv add-sstp.sh /usr/bin/add-sstp && chmod +x /usr/bin/add-sstp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/del-sstp.sh" && mv del-sstp.sh /usr/bin/del-sstp && chmod +x /usr/bin/del-sstp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/cek-sstp.sh" && mv cek-sstp.sh /usr/bin/cek-sstp  && chmod +x /usr/bin/cek-sstp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/renew-sstp.sh" && mv renew-sstp.sh /usr/bin/renew-sstp && chmod +x /usr/bin/renew-sstp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/trial-sstp.sh" && mv trial-sstp.sh /usr/bin/trial-sstp && chmod +x /usr/bin/trial-sstp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/sstp/port-sstp.sh" && mv port-sstp.sh /usr/bin/port-sstp && chmod +x /usr/bin/port-sstp
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/sstp-menu.sh" && mv sstp-menu.sh /usr/bin/sstp-menu && chmod +x /usr/bin/sstp-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/add-sstp.sh" && mv add-sstp.sh /usr/bin/add-sstp && chmod +x /usr/bin/add-sstp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/del-sstp.sh" && mv del-sstp.sh /usr/bin/del-sstp && chmod +x /usr/bin/del-sstp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/cek-sstp.sh" && mv cek-sstp.sh /usr/bin/cek-sstp  && chmod +x /usr/bin/cek-sstp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/renew-sstp.sh" && mv renew-sstp.sh /usr/bin/renew-sstp && chmod +x /usr/bin/renew-sstp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/trial-sstp.sh" && mv trial-sstp.sh /usr/bin/trial-sstp && chmod +x /usr/bin/trial-sstp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/sstp/port-sstp.sh" && mv port-sstp.sh /usr/bin/port-sstp && chmod +x /usr/bin/port-sstp
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/sstp-menu.sh" && mv sstp-menu.sh /usr/bin/sstp-menu && chmod +x /usr/bin/sstp-menu
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
