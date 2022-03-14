@@ -53,7 +53,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-curl -sS https://${token}@raw.githubusercontent.com/geovpn/scz/main/resources/ascii-home
+curl -sS https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/resources/ascii-home
 echo "V2Ray Core Vmess / Vless"
 echo "Trojan / Trojan Go"
 echo "Progress..."
@@ -602,7 +602,7 @@ EOF
 
 sleep 1
 echo -e "[ ${green}INFO$NC ] Installing bbr.."
-wget -q -O /usr/bin/bbr "https://${token}@raw.githubusercontent.com/geovpn/scz/main/dll/bbr.sh"
+wget -q -O /usr/bin/bbr "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/dll/bbr.sh"
 chmod +x /usr/bin/bbr
 bbr >/dev/null 2>&1
 rm /usr/bin/bbr >/dev/null 2>&1
@@ -642,36 +642,36 @@ systemctl restart trojan-go >/dev/null 2>&1
 sleep 1
 cd /root
 echo -e "[ ${green}ok${NC} ] Downloading files for trojan-go... "
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/add-ws.sh" && mv add-ws.sh /usr/bin/add-ws && chmod +x /usr/bin/add-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/add-vless.sh" && mv add-vless.sh /usr/bin/add-vless && chmod +x /usr/bin/add-vless
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/add-tr.sh" && mv add-tr.sh /usr/bin/add-tr && chmod +x /usr/bin/add-tr
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/del-ws.sh" && mv del-ws.sh /usr/bin/del-ws && chmod +x /usr/bin/del-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/del-vless.sh" && mv del-vless.sh /usr/bin/del-vless && chmod +x /usr/bin/del-vless
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/del-tr.sh" && mv del-tr.sh /usr/bin/del-tr && chmod +x /usr/bin/del-tr
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/cek-ws.sh" && mv cek-ws.sh /usr/bin/cek-ws && chmod +x /usr/bin/cek-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/cek-vless.sh" && mv cek-vless.sh /usr/bin/cek-vless && chmod +x /usr/bin/cek-vless
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/cek-tr.sh" && mv cek-tr.sh /usr/bin/cek-tr && chmod +x /usr/bin/cek-tr
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/renew-ws.sh" && mv renew-ws.sh /usr/bin/renew-ws && chmod +x /usr/bin/renew-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/renew-vless.sh" && mv renew-vless.sh /usr/bin/renew-vless && chmod +x /usr/bin/renew-vless
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/renew-tr.sh" && mv renew-tr.sh /usr/bin/renew-tr && chmod +x /usr/bin/renew-tr
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/trial-ws.sh" && mv trial-ws.sh /usr/bin/trial-ws && chmod +x /usr/bin/trial-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/trial-vless.sh" && mv trial-vless.sh /usr/bin/trial-vless && chmod +x /usr/bin/trial-vless
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/trial-tr.sh" && mv trial-tr.sh /usr/bin/trial-tr && chmod +x /usr/bin/trial-tr
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/port-ws.sh" && mv port-ws.sh /usr/bin/port-ws && chmod +x /usr/bin/port-ws
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/port-vless.sh" && mv port-vless.sh /usr/bin/port-vless && chmod +x /usr/bin/port-vless
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/port-tr.sh" && mv port-tr.sh /usr/bin/port-tr && chmod +x /usr/bin/port-tr
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/add-ws.sh" && mv add-ws.sh /usr/bin/add-ws && chmod +x /usr/bin/add-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/add-vless.sh" && mv add-vless.sh /usr/bin/add-vless && chmod +x /usr/bin/add-vless
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/add-tr.sh" && mv add-tr.sh /usr/bin/add-tr && chmod +x /usr/bin/add-tr
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/del-ws.sh" && mv del-ws.sh /usr/bin/del-ws && chmod +x /usr/bin/del-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/del-vless.sh" && mv del-vless.sh /usr/bin/del-vless && chmod +x /usr/bin/del-vless
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/del-tr.sh" && mv del-tr.sh /usr/bin/del-tr && chmod +x /usr/bin/del-tr
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/cek-ws.sh" && mv cek-ws.sh /usr/bin/cek-ws && chmod +x /usr/bin/cek-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/cek-vless.sh" && mv cek-vless.sh /usr/bin/cek-vless && chmod +x /usr/bin/cek-vless
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/cek-tr.sh" && mv cek-tr.sh /usr/bin/cek-tr && chmod +x /usr/bin/cek-tr
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/renew-ws.sh" && mv renew-ws.sh /usr/bin/renew-ws && chmod +x /usr/bin/renew-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/renew-vless.sh" && mv renew-vless.sh /usr/bin/renew-vless && chmod +x /usr/bin/renew-vless
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/renew-tr.sh" && mv renew-tr.sh /usr/bin/renew-tr && chmod +x /usr/bin/renew-tr
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/trial-ws.sh" && mv trial-ws.sh /usr/bin/trial-ws && chmod +x /usr/bin/trial-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/trial-vless.sh" && mv trial-vless.sh /usr/bin/trial-vless && chmod +x /usr/bin/trial-vless
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/trial-tr.sh" && mv trial-tr.sh /usr/bin/trial-tr && chmod +x /usr/bin/trial-tr
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/port-ws.sh" && mv port-ws.sh /usr/bin/port-ws && chmod +x /usr/bin/port-ws
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/port-vless.sh" && mv port-vless.sh /usr/bin/port-vless && chmod +x /usr/bin/port-vless
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/port-tr.sh" && mv port-tr.sh /usr/bin/port-tr && chmod +x /usr/bin/port-tr
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/v2ray/cert.sh" && mv cert.sh /usr/bin/renewcert && chmod +x /usr/bin/renewcert
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/v2ray/cert.sh" && mv cert.sh /usr/bin/renewcert && chmod +x /usr/bin/renewcert
 #===baru===
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/trojan/add-trgo.sh" && mv add-trgo.sh /usr/bin/add-trgo && chmod +x /usr/bin/add-trgo
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/trojan/renew-trgo.sh" && mv renew-trgo.sh /usr/bin/renew-trgo && chmod +x /usr/bin/renew-trgo
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/trojan/cek-trgo.sh" && mv cek-trgo.sh /usr/bin/cek-trgo && chmod +x /usr/bin/cek-trgo
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/trojan/del-trgo.sh" && mv del-trgo.sh /usr/bin/del-trgo && chmod +x /usr/bin/del-trgo
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/trojan/trial-trgo.sh" && mv trial-trgo.sh /usr/bin/trial-trgo && chmod +x /usr/bin/trial-trgo
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/trojan/port-trgo.sh" && mv port-trgo.sh /usr/bin/port-trgo && chmod +x /usr/bin/port-trgo
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/trojan/add-trgo.sh" && mv add-trgo.sh /usr/bin/add-trgo && chmod +x /usr/bin/add-trgo
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/trojan/renew-trgo.sh" && mv renew-trgo.sh /usr/bin/renew-trgo && chmod +x /usr/bin/renew-trgo
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/trojan/cek-trgo.sh" && mv cek-trgo.sh /usr/bin/cek-trgo && chmod +x /usr/bin/cek-trgo
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/trojan/del-trgo.sh" && mv del-trgo.sh /usr/bin/del-trgo && chmod +x /usr/bin/del-trgo
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/trojan/trial-trgo.sh" && mv trial-trgo.sh /usr/bin/trial-trgo && chmod +x /usr/bin/trial-trgo
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/trojan/port-trgo.sh" && mv port-trgo.sh /usr/bin/port-trgo && chmod +x /usr/bin/port-trgo
 
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/v2ray-menu.sh" && mv v2ray-menu.sh /usr/bin/v2ray-menu && chmod +x /usr/bin/v2ray-menu
-curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/scz/main/menu_all/trojan-menu.sh" && mv trojan-menu.sh /usr/bin/trojan-menu && chmod +x /usr/bin/trojan-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/v2ray-menu.sh" && mv v2ray-menu.sh /usr/bin/v2ray-menu && chmod +x /usr/bin/v2ray-menu
+curl -s -O "https://${token}@raw.githubusercontent.com/geovpn/geovpn.github.io/main/xray/scz/menu_all/trojan-menu.sh" && mv trojan-menu.sh /usr/bin/trojan-menu && chmod +x /usr/bin/trojan-menu
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
