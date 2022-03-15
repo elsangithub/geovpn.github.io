@@ -121,7 +121,7 @@ echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━
 echo -e "   \E[44;1;39m                ⇱ GEOVPN PROJECT ⇲               \E[0m"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ $NC"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ $NC"
-echo -e "  $green Version        ${color1}•$Lyellow\033[1;36m $(cat /opt/.ver) Latest Version\e[0m"
+echo -e "  $green Version        ${color1}•$Lyellow\033[1;36m $(cat /opt/.ver)\e[0m"
 echo -e "  $green Client Name    ${color1}•$Lyellow $Name"
 echo -e "  $green Script Expired ${color1}•$Lyellow $Exp2"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ $NC"
