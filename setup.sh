@@ -195,26 +195,6 @@ geovpnnnnnnnnn="geovpn.github.io/websocket"
 # Link Hosting Kalian Untuk Ohp
 geovpnnnnnnnnnn="geovpn.github.io/ohp"
 #######################################################
-x="ok"
-while true $x != "ok"
-do
-echo -e "[ ${green}INFO${NC} ] Select core : " 
-echo -e "[ ${yell}*${NC} ] 1. XRAY"
-echo " =--------------="
-echo -ne "[ ${red}#${NC} ] Choice : "; read x
-case "$x" in
-   1)
-   coreselect="xray"
-   green "XRAY Selected"
-   sleep 3
-   break
-   ;;
-   *)
-   echo -e "\n\033[1;31mNot Valid!\033[0m"
-   sleep .1
-esac
-done
-
 if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
