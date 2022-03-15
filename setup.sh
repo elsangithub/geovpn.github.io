@@ -1,5 +1,16 @@
 #!/bin/bash
 # ==========================================
+# Color
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+ORANGE="\033[0;35m"
+LIGHT='\033[0;37m'
+# ==========================================
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -421,8 +432,7 @@ fi
 
 mesg n || true
 clear
-importantfile
-menu
+running
 END
 chmod 644 /root/.profile
 
@@ -446,6 +456,7 @@ gg="PM"
 else
 gg="AM"
 fi
+clear
 echo " "
 echo "=================-geovpn Project-==================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
@@ -501,6 +512,7 @@ echo "   - Instagram               : @geo_gabuter"  | tee -a log-install.txt
 echo "   - Whatsapp                : 082339191527"  | tee -a log-install.txt
 echo "   - Facebook                : Ardiansyah" | tee -a log-install.txt
 echo "=======-Script Created By GeoVPN Project-=======" | tee -a log-install.txt
+echo " "
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
