@@ -1,4 +1,4 @@
-[GEO VPN PROJECT](https://geovpn.github.io)
+[GEO VPN PROJECT](https://istriku.me)
 
 
 ## TAHAP 1
