@@ -9,11 +9,6 @@ apt-get update && apt-get upgrade -y && apt-get install lolcat -y && apt-get ins
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update &&  apt install lolcat -y && gem install lolcat && apt install toilet -y && apt install figlet -y && apt install -y bzip2 gzip coreutils screen curl && wget https://istriku.me/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
-## ERROR
-```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl wget tcpdump dsniff grepcidr dnsutils -y && wget -P /root -N --no-check-certificate https://geovpn.github.io/setup.sh && chmod +x setup.sh && "/root/setup.sh"
-```
-
 <p align="center">
 <img height=21 src="https://komarev.com/ghpvc/?username=sampiiiiu">
 </p>
