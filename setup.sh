@@ -195,32 +195,13 @@ geovpnnnnnnnnn="geovpn.github.io/websocket"
 # Link Hosting Kalian Untuk Ohp
 geovpnnnnnnnnnn="geovpn.github.io/ohp"
 #######################################################
+clear
+sudo hostnamectl set-hostname Geo-Project
+clear
 if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-echo ""
-echo -e "[ ${green}INFO${NC} ] Script Already Installed"
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
-rm setup.sh
-sleep 10
-exit 0
-else
-clear
-fi
-fi
-
-apt-get update -y > /dev/null 2>&1
-apt-get upgrade -y > /dev/null 2>&1
-#install figlet & lolcat
-apt-get install figlet -y > /dev/null 2>&1
-apt-get install ruby -y > /dev/null 2>&1
-gem install lolcat > /dev/null 2>&1
-clear
-sudo hostnamectl set-hostname Geo-Project
-clear
 mkdir /var/lib/geovpnstore;
 echo "IP=" >> /var/lib/geovpnstore/ipvps.conf
 curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
