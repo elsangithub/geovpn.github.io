@@ -70,8 +70,8 @@ if [ "$cekray" = "XRAY" ]; then
 domen=`cat /etc/xray/domain`
 raycheck='xray'
 else
-domen=`cat /etc/v2ray/domain`
-raycheck='v2ray'
+domen=`cat /etc/xray/domain`
+raycheck='xray'
 fi
 
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
