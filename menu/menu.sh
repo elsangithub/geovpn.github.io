@@ -76,8 +76,6 @@ DATE=$(date +%m/%d/%Y)
 IPVPS=$(curl -s ipinfo.io/ip )
 	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
-	uram=$( free -m | awk 'NR==2 {print $3}' )
-	fram=$( free -m | awk 'NR==2 {print $4}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 clear
 echo -e ""
@@ -94,8 +92,6 @@ echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━
   echo -e "  $green Ip Vps               :$Lyellow  $IPVPS"
   echo -e "  $green Operating System     :$white  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
   echo -e "  $green Total Amount Of RAM  : $white $tram MB"
-  echo -e "  $green Used RAM             :$white  $uram MB"
-  echo -e "  $green Free RAM             :$white  $fram MB"
   echo -e "  $green System Uptime        :$white  $uptime"
   echo -e "  $green City                 :$white  $CITY"
   echo -e "  $green Time                 :$white  $WKT"
@@ -121,7 +117,7 @@ echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━
 echo -e "   \E[44;1;39m                ⇱ GEOVPN PROJECT ⇲               \E[0m"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ $NC"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ $NC"
-echo -e "  $green Version        ${color1}•$Lyellow\033[1;36m $(cat /opt/.ver)\e[0m"
+echo -e "  $green Version        ${color1}•$Lyellow\033[1;36m $(cat /opt/.ver) Latest Version\e[0m"
 echo -e "  $green Client Name    ${color1}•$Lyellow $Name"
 echo -e "  $green Script Expired ${color1}•$Lyellow $Exp2"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ $NC"
