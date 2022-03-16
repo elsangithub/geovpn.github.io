@@ -251,21 +251,18 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 # install
-
-# install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "figlet -f slant GEO GABUT | lolcat" >> .profile
 echo "sleep 0.5" >> .profile
 echo "clear" >> .profile
-echo "running " >> .profile
 echo "echo -e \" - Script Mod By Geo Project\" | lolcat" >> .profile
 echo "echo -e \"\x1b[96m - Silahkan Ketik\x1b[m \x1b[92mMENU\x1b[m \x1b[96mUntuk Melihat daftar Perintah\x1b[m\"" >> .profile
 
 # install webserver
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
+rm /etc/nginx/sites-enabled/$domain
+rm /etc/nginx/sites-available/$domain
 curl https://${geovpn}/nginx.conf > /etc/nginx/nginx.conf
 curl https://${geovpn}/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
@@ -275,7 +272,7 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-#wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
+wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
 /etc/init.d/nginx restart
 cd
 
@@ -307,14 +304,6 @@ sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/drop
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
-
-# text gambar
-#apt-get install boxes -y
-
-# color text
-#cd
-#rm -rf /root/.bashrc
-#wget -O /root/.profile "https://geovpn.github.io/.profile"
 
 # install squid
 cd
@@ -673,19 +662,6 @@ chmod +x menu-wireguard
 chmod +x running
 chmod +x status
 chmod +x bbr
-chmod +x update
-chmod +x bannerku
-chmod +x bannerDOMAIN
-chmod +x bannerL2TP
-chmod +x bannerPPTP
-chmod +x bannerSHADOWSOCK
-chmod +x bannerSSH
-chmod +x bannerSSTP
-chmod +x bannerSYSTEM
-chmod +x bannerTROJAN
-chmod +x bannerV2RAY
-chmod +x bannerVPN
-chmod +x bannerWIREGUARD
 chmod +x portsshws
 chmod +x portsshnontls
 chmod +x cfd
