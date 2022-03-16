@@ -462,6 +462,7 @@ wget -O member "https://${geovpn}/member.sh" > /dev/null 2>&1
 wget -O delexp "https://${geovpn}/delexp.sh" > /dev/null 2>&1
 wget -O cekssh "https://${geovpn}/cekssh.sh" > /dev/null 2>&1
 wget -O restart "https://${geovpn}/restart.sh" > /dev/null 2>&1
+wget -O onoffservice "https://${geovpn}/onoffservice.sh" > /dev/null 2>&1
 wget -O speedtest "https://${geovpn}/speedtest_cli.py" > /dev/null 2>&1
 wget -O info "https://${geovpn}/info.sh" > /dev/null 2>&1
 wget -O ram "https://${geovpn}/ram.sh" > /dev/null 2>&1
@@ -648,6 +649,7 @@ chmod +x cfh
 chmod +x domen
 chmod +x pointing
 chmod +x bw
+chmod +x onoffservice
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
