@@ -175,44 +175,44 @@ apt -y install wget curl
 
 # Install Requirements Tools
 apt install ruby -y
-apt install python -y >
 apt install privoxy -y
+apt install python -y > /dev/null 2>&1
 apt install make -y
-apt install cmake -y >
+apt install cmake -y > /dev/null 2>&1
 apt install coreutils -y
-apt install rsyslog -y >
+apt install rsyslog -y > /dev/null 2>&1
 apt install net-tools -y
-apt install zip -y >
+apt install zip -y > /dev/null 2>&1
 apt install unzip -y
-apt install nano -y >
+apt install nano -y > /dev/null 2>&1
 apt install sed -y
-apt install gnupg -y >
+apt install gnupg -y > /dev/null 2>&1
 apt install gnupg1 -y
-apt install bc -y >
+apt install bc -y > /dev/null 2>&1
 apt install jq -y
-apt install apt-transport-https -y
+apt install apt-transport-https -y > /dev/null 2>&1
 apt install build-essential -y
-apt install dirmngr -y
+apt install dirmngr -y > /dev/null 2>&1
 apt install libxml-parser-perl -y
-apt install neofetch -y
+apt install neofetch -y > /dev/null 2>&1
 apt install git -y
-apt install lsof -y
+apt install lsof -y > /dev/null 2>&1
 apt install libsqlite3-dev -y
-apt install libz-dev -y
+apt install libz-dev -y > /dev/null 2>&1
 apt install gcc -y
-apt install g++ -y >
+apt install g++ -y > /dev/null 2>&1
 apt install libreadline-dev -y
-apt install zlib1g-dev -y
+apt install zlib1g-dev -y > /dev/null 2>&1
 apt install libssl-dev -y
-apt install libssl1.0-dev -y
+apt install libssl1.0-dev -y > /dev/null 2>&1
 apt install dos2unix -y
 
 # Privoxy Ports
 Privoxy_Port1='6967'
 Privoxy_Port2='6968'
 
-# Creating Privoxy server config using cat eof tricks
-cat <<'privoxy' > /etc/privoxy/config
+ # Creating Privoxy server config using cat eof tricks
+ cat <<'privoxy' > /etc/privoxy/config
 # My Privoxy Server Config
 user-manual /usr/share/doc/privoxy/user-manual
 confdir /etc/privoxy
@@ -238,12 +238,15 @@ socket-timeout 300
 permit-access 0.0.0.0/0 IP-ADDRESS
 privoxy
 IP-ADDRESS=$MYIL
-# Setting machine's IP Address inside of our privoxy config(security that only allows this machine to use this proxy server)
-sed -i "s|IP-ADDRESS|$IPADDR|g" /etc/privoxy/config
+ # Setting machine's IP Address inside of our privoxy config(security that only allows this machine to use this proxy server)
+ sed -i "s|IP-ADDRESS|$IPADDR|g" /etc/privoxy/config
  
-# Setting privoxy ports
-sed -i "s|Privoxy_Port1|$Privoxy_Port1|g" /etc/privoxy/config
-sed -i "s|Privoxy_Port2|$Privoxy_Port2|g" /etc/privoxy/config
+ # Setting privoxy ports
+ sed -i "s|Privoxy_Port1|$Privoxy_Port1|g" /etc/privoxy/config
+ sed -i "s|Privoxy_Port2|$Privoxy_Port2|g" /etc/privoxy/config
+# set time GMT +7
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -251,11 +254,14 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 # install
+
+# install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "figlet -f slant GEO GABUT | lolcat" >> .profile
 echo "sleep 0.5" >> .profile
 echo "clear" >> .profile
+echo "running " >> .profile
 echo "echo -e \" - Script Mod By Geo Project\" | lolcat" >> .profile
 echo "echo -e \"\x1b[96m - Silahkan Ketik\x1b[m \x1b[92mMENU\x1b[m \x1b[96mUntuk Melihat daftar Perintah\x1b[m\"" >> .profile
 
@@ -304,6 +310,14 @@ sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/drop
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
+
+# text gambar
+#apt-get install boxes -y
+
+# color text
+#cd
+#rm -rf /root/.bashrc
+#wget -O /root/.profile "https://geovpn.github.io/.profile"
 
 # install squid
 cd
@@ -662,6 +676,19 @@ chmod +x menu-wireguard
 chmod +x running
 chmod +x status
 chmod +x bbr
+chmod +x update
+chmod +x bannerku
+chmod +x bannerDOMAIN
+chmod +x bannerL2TP
+chmod +x bannerPPTP
+chmod +x bannerSHADOWSOCK
+chmod +x bannerSSH
+chmod +x bannerSSTP
+chmod +x bannerSYSTEM
+chmod +x bannerTROJAN
+chmod +x bannerV2RAY
+chmod +x bannerVPN
+chmod +x bannerWIREGUARD
 chmod +x portsshws
 chmod +x portsshnontls
 chmod +x cfd
