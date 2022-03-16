@@ -175,7 +175,6 @@ apt -y install wget curl
 
 # Install Requirements Tools
 apt install ruby -y
-apt install privoxy -y
 apt install python -y > /dev/null 2>&1
 apt install make -y
 apt install cmake -y > /dev/null 2>&1
@@ -206,46 +205,6 @@ apt install zlib1g-dev -y > /dev/null 2>&1
 apt install libssl-dev -y
 apt install libssl1.0-dev -y > /dev/null 2>&1
 apt install dos2unix -y
-
-# Privoxy Ports
-Privoxy_Port1='6967'
-Privoxy_Port2='6968'
-
- # Creating Privoxy server config using cat eof tricks
- cat <<'privoxy' > /etc/privoxy/config
-# My Privoxy Server Config
-user-manual /usr/share/doc/privoxy/user-manual
-confdir /etc/privoxy
-logdir /var/log/privoxy
-filterfile default.filter
-logfile logfile
-listen-address 0.0.0.0:Privoxy_Port1
-listen-address 0.0.0.0:Privoxy_Port2
-toggle 1
-enable-remote-toggle 0
-enable-remote-http-toggle 0
-enable-edit-actions 0
-enforce-blocks 0
-buffer-limit 4096
-enable-proxy-authentication-forwarding 1
-forwarded-connect-retries 1
-accept-intercepted-requests 1
-allow-cgi-request-crunching 1
-split-large-forms 0
-keep-alive-timeout 5
-tolerate-pipelining 1
-socket-timeout 300
-permit-access 0.0.0.0/0 IP-ADDRESS
-privoxy
-IP-ADDRESS=$MYIL
- # Setting machine's IP Address inside of our privoxy config(security that only allows this machine to use this proxy server)
- sed -i "s|IP-ADDRESS|$IPADDR|g" /etc/privoxy/config
- 
- # Setting privoxy ports
- sed -i "s|Privoxy_Port1|$Privoxy_Port1|g" /etc/privoxy/config
- sed -i "s|Privoxy_Port2|$Privoxy_Port2|g" /etc/privoxy/config
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
