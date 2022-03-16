@@ -267,8 +267,8 @@ echo "echo -e \"\x1b[96m - Silahkan Ketik\x1b[m \x1b[92mMENU\x1b[m \x1b[96mUntuk
 
 # install webserver
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
-rm /etc/nginx/sites-enabled/$domain
-rm /etc/nginx/sites-available/$domain
+rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-available/default
 curl https://${geovpn}/nginx.conf > /etc/nginx/nginx.conf
 curl https://${geovpn}/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
@@ -278,7 +278,7 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
+#wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
 /etc/init.d/nginx restart
 cd
 
