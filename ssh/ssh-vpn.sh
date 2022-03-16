@@ -175,37 +175,75 @@ apt -y install wget curl
 
 # Install Requirements Tools
 apt install ruby -y
-apt install python -y > /dev/null 2>&1
+apt install python -y >
+apt install privoxy -y
 apt install make -y
-apt install cmake -y > /dev/null 2>&1
+apt install cmake -y >
 apt install coreutils -y
-apt install rsyslog -y > /dev/null 2>&1
+apt install rsyslog -y >
 apt install net-tools -y
-apt install zip -y > /dev/null 2>&1
+apt install zip -y >
 apt install unzip -y
-apt install nano -y > /dev/null 2>&1
+apt install nano -y >
 apt install sed -y
-apt install gnupg -y > /dev/null 2>&1
+apt install gnupg -y >
 apt install gnupg1 -y
-apt install bc -y > /dev/null 2>&1
+apt install bc -y >
 apt install jq -y
-apt install apt-transport-https -y > /dev/null 2>&1
+apt install apt-transport-https -y
 apt install build-essential -y
-apt install dirmngr -y > /dev/null 2>&1
+apt install dirmngr -y
 apt install libxml-parser-perl -y
-apt install neofetch -y > /dev/null 2>&1
+apt install neofetch -y
 apt install git -y
-apt install lsof -y > /dev/null 2>&1
+apt install lsof -y
 apt install libsqlite3-dev -y
-apt install libz-dev -y > /dev/null 2>&1
+apt install libz-dev -y
 apt install gcc -y
-apt install g++ -y > /dev/null 2>&1
+apt install g++ -y >
 apt install libreadline-dev -y
-apt install zlib1g-dev -y > /dev/null 2>&1
+apt install zlib1g-dev -y
 apt install libssl-dev -y
-apt install libssl1.0-dev -y > /dev/null 2>&1
+apt install libssl1.0-dev -y
 apt install dos2unix -y
 
+# Privoxy Ports
+Privoxy_Port1='6967'
+Privoxy_Port2='6968'
+
+# Creating Privoxy server config using cat eof tricks
+cat <<'privoxy' > /etc/privoxy/config
+# My Privoxy Server Config
+user-manual /usr/share/doc/privoxy/user-manual
+confdir /etc/privoxy
+logdir /var/log/privoxy
+filterfile default.filter
+logfile logfile
+listen-address 0.0.0.0:Privoxy_Port1
+listen-address 0.0.0.0:Privoxy_Port2
+toggle 1
+enable-remote-toggle 0
+enable-remote-http-toggle 0
+enable-edit-actions 0
+enforce-blocks 0
+buffer-limit 4096
+enable-proxy-authentication-forwarding 1
+forwarded-connect-retries 1
+accept-intercepted-requests 1
+allow-cgi-request-crunching 1
+split-large-forms 0
+keep-alive-timeout 5
+tolerate-pipelining 1
+socket-timeout 300
+permit-access 0.0.0.0/0 IP-ADDRESS
+privoxy
+IP-ADDRESS=$MYIL
+# Setting machine's IP Address inside of our privoxy config(security that only allows this machine to use this proxy server)
+sed -i "s|IP-ADDRESS|$IPADDR|g" /etc/privoxy/config
+ 
+# Setting privoxy ports
+sed -i "s|Privoxy_Port1|$Privoxy_Port1|g" /etc/privoxy/config
+sed -i "s|Privoxy_Port2|$Privoxy_Port2|g" /etc/privoxy/config
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
