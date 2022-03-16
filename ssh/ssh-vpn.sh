@@ -81,28 +81,28 @@ fi
 clear
 # ==================================================
 # Link Hosting Kalian
-geovpn="geovpn.github.io/ssh"
+geovpn="istriku.me/ssh"
 
 # Link Hosting Kalian Untuk Xray
-geovpnn="geovpn.github.io/xray"
+geovpnn="istriku.me/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-geovpnnn="geovpn.github.io/trojango"
+geovpnnn="istriku.me/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-geovpnnnn="geovpn.github.io/stunnel5"
+geovpnnnn="istriku.me/stunnel5"
 
 # Link Hosting Kalian Untuk menu
-geovpnnnnn="geovpn.github.io/menu"
+geovpnnnnn="istriku.me/menu"
 
 # Link Hosting Kalian Untuk banner
-geovpnnnnnn="geovpn.github.io/banner"
+geovpnnnnnn="istriku.me/banner"
 
 # Link Hosting Kalian Untuk dom
-geovpnnnnnnn="geovpn.github.io/dom"
+geovpnnnnnnn="istriku.me/dom"
 
 # Link Hosting Kalian Untuk trial
-geovpnnnnnnnn="geovpn.github.io/trial"
+geovpnnnnnnnn="istriku.me/trial"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -217,7 +217,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 # install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
-echo "figlet -f slant GEO GABUT | lolcat" >> .profile
+echo "figlet -f slant GEO PROJECT | lolcat" >> .profile
 echo "sleep 0.5" >> .profile
 echo "clear" >> .profile
 echo "running " >> .profile
@@ -269,14 +269,6 @@ sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/drop
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
-
-# text gambar
-#apt-get install boxes -y
-
-# color text
-#cd
-#rm -rf /root/.bashrc
-#wget -O /root/.profile "https://geovpn.github.io/.profile"
 
 # install squid
 cd
