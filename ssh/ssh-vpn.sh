@@ -572,6 +572,7 @@ chmod +x addssh
 chmod +x trialssh
 chmod +x delssh
 chmod +x member
+chmod +x banner
 chmod +x delexp
 chmod +x cekssh
 chmod +x restart
