@@ -195,3 +195,4 @@ wget -q -O /usr/bin/delxtls "https://${geovpn}/delxtls" && chmod +x /usr/bin/del
 wget -q -O /usr/bin/cekxtls "https://${geovpn}/cekxtls" && chmod +x /usr/bin/cekxtls
 wget -q -O /usr/bin/renewxtls "https://${geovpn}/renewxtls" && chmod +x /usr/bin/renewxtls
 wget -q -O /usr/bin/portxtls "https://${geovpn}/portxtls" && chmod +x /usr/bin/portxtls
+rm -f /root/xtls.sh
