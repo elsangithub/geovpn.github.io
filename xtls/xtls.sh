@@ -190,9 +190,9 @@ systemctl daemon-reload > /dev/null 2>&1
 systemctl enable xtls > /dev/null 2>&1
 systemctl restart xtls > /dev/null 2>&1
 
-wget -q -O /usr/bin/addxtls "https://${geovpn}/addxtls" && chmod +x /usr/bin/addxtls
-wget -q -O /usr/bin/delxtls "https://${geovpn}/delxtls" && chmod +x /usr/bin/delxtls
-wget -q -O /usr/bin/cekxtls "https://${geovpn}/cekxtls" && chmod +x /usr/bin/cekxtls
-wget -q -O /usr/bin/renewxtls "https://${geovpn}/renewxtls" && chmod +x /usr/bin/renewxtls
-wget -q -O /usr/bin/portxtls "https://${geovpn}/portxtls" && chmod +x /usr/bin/portxtls
+wget -q -O /usr/bin/addxtls "https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xtls/addxtls.sh" && chmod +x /usr/bin/addxtls
+wget -q -O /usr/bin/delxtls "https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xtls/delxtls" && chmod +x /usr/bin/delxtls
+wget -q -O /usr/bin/cekxtls "https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xtls/cekxtls" && chmod +x /usr/bin/cekxtls
+wget -q -O /usr/bin/renewxtls "https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xtls/renewxtls" && chmod +x /usr/bin/renewxtls
+wget -q -O /usr/bin/portxtls "https://raw.githubusercontent.com/geovpn/geovpn.github.io/main/xtls" && chmod +x /usr/bin/portxtls
 rm -f /root/xtls.sh
