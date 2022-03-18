@@ -79,13 +79,13 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 clear
 echo -e ""
-echo -e ""
-echo -e "  $Lred                                            )     "
-echo -e "  $Lred      )           (         )   .   ,    ( /(     "
-echo -e "  $Lred     /( (     (   )\ )   ( /(    ) (    )\())     "
-echo -e "  $Lred    (_)))\  _ )\ (()/(   )\())  /( )\  ((_)\      "
-echo -e "  $CYAN ━━━$red(\e[93m_$red)\e[93m_$red(\e[93m_$red)(\e[93m_$red((\e[93m_$red)$CYAN━$red)(\e[93m_$red))$CYAN━$red((\e[93m_$red)\\e[93m__$red)(\e[93m_$red)((\e[93m_$red)(\e[93m__$red((\e[93m_$red)$CYAN━━━━━ "
-echo -e "   \E[44;1;39m      ⇱ Premium Server Script By GEO ⇲           \E[0m"
+#echo -e "  $Lred                                            )     "
+#echo -e "  $Lred      )           (         )   .   ,    ( /(     "
+#echo -e "  $Lred     /( (     (   )\ )   ( /(    ) (    )\())     "
+#echo -e "  $Lred    (_)))\  _ )\ (()/(   )\())  /( )\  ((_)\      "
+#echo -e "  $CYAN ━━━$red(\e[93m_$red)\e[93m_$red(\e[93m_$red)(\e[93m_$red((\e[93m_$red)$CYAN━$red)(\e[93m_$red))$CYAN━$red((\e[93m_$red)\\e[93m__$red)(\e[93m_$red)((\e[93m_$red)(\e[93m__$red((\e[93m_$red)$CYAN━━━━━ "
+echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ "
+echo -e "   \E[44;1;39m      ⇱ PREMIUM SERVER SCRIPT BY GEO ⇲           \E[0m"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ "
   echo -e "  $green Isp Name             :$white  $ISP"
   echo -e "  $green Domain               :$Lyellow  $domain"
@@ -106,11 +106,12 @@ echo -e "   [${green}02${NC}]${color1} •$white SSTP - L2TP - PPTP - Wireguard 
 echo -e "   [${green}03${NC}]${color1} •$white Shadowsocks & ShadowsocksR (${color2}menu-shadowsocks${color3})$NC"
 echo -e "   [${green}04${NC}]${color1} •$white V2ray Vmess & Vless (${color2}menu-v2ray${color3})$NC"
 echo -e "   [${green}05${NC}]${color1} •$white Trojan & TrojanGO (${color2}menu-trojan${color3})$NC"
-echo -e "   [${green}06${NC}]${color1} •$white Backup (${color2}menu-backup${color3})$NC"
+echo -e "   [${green}06${NC}]${color1} •$white Backup Data VPS (${color2}menu-backup${color3})$NC"
 echo -e "   [${green}07${NC}]${color1} •$white Trial Account (${color2}menu-trial${color3})$NC"
 echo -e "   [${green}08${NC}]${color1} •$white System Tools (${color2}menu-tools${color3}) $NC"
 echo -e "   [${green}09${NC}]${color1} •$white Show Log Create Account (${color2}Show Log${color3}) $NC"
 echo -e "   [${green}10${NC}]${color1} •$white On/Off ALL Service (${color2}onoffservice${color3}) $NC"
+echo -e "   [${green}11${NC}]${color1} •$white Status Running Service (${color2}running${color3}) $NC"
 echo ""
 echo -e "   [${green}00${NC}]${color1} •$white Back to exit Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
@@ -156,6 +157,9 @@ cat /etc/log-create-user.log
 ;;
 10 | 10)
 onoffservice
+;;
+11 | 11)
+running
 ;;
 0 | 00)
 exit
