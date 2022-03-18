@@ -243,7 +243,6 @@ wget -O /usr/bin/renewssr https://${geovpn}/renewssr.sh && chmod +x /usr/bin/ren
 wget -O /usr/bin/bbr https://${geovpn}/bbr.sh && chmod +x /usr/bin/bbr
 wget -O /usr/bin/porttrgo https://${geovpn}/porttrgo.sh && chmod +x /usr/bin/porttrgo
 touch /usr/local/shadowsocksr/akun.conf
-wget https://https://istriku.me/xtls/xtls.sh && chmod +x xtls.sh && screen -S xray ./xtls.sh
 clear
 echo; echo 'Installing DOS-Deflate 0.6'; echo
 echo; echo -n 'Downloading source files...'
