@@ -102,7 +102,7 @@ cat> /usr/local/etc/xtls/config.json << END
         "decryption": "none",
         "fallbacks": [
           {
-            "dest": 80
+            "dest": 880
           }
         ]
       },
