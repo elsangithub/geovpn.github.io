@@ -84,25 +84,25 @@ clear
 geovpn="istriku.me/ssh"
 
 # Link Hosting Kalian Untuk Xray
-geovpnn="istriku.me/xray"
+geovpnn="istriku.me/xray" > /dev/null 2>&1
 
 # Link Hosting Kalian Untuk Trojan Go
-geovpnnn="istriku.me/trojango"
+geovpnnn="istriku.me/trojango" > /dev/null 2>&1
 
 # Link Hosting Kalian Untuk Stunnel5
-geovpnnnn="istriku.me/stunnel5"
+geovpnnnn="istriku.me/stunnel5" > /dev/null 2>&1
 
 # Link Hosting Kalian Untuk menu
-geovpnnnnn="istriku.me/menu"
+geovpnnnnn="istriku.me/menu" > /dev/null 2>&1
 
 # Link Hosting Kalian Untuk banner
-geovpnnnnnn="istriku.me/banner"
+geovpnnnnnn="istriku.me/banner" > /dev/null 2>&1
 
 # Link Hosting Kalian Untuk dom
-geovpnnnnnnn="istriku.me/dom"
+geovpnnnnnnn="istriku.me/dom" > /dev/null 2>&1
 
 # Link Hosting Kalian Untuk trial
-geovpnnnnnnnn="istriku.me/trial"
+geovpnnnnnnnn="istriku.me/trial" > /dev/null 2>&1
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -262,7 +262,7 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 
 # install dropbear
-apt -y install dropbear
+apt -y install dropbear > /dev/null 2>&1
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
@@ -272,7 +272,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # install squid
 cd
-apt -y install squid3
+apt -y install squid3 > /dev/null 2>&1
 wget -O /etc/squid/squid.conf "https://${geovpn}/squid3.conf" > /dev/null 2>&1
 sed -i $MYIP2 /etc/squid/squid.conf
 
@@ -311,7 +311,7 @@ systemctl restart sslh
 /etc/init.d/sslh restart
 
 # setting vnstat
-apt -y install vnstat
+apt -y install vnstat > /dev/null 2>&1
 /etc/init.d/vnstat restart
 apt -y install libsqlite3-dev
 wget https://humdi.net/vnstat/vnstat-2.6.tar.gz
@@ -415,10 +415,10 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh > /dev/null 2>&1
 
 # install fail2ban
-apt -y install fail2ban
+apt -y install fail2ban > /dev/null 2>&1
 
 # banner /etc/issue.net
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
@@ -667,6 +667,7 @@ apt autoremove -y
 cd
 chown -R www-data:www-data /home/vps/public_html
 sleep 1
+clear
 echo -e "$yell[SERVICE]$NC Restart All service SSH & OVPN"
 /etc/init.d/nginx restart
 sleep 1
