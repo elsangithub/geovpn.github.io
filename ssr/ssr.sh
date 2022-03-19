@@ -162,7 +162,7 @@ Debian_apt(){
 }
 Download_SSR(){
 	cd "/usr/local"
-	git clone -b akkariiin/master https://github.com/shadowsocksrr/shadowsocksr.git
+	git clone -b akkariiin/master https://github.com/shadowsocksrr/shadowsocksr.git > /dev/null 2>&1
 	cd "shadowsocksr"
 	cp "${ssr_folder}/config.json" "${config_user_file}"
 	cp "${ssr_folder}/mysql.json" "${ssr_folder}/usermysql.json"
@@ -174,19 +174,19 @@ Download_SSR(){
 }
 Service_SSR(){
 if [[ ${OS} = "centos" ]]; then
-wget --no-check-certificate https://raw.githubusercontent.com/hybtoy/ssrrmu/master/ssrmu_centos -O /etc/init.d/ssrmu
+wget --no-check-certificate https://raw.githubusercontent.com/hybtoy/ssrrmu/master/ssrmu_centos -O /etc/init.d/ssrmu > /dev/null 2>&1
 chmod +x /etc/init.d/ssrmu
 chkconfig --add ssrmu
 chkconfig ssrmu on
 else
-wget --no-check-certificate https://raw.githubusercontent.com/hybtoy/ssrrmu/master/ssrmu_debian -O /etc/init.d/ssrmu
+wget --no-check-certificate https://raw.githubusercontent.com/hybtoy/ssrrmu/master/ssrmu_debian -O /etc/init.d/ssrmu > /dev/null 2>&1
 chmod +x /etc/init.d/ssrmu
 update-rc.d -f ssrmu defaults
 fi
 }
 JQ_install(){
 cd "${ssr_folder}"
-wget --no-check-certificate "https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64" -O ${jq_file}
+wget --no-check-certificate "https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64" -O ${jq_file} > /dev/null 2>&1
 chmod +x ${jq_file}
 }
 Installation_dependency(){
@@ -200,11 +200,12 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://${geovpn}/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://${geovpn}/ssrmu" > /dev/null 2>&1
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
 sleep 1
+clear
 echo -e "[ ${green}INFO${NC} ] Set user api server... "
 Set_user_api_server_pub_addr
 sleep 1
@@ -236,18 +237,18 @@ echo -e "[ ${green}INFO${NC} ] Starting ssr service... "
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://${geovpn}/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/addssr https://${geovpn}/addssr.sh && chmod +x /usr/bin/addssr
-wget -O /usr/bin/delssr https://${geovpn}/delssr.sh && chmod +x /usr/bin/delssr
-wget -O /usr/bin/renewssr https://${geovpn}/renewssr.sh && chmod +x /usr/bin/renewssr
-wget -O /usr/bin/bbr https://${geovpn}/bbr.sh && chmod +x /usr/bin/bbr
-wget -O /usr/bin/porttrgo https://${geovpn}/porttrgo.sh && chmod +x /usr/bin/porttrgo
+wget -O /usr/bin/ssr https://${geovpn}/ssrmu.sh && chmod +x /usr/bin/ssr > /dev/null 2>&1
+wget -O /usr/bin/addssr https://${geovpn}/addssr.sh && chmod +x /usr/bin/addssr > /dev/null 2>&1
+wget -O /usr/bin/delssr https://${geovpn}/delssr.sh && chmod +x /usr/bin/delssr > /dev/null 2>&1
+wget -O /usr/bin/renewssr https://${geovpn}/renewssr.sh && chmod +x /usr/bin/renewssr > /dev/null 2>&1
+wget -O /usr/bin/bbr https://${geovpn}/bbr.sh && chmod +x /usr/bin/bbr > /dev/null 2>&1
+wget -O /usr/bin/porttrgo https://${geovpn}/porttrgo.sh && chmod +x /usr/bin/porttrgo > /dev/null 2>&1
 touch /usr/local/shadowsocksr/akun.conf
 clear
 echo; echo 'Installing DOS-Deflate 0.6'; echo
 echo; echo -n 'Downloading source files...'
 apt install -y dnsutils tcpdump dsniff grepcidr
-wget -qO ddos.zip "https://${geovpn}/ddos-deflate.zip"
+wget -qO ddos.zip "https://${geovpn}/ddos-deflate.zip" > /dev/null 2>&1
 unzip ddos.zip
 cd ddos-deflate
 chmod +x install.sh
