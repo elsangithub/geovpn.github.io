@@ -535,21 +535,6 @@ wget -O menu-wireguard "https://${geovpnnnnn}/menu-wireguard.sh" > /dev/null 2>&
 wget -O bbr "https://${geovpnnnnn}/bbr.sh" > /dev/null 2>&1
 wget -O status "https://${geovpnnnnn}/status.sh" > /dev/null 2>&1
 wget -O running "https://${geovpnnnnn}/running.sh" > /dev/null 2>&1
-wget -O bannerku "https://${geovpnnnnn}/bannerku" > /dev/null 2>&1
-wget -O bannerDOMAIN "https://${geovpnnnnnn}/bannerDOMAIN" > /dev/null 2>&1
-wget -O bannerTRIAL "https://${geovpnnnnnn}/bannerTRIAL" > /dev/null 2>&1
-wget -O bannerL2TP "https://${geovpnnnnnn}/bannerL2TP" > /dev/null 2>&1
-wget -O bannerPPTP "https://${geovpnnnnnn}/bannerPPTP" > /dev/null 2>&1
-wget -O bannerSHADOWSOCK "https://${geovpnnnnnn}/bannerSHADOWSOCK" > /dev/null 2>&1
-wget -O bannerSSH "https://${geovpnnnnnn}/bannerSSH" > /dev/null 2>&1
-wget -O bannerSSTP "https://${geovpnnnnnn}/bannerSSTP" > /dev/null 2>&1
-wget -O bannerSYSTEM "https://${geovpnnnnnn}/bannerSYSTEM" > /dev/null 2>&1
-wget -O bannerTROJAN "https://${geovpnnnnnn}/bannerTROJAN" > /dev/null 2>&1
-wget -O bannerV2RAY "https://${geovpnnnnnn}/bannerV2RAY" > /dev/null 2>&1
-wget -O bannerVPN "https://${geovpnnnnnn}/bannerVPN" > /dev/null 2>&1
-wget -O bannerWIREGUARD "https://${geovpnnnnnn}/bannerWIREGUARD" > /dev/null 2>&1
-wget -O bannerBACKUP "https://${geovpnnnnnn}/bannerBACKUP" > /dev/null 2>&1
-wget -O addcf "https://${geovpnnnnnnn}/addcf.sh" > /dev/null 2>&1
 wget -O cfd "https://${geovpnnnnnnn}/cfd.sh" > /dev/null 2>&1
 wget -O cff "https://${geovpnnnnnnn}/cff.sh" > /dev/null 2>&1
 wget -O cfh "https://${geovpnnnnnnn}/cfh.sh" > /dev/null 2>&1
@@ -647,18 +632,6 @@ chmod +x running
 chmod +x status
 chmod +x bbr
 chmod +x update
-chmod +x bannerku
-chmod +x bannerDOMAIN
-chmod +x bannerL2TP
-chmod +x bannerPPTP
-chmod +x bannerSHADOWSOCK
-chmod +x bannerSSH
-chmod +x bannerSSTP
-chmod +x bannerSYSTEM
-chmod +x bannerTROJAN
-chmod +x bannerV2RAY
-chmod +x bannerVPN
-chmod +x bannerWIREGUARD
 chmod +x portsshws
 chmod +x portsshnontls
 chmod +x cfd
