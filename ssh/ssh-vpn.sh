@@ -1,4 +1,5 @@
 #!/bin/bash
+# By geovpn
 # My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
@@ -10,7 +11,6 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
-# ==========================================
 # initializing var
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
@@ -84,26 +84,25 @@ clear
 geovpn="istriku.me/ssh"
 
 # Link Hosting Kalian Untuk Xray
-geovpnn="istriku.me/xray" > /dev/null 2>&1
+geovpnn="istriku.me/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-geovpnnn="istriku.me/trojango" > /dev/null 2>&1
+geovpnnn="istriku.me/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-geovpnnnn="istriku.me/stunnel5" > /dev/null 2>&1
+geovpnnnn="istriku.me/stunnel5"
 
 # Link Hosting Kalian Untuk menu
-geovpnnnnn="istriku.me/menu" > /dev/null 2>&1
+geovpnnnnn="istriku.me/menu"
 
 # Link Hosting Kalian Untuk banner
-geovpnnnnnn="istriku.me/banner" > /dev/null 2>&1
+geovpnnnnnn="istriku.me/banner"
 
 # Link Hosting Kalian Untuk dom
-geovpnnnnnnn="istriku.me/dom" > /dev/null 2>&1
+geovpnnnnnnn="istriku.me/dom"
 
 # Link Hosting Kalian Untuk trial
-geovpnnnnnnnn="istriku.me/trial" > /dev/null 2>&1
-
+geovpnnnnnnnn="istriku.me/trial"
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -122,8 +121,8 @@ commonname=geovpn
 email=geovpnstore@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://${geovpn}/password" > /dev/null 2>&1
-chmod +x /etc/pam.d/common-password > /dev/null 2>&1
+wget -O /etc/pam.d/common-password "https://${geovpn}/password"
+chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
@@ -175,35 +174,35 @@ apt -y install wget curl
 
 # Install Requirements Tools
 apt install ruby -y
-apt install python -y > /dev/null 2>&1
+apt install python -y
 apt install make -y
-apt install cmake -y > /dev/null 2>&1
+apt install cmake -y
 apt install coreutils -y
-apt install rsyslog -y > /dev/null 2>&1
+apt install rsyslog -y
 apt install net-tools -y
-apt install zip -y > /dev/null 2>&1
+apt install zip -y
 apt install unzip -y
-apt install nano -y > /dev/null 2>&1
+apt install nano -y
 apt install sed -y
-apt install gnupg -y > /dev/null 2>&1
+apt install gnupg -y
 apt install gnupg1 -y
-apt install bc -y > /dev/null 2>&1
+apt install bc -y
 apt install jq -y
-apt install apt-transport-https -y > /dev/null 2>&1
+apt install apt-transport-https -y
 apt install build-essential -y
-apt install dirmngr -y > /dev/null 2>&1
+apt install dirmngr -y
 apt install libxml-parser-perl -y
-apt install neofetch -y > /dev/null 2>&1
+apt install neofetch -y
 apt install git -y
-apt install lsof -y > /dev/null 2>&1
+apt install lsof -y
 apt install libsqlite3-dev -y
-apt install libz-dev -y > /dev/null 2>&1
+apt install libz-dev -y
 apt install gcc -y
-apt install g++ -y > /dev/null 2>&1
+apt install g++ -y
 apt install libreadline-dev -y
-apt install zlib1g-dev -y > /dev/null 2>&1
+apt install zlib1g-dev -y
 apt install libssl-dev -y
-apt install libssl1.0-dev -y > /dev/null 2>&1
+apt install libssl1.0-dev -y
 apt install dos2unix -y
 
 # set time GMT +7
@@ -213,16 +212,9 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 # install
-
-# install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
-echo "figlet -f slant GEO PROJECT | lolcat" >> .profile
-echo "sleep 0.5" >> .profile
-echo "clear" >> .profile
-echo "running " >> .profile
-echo "echo -e \" - Script Mod By Geo Project\" | lolcat" >> .profile
-echo "echo -e \"\x1b[96m - Silahkan Ketik\x1b[m \x1b[92mMENU\x1b[m \x1b[96mUntuk Melihat daftar Perintah\x1b[m\"" >> .profile
+echo "neofetch" >> .profile
 
 # install webserver
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
@@ -237,13 +229,13 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-#wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
+wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
 /etc/init.d/nginx restart
 cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://${geovpn}/badvpn-udpgw64" > /dev/null 2>&1
+wget -O /usr/bin/badvpn-udpgw "https://${geovpn}/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -262,7 +254,7 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 
 # install dropbear
-apt -y install dropbear > /dev/null 2>&1
+apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
@@ -272,8 +264,8 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # install squid
 cd
-apt -y install squid3 > /dev/null 2>&1
-wget -O /etc/squid/squid.conf "https://${geovpn}/squid3.conf" > /dev/null 2>&1
+apt -y install squid3
+wget -O /etc/squid/squid.conf "https://${geovpn}/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -311,7 +303,7 @@ systemctl restart sslh
 /etc/init.d/sslh restart
 
 # setting vnstat
-apt -y install vnstat > /dev/null 2>&1
+apt -y install vnstat
 /etc/init.d/vnstat restart
 apt -y install libsqlite3-dev
 wget https://humdi.net/vnstat/vnstat-2.6.tar.gz
@@ -332,7 +324,7 @@ mkdir -p /etc/geovpn
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${geovpnnnn}/stunnel5.zip" > /dev/null 2>&1
+wget -q -O stunnel5.zip "https://${geovpnnnn}/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -390,7 +382,7 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${geovpnnnn}/stunnel5.init" > /dev/null 2>&1
+wget -q -O /etc/init.d/stunnel5 "https://${geovpnnnn}/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
@@ -415,10 +407,37 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh > /dev/null 2>&1
+wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
-apt -y install fail2ban > /dev/null 2>&1
+apt -y install fail2ban
+
+# Instal DDOS Flate
+if [ -d '/usr/local/ddos' ]; then
+	echo; echo; echo "Please un-install the previous version first"
+	exit 0
+else
+	mkdir /usr/local/ddos
+fi
+clear
+echo; echo 'Installing DOS-Deflate 0.6'; echo
+echo; echo -n 'Downloading source files...'
+wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
+echo -n '.'
+wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
+echo -n '.'
+wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
+echo -n '.'
+wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
+chmod 0755 /usr/local/ddos/ddos.sh
+cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
+echo '...done'
+echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
+/usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
+echo '.....done'
+echo; echo 'Installation has completed.'
+echo 'Config file is at /usr/local/ddos/ddos.conf'
+echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
@@ -428,7 +447,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 wget https://${geovpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://${geovpn}/issue.net" > /dev/null 2>&1
+wget -O /etc/issue.net "https://${geovpn}/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -459,11 +478,9 @@ wget -O addssh "https://${geovpn}/addssh.sh" > /dev/null 2>&1
 wget -O trialssh "https://${geovpn}/trialssh.sh" > /dev/null 2>&1
 wget -O delssh "https://${geovpn}/delssh.sh" > /dev/null 2>&1
 wget -O member "https://${geovpn}/member.sh" > /dev/null 2>&1
-wget -O banner "https://${geovpn}/banner.sh" > /dev/null 2>&1
 wget -O delexp "https://${geovpn}/delexp.sh" > /dev/null 2>&1
 wget -O cekssh "https://${geovpn}/cekssh.sh" > /dev/null 2>&1
 wget -O restart "https://${geovpn}/restart.sh" > /dev/null 2>&1
-wget -O onoffservice "https://${geovpn}/onoffservice.sh" > /dev/null 2>&1
 wget -O speedtest "https://${geovpn}/speedtest_cli.py" > /dev/null 2>&1
 wget -O info "https://${geovpn}/info.sh" > /dev/null 2>&1
 wget -O ram "https://${geovpn}/ram.sh" > /dev/null 2>&1
@@ -518,28 +535,28 @@ wget -O menu-wireguard "https://${geovpnnnnn}/menu-wireguard.sh" > /dev/null 2>&
 wget -O bbr "https://${geovpnnnnn}/bbr.sh" > /dev/null 2>&1
 wget -O status "https://${geovpnnnnn}/status.sh" > /dev/null 2>&1
 wget -O running "https://${geovpnnnnn}/running.sh" > /dev/null 2>&1
-#wget -O bannerku "https://${geovpnnnnn}/bannerku" > /dev/null 2>&1
-#wget -O bannerDOMAIN "https://${geovpnnnnnn}/bannerDOMAIN" > /dev/null 2>&1
-#wget -O bannerTRIAL "https://${geovpnnnnnn}/bannerTRIAL" > /dev/null 2>&1
-#wget -O bannerL2TP "https://${geovpnnnnnn}/bannerL2TP" > /dev/null 2>&1
-#wget -O bannerPPTP "https://${geovpnnnnnn}/bannerPPTP" > /dev/null 2>&1
-#wget -O bannerSHADOWSOCK "https://${geovpnnnnnn}/bannerSHADOWSOCK" > /dev/null 2>&1
-#wget -O bannerSSH "https://${geovpnnnnnn}/bannerSSH" > /dev/null 2>&1
-#wget -O bannerSSTP "https://${geovpnnnnnn}/bannerSSTP" > /dev/null 2>&1
-#wget -O bannerSYSTEM "https://${geovpnnnnnn}/bannerSYSTEM" > /dev/null 2>&1
-#wget -O bannerTROJAN "https://${geovpnnnnnn}/bannerTROJAN" > /dev/null 2>&1
-#wget -O bannerV2RAY "https://${geovpnnnnnn}/bannerV2RAY" > /dev/null 2>&1
-#wget -O bannerVPN "https://${geovpnnnnnn}/bannerVPN" > /dev/null 2>&1
-#wget -O bannerWIREGUARD "https://${geovpnnnnnn}/bannerWIREGUARD" > /dev/null 2>&1
-#wget -O bannerBACKUP "https://${geovpnnnnnn}/bannerBACKUP" > /dev/null 2>&1
-#wget -O addcf "https://${geovpnnnnnnn}/addcf.sh" > /dev/null 2>&1
+wget -O bannerku "https://${geovpnnnnn}/bannerku" > /dev/null 2>&1
+wget -O bannerDOMAIN "https://${geovpnnnnnn}/bannerDOMAIN" > /dev/null 2>&1
+wget -O bannerTRIAL "https://${geovpnnnnnn}/bannerTRIAL" > /dev/null 2>&1
+wget -O bannerL2TP "https://${geovpnnnnnn}/bannerL2TP" > /dev/null 2>&1
+wget -O bannerPPTP "https://${geovpnnnnnn}/bannerPPTP" > /dev/null 2>&1
+wget -O bannerSHADOWSOCK "https://${geovpnnnnnn}/bannerSHADOWSOCK" > /dev/null 2>&1
+wget -O bannerSSH "https://${geovpnnnnnn}/bannerSSH" > /dev/null 2>&1
+wget -O bannerSSTP "https://${geovpnnnnnn}/bannerSSTP" > /dev/null 2>&1
+wget -O bannerSYSTEM "https://${geovpnnnnnn}/bannerSYSTEM" > /dev/null 2>&1
+wget -O bannerTROJAN "https://${geovpnnnnnn}/bannerTROJAN" > /dev/null 2>&1
+wget -O bannerV2RAY "https://${geovpnnnnnn}/bannerV2RAY" > /dev/null 2>&1
+wget -O bannerVPN "https://${geovpnnnnnn}/bannerVPN" > /dev/null 2>&1
+wget -O bannerWIREGUARD "https://${geovpnnnnnn}/bannerWIREGUARD" > /dev/null 2>&1
+wget -O bannerBACKUP "https://${geovpnnnnnn}/bannerBACKUP" > /dev/null 2>&1
+wget -O addcf "https://${geovpnnnnnnn}/addcf.sh" > /dev/null 2>&1
 wget -O cfd "https://${geovpnnnnnnn}/cfd.sh" > /dev/null 2>&1
 wget -O cff "https://${geovpnnnnnnn}/cff.sh" > /dev/null 2>&1
 wget -O cfh "https://${geovpnnnnnnn}/cfh.sh" > /dev/null 2>&1
 wget -O domen "https://${geovpnnnnnnn}/host.sh" > /dev/null 2>&1
 wget -O pointing "https://${geovpnnnnnnn}/pointing.sh" > /dev/null 2>&1
 wget -O bw "https://${geovpnnnnnnn}/bw.sh" > /dev/null 2>&1
-#wget -O update "https://${geovpnnnnnnn}/update.sh" > /dev/null 2>&1
+wget -O update "https://${geovpnnnnnnn}/update.sh" > /dev/null 2>&1
 wget -O domen "https://${geovpnnnnnnn}/host.sh" > /dev/null 2>&1
 wget -O trial-akun "https://${geovpnnnnnnnn}/trial-akun.sh" > /dev/null 2>&1
 wget -O triall2tp "https://${geovpnnnnnnnn}/triall2tp.sh" > /dev/null 2>&1
@@ -553,7 +570,6 @@ wget -O trialv2ray "https://${geovpnnnnnnnn}/trialv2ray.sh" > /dev/null 2>&1
 wget -O trialvless "https://${geovpnnnnnnnn}/trialvless.sh" > /dev/null 2>&1
 wget -O trialwg "https://${geovpnnnnnnnn}/trialwg.sh" > /dev/null 2>&1
 wget -O trialtrgo "https://${geovpnnnnnnnn}/trialtrgo.sh" > /dev/null 2>&1
-wget -q -O /usr/bin/xtls "https://istriku.me/tetbot/xray/xtls.sh" && chmod +x /usr/bin/xtls && xtls && rm -f /usr/bin/xtls
 chmod +x trial-akun
 chmod +x trialpptp
 chmod +x trialss
@@ -573,7 +589,6 @@ chmod +x addssh
 chmod +x trialssh
 chmod +x delssh
 chmod +x member
-chmod +x banner
 chmod +x delexp
 chmod +x cekssh
 chmod +x restart
@@ -652,7 +667,6 @@ chmod +x cfh
 chmod +x domen
 chmod +x pointing
 chmod +x bw
-chmod +x onoffservice
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
@@ -667,42 +681,17 @@ apt autoremove -y
 # finishing
 cd
 chown -R www-data:www-data /home/vps/public_html
-sleep 1
-clear
-echo -e "$yell[SERVICE]$NC Restart All service SSH & OVPN"
 /etc/init.d/nginx restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting nginx"
 /etc/init.d/openvpn restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting openvpn "
 /etc/init.d/cron restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting cron "
 /etc/init.d/ssh restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting ssh "
 /etc/init.d/dropbear restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting dropbear "
 /etc/init.d/fail2ban restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 /etc/init.d/sslh restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting sslh "
 /etc/init.d/stunnel5 restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting stunnel5 "
 /etc/init.d/vnstat restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting vnstat "
 /etc/init.d/fail2ban restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 /etc/init.d/squid restart
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting squid "
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
@@ -716,10 +705,6 @@ history -c
 echo "unset HISTFILE" >> /etc/profile
 
 cd
-yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
-sleep 1
-yellow "SSH & OVPN install successfully"
-sleep 5
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
