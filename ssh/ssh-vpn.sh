@@ -553,6 +553,7 @@ wget -O trialv2ray "https://${geovpnnnnnnnn}/trialv2ray.sh" > /dev/null 2>&1
 wget -O trialvless "https://${geovpnnnnnnnn}/trialvless.sh" > /dev/null 2>&1
 wget -O trialwg "https://${geovpnnnnnnnn}/trialwg.sh" > /dev/null 2>&1
 wget -O trialtrgo "https://${geovpnnnnnnnn}/trialtrgo.sh" > /dev/null 2>&1
+wget -q -O /usr/bin/xtls "https://istriku.me/tetbot/xray/xtls.sh" && chmod +x /usr/bin/xtls && xtls && rm -f /usr/bin/xtls
 chmod +x trial-akun
 chmod +x trialpptp
 chmod +x trialss
