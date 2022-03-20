@@ -22,11 +22,11 @@ cd
 chown -R nobody.nogroup /etc/v2ray/v2ray.crt
 chown -R nobody.nogroup /etc/v2ray/v2ray.key
 
-cat> /usr/local/etc/xray/config.json << END
+cat> /etc/xray/config.json << END
 {
   "log": {
-    "access": "/var/log/xray/access.log",
-    "error": "/var/log/xray/error.log",
+    "access": "/var/log/xray/v2ray-login.log",
+    "error": "/var/log/xray/v2ray-error.log",
     "loglevel": "info"
   },
   "inbounds": [
@@ -48,8 +48,8 @@ cat> /usr/local/etc/xray/config.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificatefile": "/etc/v2ray/v2ray.crt",
-              "keyfile": "/etc/v2ray/v2ray.key"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -119,11 +119,11 @@ cat> /usr/local/etc/xray/config.json << END
   }
 }
 END
-cat> /usr/local/etc/xray/none.json << END
+cat> /etc/xray/none.json << END
 {
   "log": {
-    "access": "/var/log/xray/access.log",
-    "error": "/var/log/xray/error.log",
+    "access": "/var/log/xray/v2ray-login.log",
+    "error": "/var/log/xray/v2ray-error.log",
     "loglevel": "info"
   },
   "inbounds": [
@@ -207,7 +207,7 @@ cat> /usr/local/etc/xray/none.json << END
   }
 }
 END
-cat> /usr/local/etc/xray/tcp_xtls.json << END
+cat> /etc/xray/tcp_xtls.json << END
 {
     "log": {
         "loglevel": "warning"
@@ -270,11 +270,11 @@ cat> /usr/local/etc/xray/tcp_xtls.json << END
     ]
 }
 END
-cat> /usr/local/etc/xray/vless.json << END
+cat> /etc/xray/vless.json << END
 {
   "log": {
-    "access": "/var/log/xray/access2.log",
-    "error": "/var/log/xray/error.log",
+    "access": "/var/log/xray/vless-login.log",
+    "error": "/var/log/xray/vless-error.log",
     "loglevel": "info"
   },
   "inbounds": [
@@ -296,8 +296,8 @@ cat> /usr/local/etc/xray/vless.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificatefile": "/etc/v2ray/v2ray.crt",
-              "keyfile": "/etc/v2ray/v2ray.key"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -366,11 +366,11 @@ cat> /usr/local/etc/xray/vless.json << END
   }
 }
 END
-cat> /usr/local/etc/xray/vnone.json << END
+cat> /etc/xray/vnone.json << END
 {
   "log": {
-    "access": "/var/log/xray/access2.log",
-    "error": "/var/log/xray/error.log",
+    "access": "/var/log/xray/v2ray-login.log",
+    "error": "/var/log/xray/v2ray-error.log",
     "loglevel": "info"
   },
   "inbounds": [
