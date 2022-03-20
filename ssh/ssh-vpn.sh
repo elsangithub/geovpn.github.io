@@ -484,6 +484,7 @@ wget -O restart "https://${geovpn}/restart.sh" > /dev/null 2>&1
 wget -O speedtest "https://${geovpn}/speedtest_cli.py" > /dev/null 2>&1
 wget -O info "https://${geovpn}/info.sh" > /dev/null 2>&1
 wget -O onoffservice "https://${geovpn}/onoffservice.sh" > /dev/null 2>&1
+wget -O banner "https://${geovpn}/banner.sh" > /dev/null 2>&1
 wget -O ram "https://${geovpn}/ram.sh" > /dev/null 2>&1
 wget -O renewssh "https://${geovpn}/renewssh.sh" > /dev/null 2>&1
 wget -O autokill "https://${geovpn}/autokill.sh" > /dev/null 2>&1
@@ -580,6 +581,8 @@ chmod +x cekssh
 chmod +x restart
 chmod +x speedtest
 chmod +x info
+chmod +x banner
+chmod +x onoffservice
 chmod +x about
 chmod +x autokill
 chmod +x tendang
