@@ -260,7 +260,6 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 sleep 1
-wget https://istriku.me/xray/xray-go.sh && chmod +x xray-go.sh && screen -S xray-go ./xray-go.sh
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "Shadowsock-R successfully installed.."
 sleep 5
