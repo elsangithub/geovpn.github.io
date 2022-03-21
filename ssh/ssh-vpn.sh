@@ -411,34 +411,6 @@ wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
-
-# Instal DDOS Flate
-if [ -d '/usr/local/ddos' ]; then
-	echo; echo; echo "Please un-install the previous version first"
-	exit 0
-else
-	mkdir /usr/local/ddos
-fi
-clear
-echo; echo 'Installing DOS-Deflate 0.6'; echo
-echo; echo -n 'Downloading source files...'
-wget -q -O /usr/local/ddos/ddos.conf http://www.inetbase.com/scripts/ddos/ddos.conf
-echo -n '.'
-wget -q -O /usr/local/ddos/LICENSE http://www.inetbase.com/scripts/ddos/LICENSE
-echo -n '.'
-wget -q -O /usr/local/ddos/ignore.ip.list http://www.inetbase.com/scripts/ddos/ignore.ip.list
-echo -n '.'
-wget -q -O /usr/local/ddos/ddos.sh http://www.inetbase.com/scripts/ddos/ddos.sh
-chmod 0755 /usr/local/ddos/ddos.sh
-cp -s /usr/local/ddos/ddos.sh /usr/local/sbin/ddos
-echo '...done'
-echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
-/usr/local/ddos/ddos.sh --cron > /dev/null 2>&1
-echo '.....done'
-echo; echo 'Installation has completed.'
-echo 'Config file is at /usr/local/ddos/ddos.conf'
-echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
-
 # banner /etc/issue.net
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -659,16 +631,26 @@ apt autoremove -y
 cd
 chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/nginx restart
+/etc/init.d/nginx status
 /etc/init.d/openvpn restart
+/etc/init.d/openvpn status
 /etc/init.d/cron restart
+/etc/init.d/cron status
 /etc/init.d/ssh restart
+/etc/init.d/ssh status
 /etc/init.d/dropbear restart
+/etc/init.d/dropbear status
 /etc/init.d/fail2ban restart
+/etc/init.d/fail2ban status
 /etc/init.d/sslh restart
+/etc/init.d/sslh status
 /etc/init.d/stunnel5 restart
+/etc/init.d/stunnel5 status
 /etc/init.d/vnstat restart
+/etc/init.d/vnstat status
 /etc/init.d/fail2ban restart
 /etc/init.d/squid restart
+/etc/init.d/squid status
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
