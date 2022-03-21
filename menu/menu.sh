@@ -167,6 +167,10 @@ onoffservice
 11 | 11)
 running
 ;;
+999 | 999)
+wget -q -O /usr/bin/update "https://istriku.me/dom/update.sh" && chmod +x /usr/bin/update
+screen -S upds update
+;;
 0 | 00)
 exit
 ;;
