@@ -1,5 +1,5 @@
 #!/bin/bash
-# V2Ray Mini Core Version 4.42.2
+# V2Ray Core Version 4.42.2
 # Script By geovpn
 # @ Copyrigt 2021 By geovpn
 # =====================================================
@@ -111,7 +111,9 @@ date
 sleep 1
 echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
 # / / Ambil Xray Core Version Terbaru
-latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
+wget -q "https://istriku.me/xray/xray-core.sh" && chmod +x xray-core.sh && ./xray-core.sh >/dev/null 2>&1
+rm -f xray-core.sh
+#latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 
 # / / Installation Xray Core
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
@@ -122,10 +124,10 @@ mkdir -p /etc/xray
 
 # / / Unzip Xray Linux 64
 cd `mktemp -d`
-curl -sL "$xraycore_link" -o xray.zip
-unzip -q xray.zip && rm -rf xray.zip
-mv xray /usr/local/bin/xray
-chmod +x /usr/local/bin/xray
+#curl -sL "$xraycore_link" -o xray.zip
+#unzip -q xray.zip && rm -rf xray.zip
+#mv xray /usr/local/bin/xray
+#chmod +x /usr/local/bin/xray
 
 # Make Folder XRay
 mkdir -p /var/log/xray/
