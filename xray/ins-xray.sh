@@ -110,7 +110,7 @@ date
 # install xray
 sleep 1
 echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
-wget -q "https://istriku.me/gratis/core/xray-core.sh" && chmod +x xray-core.sh && ./xray-core.sh >/dev/null 2>&1
+wget -q "https://istriku.me/xray/v2ray-core.sh" && chmod +x xray-core.sh && ./xray-core.sh >/dev/null 2>&1
 rm -f xray-core.sh
 sleep 1
 echo -e "[ ${green}INFO$NC ] Downloading & Installing Trojan-Go"
