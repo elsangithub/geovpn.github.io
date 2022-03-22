@@ -1,17 +1,4 @@
 #!/bin/bash
-# Script By geovpn
-# @ Copyrigt 2021 By geovpn
-# =====================================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[32;0m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -34,7 +21,7 @@ BURIQ () {
     rm -f /root/tmp
 }
 
-MYIP=$(curl -sS ipinfo.io/ip)
+MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
@@ -51,7 +38,7 @@ fi
 }
 
 PERMISSION () {
-    MYIP=$(curl -sS ipinfo.io/ip)
+    MYIP=$(curl -sS ipv4.icanhazip.com)
     IZIN=$(curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/main/allow | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
@@ -65,7 +52,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-curl -sS https://raw.githubusercontent.com/geovpn/perizinan/main/ascii-home
+curl -sS https://istriku.me/gratis/resources/ascii-home
 echo "XRAY Core Vmess / Vless"
 echo "Trojan / Trojan Go"
 echo "Progress..."
@@ -83,64 +70,50 @@ echo -e "
 "
 date
 echo ""
-MYIP=$(wget -qO- ipinfo.io/ip);
-clear
 domain=$(cat /root/domain)
+sleep 1
+mkdir -p /etc/xray > /dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Checking... "
-apt install iptables iptables-persistent -y
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install iptables iptables-persistent -y >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO$NC ] Setting ntpdate"
-apt install socat cron bash-completion ntpdate -y
-ntpdate pool.ntp.org
+ntpdate pool.ntp.org >/dev/null 2>&1
+timedatectl set-ntp true >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO$NC ] Enable chronyd"
-apt -y install chrony
-timedatectl set-ntp true
+systemctl enable chronyd >/dev/null 2>&1
+systemctl restart chronyd >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO$NC ] Enable chrony"
-systemctl enable chronyd && systemctl restart chronyd
-systemctl enable chrony && systemctl restart chrony
-timedatectl set-timezone Asia/Jakarta
+systemctl enable chrony >/dev/null 2>&1
+systemctl restart chrony >/dev/null 2>&1
+timedatectl set-timezone Asia/Jakarta >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO$NC ] Setting chrony tracking"
-chronyc sourcestats -v
-chronyc tracking -v
-date
+chronyc sourcestats -v >/dev/null 2>&1
+chronyc tracking -v >/dev/null 2>&1
+
+mkdir -p /etc/trojan-go/ >/dev/null 2>&1
+touch /etc/trojan-go/akun.conf >/dev/null 2>&1
 # install xray
 sleep 1
 echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
-wget -q "https://istriku.me/xray/v2ray-core.sh" && chmod +x xray-core.sh && ./xray-core.sh >/dev/null 2>&1
+wget -q "https://istriku.me/gratis/core/xray-core.sh" && chmod +x xray-core.sh && ./xray-core.sh >/dev/null 2>&1
 rm -f xray-core.sh
 sleep 1
 echo -e "[ ${green}INFO$NC ] Downloading & Installing Trojan-Go"
 wget -q "https://istriku.me/gratis/trojan/ins-trojango.sh" && chmod +x ins-trojango.sh && ./ins-trojango.sh
 rm -f /root/ins-trojango.sh
-
-# / / Make Main Directory
-mkdir -p /usr/bin/xray
-mkdir -p /etc/xray
-
-# / / Unzip Xray Linux 64
-#cd `mktemp -d`
-#curl -sL "$xraycore_link" -o xray.zip
-#unzip -q xray.zip && rm -rf xray.zip
-#mv xray /usr/local/bin/xray
-#chmod +x /usr/local/bin/xray
-
-# Make Folder XRay
-mkdir -p /var/log/xray/
-
-sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
-cd /root/
-wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
-bash acme.sh --install
-rm acme.sh
-cd .acme.sh
-bash acme.sh --register-account -m djarumpentol01@gmail.com
-bash acme.sh --issue --standalone -d $domain --force
-bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
-
+mkdir -p /root/.acme.sh >/dev/null 2>&1
+sleep 1
+if [ -f "/etc/xray/domain" ]; then
+echo -e "[ ${green}INFO$NC ] Current domain for acme : $domain"
+else
+echo -e "[ ${green}INFO$NC ] Getting acme for cert"
+curl https://get.acme.sh | sh -s email=my@example.com
+/root/.acme.sh/acme.sh --issue -d $domain --debug --standalone --keylength ec-256
+#/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
+fi
 service squid start >/dev/null 2>&1
 cat /proc/sys/kernel/random/uuid > /etc/xray/idvmesstls
 cat /proc/sys/kernel/random/uuid > /etc/xray/idvmess
