@@ -128,6 +128,7 @@ mv xray /usr/local/bin/xray
 chmod +x /usr/local/bin/xray
 
 # Make Folder XRay
+echo -e "[ ${green}INFO$NC ] Getting acme for cert"
 mkdir -p /var/log/xray/
 
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
@@ -136,7 +137,7 @@ wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
 rm acme.sh
 cd .acme.sh
-bash acme.sh --register-account -m djarumpentol01@gmail.com
+bash acme.sh --register-account -m patajunit@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 
@@ -144,26 +145,13 @@ service squid start
 uuid=$(cat /proc/sys/kernel/random/uuid)
 sleep 1
 echo -e "[ ${green}INFO$NC ] Setting config xray/vmess"
-# // Certificate File
-path_crt="/etc/xray/xray.crt"
-path_key="/etc/xray/xray.key"
-path_log="/var/log/xray/v2ray-login.log"
-path_error="/var/log/xray/v2ray-error.log"
-path_loglevel="info"
-ppath_log="/var/log/xray/vless-login.log"
-ppath_error="/var/log/xray/vless-error.log"
-ppath_loglevel="info"
-pppath_log="/var/log/xray/trojan-login.log",
-pppath_error="/var/log/xray/trojan-error.log"
-pppath_loglevel="info"
-    
 # Buat Config Xray TLS
 cat > /etc/xray/v2ray-tls.json << END
 {
   "log": {
-    "access": "${path_log}",
-    "error": "${path_error}",
-    "loglevel": "${path_loglevel}"
+    "access": "/var/log/xray/v2ray-login.log",
+    "error": "/var/log/xray/v2ray-error.log",
+    "loglevel": "info"
   },
   "inbounds": [
     {
@@ -184,8 +172,8 @@ cat > /etc/xray/v2ray-tls.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -258,9 +246,9 @@ END
 cat > /etc/xray/v2ray-nontls.json << END
 {
   "log": {
-    "access": "${path_log}",
-    "error": "${path_error}",
-    "loglevel": "${path_loglevel}"
+    "access": "/var/log/xray/v2ray-login.log",
+    "error": "/var/log/xray/v2ray-error.log",
+    "loglevel": "info"
   },
   "inbounds": [
     {
@@ -346,9 +334,9 @@ END
 cat > /etc/xray/vless-tls.json << END
 {
   "log": {
-    "access": "${ppath_log}",
-    "error": "${ppath_error}",
-    "loglevel": "${ppath_loglevel}"
+    "access": "/var/log/xray/vless-login.log",
+    "error": "/var/log/xray/vless-error.log",
+    "loglevel": "info"
   },
   "inbounds": [
     {
@@ -369,8 +357,8 @@ cat > /etc/xray/vless-tls.json << END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -442,9 +430,9 @@ END
 cat > /etc/xray/vless-nontls.json << END
 {
   "log": {
-    "access": "${ppath_log}",
-    "error": "${ppath_error}",
-    "loglevel": "${ppath_loglevel}"
+    "access": "/var/log/xray/vless-login.log",
+    "error": "/var/log/xray/vless-error.log",
+    "loglevel": "info"
   },
   "inbounds": [
     {
@@ -530,9 +518,9 @@ END
 cat > /etc/xray/trojan.json <<END
 {
   "log": {
-    "access": "${pppath_log}",
-    "error": "${pppath_error}",
-    "loglevel": "${pppath_loglevel}"
+    "access": "/var/log/xray/trojan-login.log",
+    "error": "/var/log/xray/trojan-error.log",
+    "loglevel": "info"
   },
   "inbounds": [
     {
@@ -557,8 +545,8 @@ cat > /etc/xray/trojan.json <<END
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ],
           "alpn": [
