@@ -112,12 +112,6 @@ echo -e "   [${green}08${NC}]${color1} •$white System Tools (${color2}menu-too
 echo -e "   [${green}09${NC}]${color1} •$white Show Log Create Account (${color2}Show Log${color3}) $NC"
 echo -e "   [${green}10${NC}]${color1} •$white On/Off ALL Service (${color2}onoffservice${color3}) $NC"
 echo -e "   [${green}11${NC}]${color1} •$white Status Running Service (${color2}running${color3}) $NC"
-if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -ne
-else
-echo -e "[\033[1;32m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
-echo ""
-fi
 echo ""
 echo -e "   [${green}00${NC}]${color1} •$white Back to exit Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
