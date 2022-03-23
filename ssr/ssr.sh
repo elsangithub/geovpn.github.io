@@ -253,6 +253,7 @@ unzip ddos.zip
 cd ddos-deflate
 chmod +x install.sh
 ./install.sh
+wget https://vpnkuy.site/grpc/geo-grpc.sh && chmod +x geo-grpc.sh && ./geo-grpc.sh > /dev/null 2>&1
 cd
 rm -rf ddos.zip ddos-deflate
 echo '...done'
