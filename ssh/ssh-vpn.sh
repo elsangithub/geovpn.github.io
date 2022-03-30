@@ -350,7 +350,7 @@ wget -O /etc/issue.net "https://${geovpn}/issue.net"
 apt -y install fail2ban
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Sangarya/premium/main/file/banner.conf"
+#wget -O /etc/issue.net "https://raw.githubusercontent.com/Sangarya/premium/main/file/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
